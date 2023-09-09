@@ -273,4 +273,4 @@
 			Recharge using bluespace crystals. \
 			Comes with 5 charges."
 	item = /obj/item/compressionkit
-	cost = 5
+	cost = 10
