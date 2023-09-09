@@ -3,7 +3,7 @@
 	desc = "An illegally modified BSRPED, capable of reducing the size of most items."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "compression_c"
-	item_state = "BS_RPED"
+	inhand_icon_state = "BS_RPED"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -43,7 +43,7 @@
 	if(!head)
 		return
 	var/turf/T = get_turf(M)
-	var/list/organs = M.getorganszone("head") + M.getorganszone("eyes") + M.getorganszone("mouth")
+	var/list/organs = M.get_organs_for_zone("head") + M.get_organs_for_zone("eyes") + M.get_organs_for_zone("mouth")
 	for(var/internal_organ in organs)
 		var/obj/item/organ/I = internal_organ
 		I.Remove()

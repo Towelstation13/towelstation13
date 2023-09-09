@@ -2165,6 +2165,7 @@
 #include "code\game\objects\items\devices\anomaly_releaser.dm"
 #include "code\game\objects\items\devices\beacon.dm"
 #include "code\game\objects\items\devices\chameleonproj.dm"
+#include "code\game\objects\items\devices\compressionkit.dm"
 #include "code\game\objects\items\devices\destabilizing_crystal.dm"
 #include "code\game\objects\items\devices\desynchronizer.dm"
 #include "code\game\objects\items\devices\electroadaptive_pseudocircuit.dm"
