@@ -265,3 +265,12 @@
 			bright lights. Effective, affordable, and nigh undetectable."
 	item = /obj/item/syndicate_contacts
 	cost = 3
+
+/datum/uplink_item/device_tools/compressionkit
+	name = "Bluespace Compression Kit"
+	desc = "A modified version of a BSRPED that can be used to reduce the size of most items while retaining their original functions! \
+			Does not work on storage items. \
+			Recharge using bluespace crystals. \
+			Comes with 5 charges."
+	item = /obj/item/compressionkit
+	cost = 5
