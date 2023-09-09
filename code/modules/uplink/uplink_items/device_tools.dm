@@ -272,5 +272,6 @@
 			Does not work on storage items. \
 			Recharge using bluespace crystals. \
 			Comes with 5 charges."
+	progression_minimum = 20 MINUTES
 	item = /obj/item/compressionkit
 	cost = 13
