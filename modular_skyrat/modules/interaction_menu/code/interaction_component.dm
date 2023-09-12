@@ -45,8 +45,6 @@
 /datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/carbon/human/target)
 	if(!interaction.allow_act(target, self))
 		return FALSE
-	if(interaction.lewd && !target.client?.prefs?.read_preference(/datum/preference/toggle/erp))
-		return FALSE
 	if(!interaction.distance_allowed && !target.Adjacent(self))
 		return FALSE
 	if(interaction.category == INTERACTION_CAT_HIDE)

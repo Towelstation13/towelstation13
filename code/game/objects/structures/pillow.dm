@@ -110,9 +110,6 @@
 	if(!istype(affected_mob, /mob/living/carbon/human))
 		return
 
-	if(prob(1.5)) // 1.5% chance of special tickling feather spawning. No idea why, i was thinking that this is funny idea. Do not erase it plz
-		new /obj/item/tickle_feather(loc)
-
 //and there is code for successful check, so we are hitting someone with a pillow
 	pillow_feathers.start()
 	switch(user.zone_selected) //to let code know what part of body we gonna hit
@@ -252,7 +249,6 @@
 	icon = 'icons/obj/pillows.dmi'
 	icon_state = "pillowpile_small_pink"
 	base_icon_state = "pillowpile_small"
-	pseudo_z_axis = 4
 	var/current_color = "pink"
 	var/mutable_appearance/armrest
 
@@ -378,7 +374,6 @@
 	icon = 'icons/obj/pillows.dmi'
 	icon_state = "pillowpile_large_pink"
 	base_icon_state = "pillowpile_large"
-	pseudo_z_axis = 4
 	var/current_color = "pink"
 	var/mutable_appearance/armrest
 	//Containing pillows that we have here
