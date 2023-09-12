@@ -19,9 +19,6 @@
 		/obj/item/holochip,
 		/obj/item/card,
 		/obj/item/clothing/mask/cigarette,
-		// SKYRAT EDIT BEGIN
-		/obj/item/condom_pack,
-		// SKYRAT EDIT END
 		/obj/item/coupon,
 		/obj/item/flashlight/pen,
 		/obj/item/folder/biscuit,
