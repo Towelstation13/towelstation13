@@ -118,14 +118,6 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		for(var/mob/mob in view(sound_range, user))
 			SEND_SOUND(sound_cache, mob)
 
-	if(lewd)
-		user.adjust_pleasure(user_pleasure)
-		user.adjust_arousal(user_arousal)
-		user.adjust_pain(user_pain)
-		target.adjust_pleasure(target_pleasure)
-		target.adjust_arousal(target_arousal)
-		target.adjust_pain(target_pain)
-
 /datum/interaction/proc/load_from_json(path)
 	var/fpath = path
 	if(!fexists(fpath))
