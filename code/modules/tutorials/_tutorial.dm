@@ -119,7 +119,6 @@
 	PROTECTED_PROC(TRUE)
 
 	var/atom/movable/screen/preview = new
-	preview.icon = ui_style2icon(user.client?.prefs.read_preference(/datum/preference/choiced/ui_style) || GLOB.available_ui_styles[1])
 	preview.icon_state = icon_state
 	preview.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	preview.screen_loc = "1,1"

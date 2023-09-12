@@ -562,11 +562,6 @@
 	item_path = /obj/item/storage/fancy/cigarettes/khi
 	ckeywhitelist = list("ultimarifox")
 
-/datum/loadout_item/shoes/dragheels
-	name = "Fancy Heels (dragmeme)"
-	item_path = /obj/item/clothing/shoes/fancy_heels/drag
-	ckeywhitelist = list("thedragmeme")
-
 /datum/loadout_item/under/jumpsuit/bimpcap
 	name = "Formal Matte Black Captain Uniform"
 	item_path = /obj/item/clothing/under/bimpcap

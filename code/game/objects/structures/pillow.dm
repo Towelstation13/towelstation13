@@ -7,13 +7,12 @@
 /obj/item/fancy_pillow
 	name = "pillow"
 	desc = "A big, soft pillow."
-	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_items/lewd_items.dmi'
-	lefthand_file = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_left.dmi'
-	righthand_file = 'modular_skyrat/modules/modular_items/lewd_items/icons/mob/lewd_inhands/lewd_inhand_right.dmi'
+	icon = 'icons/obj/pillows.dmi'
+	lefthand_file = 'icons/mob/inhands/items/pillow_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/pillow_righthand.dmi'
 	icon_state = "pillow_pink_round"
 	base_icon_state = "pillow"
 	inhand_icon_state = "pillow_pink_round"
-	var/datum/effect_system/feathers/pillow_feathers
 	var/current_color = "pink"
 	var/current_form = "round"
 	var/color_changed = FALSE
@@ -78,10 +77,6 @@
 		populate_pillow_colors()
 	if(!length(pillow_forms))
 		populate_pillow_forms()
-	//part of code for feathers spawn on hit
-	pillow_feathers = new
-	pillow_feathers.set_up(2, 0, src)
-	pillow_feathers.attach(src)
 
 /obj/item/fancy_pillow/update_icon_state()
 	. = ..()
@@ -89,21 +84,7 @@
 	inhand_icon_state = "[base_icon_state]_[current_color]_[current_form]"
 
 /obj/item/fancy_pillow/Destroy()
-	if(pillow_feathers)
-		qdel(pillow_feathers)
-		pillow_feathers = null
 	return ..()
-
-//feathers effect on hit
-
-/obj/effect/temp_visual/feathers
-	name = "feathers"
-	icon_state = "feathers"
-	icon = 'modular_skyrat/modules/modular_items/lewd_items/icons/obj/lewd_decals/lewd_decals.dmi'
-	duration = 14
-
-/datum/effect_system/feathers
-	effect_type = /obj/effect/temp_visual/feathers
 
 /obj/item/fancy_pillow/attack(mob/living/carbon/human/affected_mob, mob/living/carbon/human/user)
 	. = ..()
@@ -111,7 +92,6 @@
 		return
 
 //and there is code for successful check, so we are hitting someone with a pillow
-	pillow_feathers.start()
 	switch(user.zone_selected) //to let code know what part of body we gonna hit
 
 		if(BODY_ZONE_HEAD)
@@ -120,7 +100,7 @@
 			if(prob(30))
 				affected_mob.emote(pick("laugh", "giggle"))
 			user.visible_message(span_notice("[user] [message]!"))
-			playsound(loc, 'modular_skyrat/modules/modular_items/lewd_items/sounds/hug.ogg', 50, 1, -1)
+			playsound(loc, 'sound/items/pillow_hit.ogg', 50, 1, -1)
 
 		if(BODY_ZONE_CHEST)
 			var/message = ""
@@ -128,7 +108,7 @@
 			if(prob(30))
 				affected_mob.emote(pick("laugh", "giggle"))
 			user.visible_message(span_notice("[user] [message]!"))
-			playsound(loc, 'modular_skyrat/modules/modular_items/lewd_items/sounds/hug.ogg', 50, 1, -1)
+			playsound(loc, 'sound/items/pillow_hit.ogg', 50, 1, -1)
 
 		else
 			var/message = ""
@@ -136,7 +116,7 @@
 			if(prob(30))
 				affected_mob.emote(pick("laugh", "giggle"))
 			user.visible_message(span_notice("[user] [message]!"))
-			playsound(loc, 'modular_skyrat/modules/modular_items/lewd_items/sounds/hug.ogg', 50, 1, -1)
+			playsound(loc, 'sound/items/pillow_hit.ogg', 50, 1, -1)
 
 //spawning pillow on the ground when clicking on pillow	by LBM
 

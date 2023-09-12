@@ -91,8 +91,6 @@
 	data["block_interact"] = interact_next >= world.time
 	data["interactions"] = categories
 
-	var/list/parts = list()
-
 /**
  *  Takes the organ slot name, along with a target and source, along with the item on the target that the source can potentially interact with.
  *  If the source can't interact with said slot, or there is no item in the first place, it'll set the icon to null to indicate that TGUI should put a placeholder sprite.
