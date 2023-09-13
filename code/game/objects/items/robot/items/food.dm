@@ -65,7 +65,7 @@
 				/* starting_reagent_purity = */ null,
 				/* no_base_reagents = */ FALSE,
 				/* prefill_flavours = */ list(ICE_CREAM_VANILLA),
-				)
+			)
 			food_item.desc = "Eat the ice cream."
 
 	var/into_hands = FALSE

@@ -448,7 +448,7 @@
 			if(prob(10))
 				victim.set_dizzy_if_lower(2 SECONDS)
 			if(prob(5))
-				victim.vomit()
+				victim.vomit(VOMIT_CATEGORY_DEFAULT)
 
 /datum/reagent/consumable/condensedcapsaicin/on_mob_life(mob/living/carbon/M, seconds_per_tick, times_fired)
 	if(!holder.has_reagent(/datum/reagent/consumable/milk))
@@ -647,6 +647,14 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	default_container = /obj/item/reagent_containers/condiment/rice
 
+/datum/reagent/consumable/rice_flour
+	name = "Rice Flour"
+	description = "Flour mixed with Rice"
+	reagent_state = SOLID
+	color = "#FFFFFF" // rgb: 0, 0, 0
+	taste_description = "chalky wheat with rice"
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	
 /datum/reagent/consumable/vanilla
 	name = "Vanilla Powder"
 	description = "A fatty, bitter paste made from vanilla pods."
