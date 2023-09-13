@@ -77,7 +77,9 @@ export type Job = {
   description: string;
   department: string;
   // SKYRAT EDIT
+  /* TOWEL EDIT START - VETERAN REMOVAL
   veteran?: boolean;
+   * TOWEL EDIT END */
   alt_titles?: string[];
   // SKYRAT EDIT END
 };
@@ -171,7 +173,9 @@ export type PreferencesMenuData = {
   preview_options: string[]; // SKYRAT EDIT ADDITION
   preview_selection: string; // SKYRAT EDIT ADDITION
 
+  /* TOWEL EDIT START - VETERAN REMOVAL
   is_veteran: BooleanLike; // SKYRAT EDIT - Veteran status
+   * TOWEL EDIT END */
 
   character_preferences: {
     clothing: Record<string, string>;

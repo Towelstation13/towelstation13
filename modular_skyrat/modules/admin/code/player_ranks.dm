@@ -1,5 +1,7 @@
 /// The list of the available special player ranks
-#define SKYRAT_PLAYER_RANKS list("Donator", "Mentor", "Veteran")
+/* TOWEL EDIT START - VETERAN REMOVAL
+#define SKYRAT_PLAYER_RANKS list("Donator", "Mentor")
+ * TOWEL EDIT END */
 
 /client/proc/manage_player_ranks()
 	set category = "Admin"

@@ -227,6 +227,7 @@ const JobRow = (
       </Stack>
     );
     // SKYRAT EDIT START
+    /* TOWEL EDIT START - VETERAN REMOVAL
   } else if (job.veteran && !data.is_veteran) {
     rightSide = (
       <Stack align="center" height="100%" pr={1}>
@@ -247,6 +248,7 @@ const JobRow = (
       </Stack>
     );
     // SKYRAT EDIT END
+     * TOWEL EDIT END*/
   } else {
     rightSide = (
       <PriorityButtons
