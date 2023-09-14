@@ -73,7 +73,8 @@
 
 // SKYRAT EDIT ADDITION //TOWELSTATION EDIT - Adds podpeople lore
 /datum/species/pod/get_species_description()
-	return "Podpeople are a race of humanoid plant people who grow in pods, and are known for their green skin, leafy hair, and symbiotic relationship with the natural world."
+	return "Podpeople are a race of humanoid plant people who grow in pods, and are known for their green skin,\
+		leafy hair, and symbiotic relationship with the natural world." //Originally said "Plant lore!"
 
 /datum/species/pod/get_species_lore()
 	return list(
@@ -83,7 +84,7 @@
 
 		"On their home planet, the podpeople live in small villages and communities. They have developed\
 			a symbiotic relationship with the planet's ecosystem, working together to care for the land.\
-			Each village is led by a podmother, who makes decisions that affect the community."
+			 Each village is led by a podmother, who makes decisions that affect the community." //Originally said "You're a plant!"
 
 	)
 // SKYRAT EDIT END //TOWELSTATION EDIT END
