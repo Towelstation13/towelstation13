@@ -262,6 +262,7 @@
 		var/atom/movable/screen/alert/notify_action/alert = ghost.throw_alert("[REF(source)]_notify_action", /atom/movable/screen/alert/notify_action)
 		if(!alert)
 			continue
+		var/ui_style = ghost.client?.prefs?.read_preference(/datum/preference/choiced/ui_style)
 		if (header)
 			alert.name = header
 		alert.desc = message

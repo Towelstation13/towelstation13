@@ -17,6 +17,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	"Detective" = 'icons/hud/screen_detective.dmi',
 ))
 
+/proc/ui_style2icon(ui_style)
+	return GLOB.available_ui_styles[ui_style] || GLOB.available_ui_styles[GLOB.available_ui_styles[1]]
+
 /datum/hud
 	var/mob/mymob
 
