@@ -19,12 +19,7 @@ MUTANT_SYNTH_CHASSIS, \
 "skrell_hair", \
 "taur", \
 "xenodorsal", \
-"xenohead", \
-"penis", \
-"testicles", \
-"womb", \
-"vagina", \
-"breasts",))
+"xenohead",))
 
 /datum/preferences/proc/migrate_skyrat(list/skyrat_data)
 	if(features["flavor_text"])
