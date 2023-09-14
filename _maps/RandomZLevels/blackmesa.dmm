@@ -15217,7 +15217,6 @@
 /area/awaymission/black_mesa/genetics_elevator)
 "wyq" = (
 /obj/structure/table,
-/obj/item/serviette_pack,
 /turf/open/floor/iron/dark,
 /area/awaymission/black_mesa/hecu_zone_camp)
 "wyy" = (
