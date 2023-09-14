@@ -7332,7 +7332,6 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/port_tarkon/atmos)
 "Rp" = (
-/obj/machinery/vending/dorms,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/port_tarkon/cargo)
 "Rq" = (
