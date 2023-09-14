@@ -263,6 +263,8 @@
 		if(!alert)
 			continue
 		var/ui_style = ghost.client?.prefs?.read_preference(/datum/preference/choiced/ui_style)
+		if(ui_style)
+			alert.icon = ui_style2icon(ui_style)
 		if (header)
 			alert.name = header
 		alert.desc = message
