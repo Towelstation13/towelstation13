@@ -8,8 +8,8 @@
 	name = "pillow"
 	desc = "A big, soft pillow."
 	icon = 'icons/obj/pillows.dmi'
-	lefthand_file = 'icons/mob/inhands/items/pillow_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/pillow_righthand.dmi'
+	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	icon_state = "pillow_pink_round"
 	base_icon_state = "pillow"
 	inhand_icon_state = "pillow_pink_round"
