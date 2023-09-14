@@ -206,7 +206,7 @@ const SLOTS: Record<
     gridSpot: getGridSpotKey([4, 5]),
     image: 'inventory-pocket.png',
   },
-
+};
 enum ObscuringLevel {
   Completely = 1,
   Hidden = 2,
