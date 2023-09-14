@@ -296,6 +296,7 @@
       report success or failure upon round end.'
   - qol: Space Ninja spider charges will now display where they can be detonated when
       examined, if you are a ninja.
+
 2023-09-09:
   LT3:
   - qol: Supermatter common channel alerts are less frequent if the crystal's integrity
@@ -308,6 +309,13 @@
       your injuries hurt.
   - rscadd: Ever see a robot yawn? Don't worry, it makes sense now.
   - bugfix: The messenger app can now be used when laying down.
+
+2023-09-13:
+  LT3:
+  - qol: Supermatter common channel alerts are less frequent if the crystal's integrity
+      is rising rapidly
+  SkyratBot:
+
   - bugfix: Cauteries now have 'heat', like lighters, welders, etc.
   - qol: You can smoke with a space helmet as long as you have internals on.
   - bugfix: Getting a node researched now properly makes it no longer hidden.
@@ -317,6 +325,7 @@
       z-level, with the Science techweb remaining as fallback.
   - rscadd: Oldstation RND, comes with their own Techweb and special surgery to gain
       research points through dissecting Xenomorphs.
+upstream-sync-1
   - balance: Traitors who are activated as sleeper agents or arrive late on the arrivals
       shuttle will begin with more reputation and likely be able to immediately access
       most of the uplink catalogue.
@@ -492,3 +501,4 @@
   - balance: Buffed MCR damage in line with an upstream generic laser buff
   vinylspiders:
   - bugfix: Headsets now have their old worn sprites back, did you ever notice it?
+
