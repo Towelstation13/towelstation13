@@ -1,7 +1,7 @@
 /obj/item/compressionkit
 	name = "bluespace compression kit"
 	desc = "An illegally modified BSRPED, capable of reducing the size of most items."
-	icon = 'modular_towelstation\modules\compression_kit\compressionkit.dmi'
+	icon = 'modular_towelstation/modules/compression_kit/compressionkit.dmi'
 	icon_state = "compression_c"
 	inhand_icon_state = "BS_RPED"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
