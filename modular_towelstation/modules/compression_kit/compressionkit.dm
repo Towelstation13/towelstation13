@@ -50,7 +50,7 @@
 		I.forceMove(T)
 	head.drop_limb()
 	qdel(head)
-	new user.gib_type(T,1,user.get_static_viruses())
+	user.spawn_gibs()
 	user.add_splatter_floor(T)
 	playsound(user, 'sound/weapons/flash.ogg', 50, 1)
 	playsound(user, 'sound/effects/splat.ogg', 50, 1)
