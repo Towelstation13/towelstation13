@@ -9,7 +9,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	var/charges = 5
 	// var/damage_multiplier = 0.2 Not in use yet.
-	var/mode = 0
+	var/mode = COMPRESSION_MODE
 
 /obj/item/compressionkit/examine(mob/user)
 	. = ..()
@@ -17,22 +17,20 @@
 	. += span_notice("Use in-hand to swap toggle compress mode.")
 
 /obj/item/compressionkit/attack_self(mob/user)
-	if(mode == 0)
-		mode = 1
+	if(mode == COMPRESSION_MODE)
+		mode = EXPAND_MODE
 		icon_state = "compression_e"
 		to_chat(user, span_notice("You switch the compressor to expand mode. This isn't implemented yet, so right now it wont do anything different!"))
 		return
-	if(mode == 1)
-		mode = 0
+	if(mode == EXPAND_MODE)
+		mode = COMPRESSION_MODE
 		icon_state = "compression_c"
 		to_chat(user, span_notice("You switch the compressor to compress mode. Usage will now reduce the size of objects."))
 		return
 	else
-		mode = 0
+		mode = COMPRESSION_MODE
 		icon_state = "compression_c"
 		to_chat(user, span_notice("Some coder cocked up or an admin broke your compressor. It's been set back to compress mode.."))
-
-do_sparks(5, 1, src)
 
 /obj/item/compressionkit/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is sticking their head in [src] and turning it on! [user.p_Theyre(TRUE)] going to compress their own skull!"))
