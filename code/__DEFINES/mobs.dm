@@ -725,10 +725,6 @@ GLOBAL_LIST_INIT(human_heights_to_offsets, list(
 /// Jumpsuit clothing layer
 #define UNIFORM_LAYER 31 // SKYRAT EDIT CHANGE - ORIGINAL: 26
 // SKYRAT EDIT ADDITION BEGIN - cursed layers under clothing
-#define ANUS_LAYER 30
-#define VAGINA_LAYER 29
-#define PENIS_LAYER 28
-#define NIPPLES_LAYER 27
 #define BANDAGE_LAYER 26
 //SKYRAT EDIT ADDITION END
 /// ID card layer
