@@ -14,7 +14,7 @@
 /obj/item/compressionkit/examine(mob/user)
 	. = ..()
 	. += span_notice("It has [charges] charges left. Recharge with bluespace crystals.")
-	. += span_notice("Use in-hand to swap toggle compress/expand mode (expand mode not yet implemented).")
+	. += span_notice("Use in-hand to swap toggle compress mode.")
 
 /obj/item/compressionkit/attack_self(mob/user)
 	if(mode == 0)
