@@ -6,7 +6,7 @@ MODULE ID: CUSTOMIZATION
 
 IF YOU WANT TO ADD AN EXTRA FEATURE TO SOMEONES DNA LOOK AT "code/__DEFINES/~skyrat_defines/DNA.dm"
 
-Re-writes how mutant bodyparts exist and how they're handled. Adds in a per limb body marking system. Adds in loadout, with lots of clothing ported over. Adds in all the missing species. Adds in flavor text and OOC prefs. Adds in special rendering cases for digitigrades, taurs, snouts, voxes etc. Adds in changeable PDA ringtone message.
+Re-writes how mutant bodyparts exist and how they're handled. Adds in a per limb body marking system. Adds in loadout, with lots of clothing ported over. Adds in all the missing species. Adds in flavor text and OOC prefs. Adds in special rendering cases for digitigrades, snouts, voxes etc. Adds in changeable PDA ringtone message.
 
 ### TG Proc Changes:
 
@@ -69,14 +69,8 @@ Re-writes how mutant bodyparts exist and how they're handled. Adds in a per limb
 .\modular_skyrat\master_files\icons\mob\clothing\mask_muzzled.dmi
 .\modular_skyrat\master_files\icons\mob\clothing\mask_vox.dmi
 .\modular_skyrat\master_files\icons\mob\clothing\suit_digi.dmi
-.\modular_skyrat\master_files\icons\mob\clothing\suit_taur_hoof.dmi
-.\modular_skyrat\master_files\icons\mob\clothing\suit_taur_paw.dmi
-.\modular_skyrat\master_files\icons\mob\clothing\suit_taur_snake.dmi
 .\modular_skyrat\master_files\icons\mob\clothing\uniform_digi.dmi
 .\modular_skyrat\master_files\icons\mob\clothing\under\uniform_digi.dmi
-.\modular_skyrat\master_files\icons\mob\clothing\under\uniform_taur_hoof.dmi
-.\modular_skyrat\master_files\icons\mob\clothing\under\uniform_taur_paw.dmi
-.\modular_skyrat\master_files\icons\mob\clothing\under\uniform_taur_snake.dmi
 
 ./modular_skyrat/master_files/icons/obj/drinks.dmi
 

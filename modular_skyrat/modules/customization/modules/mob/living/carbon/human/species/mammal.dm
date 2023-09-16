@@ -17,7 +17,6 @@
 		"horns" = "None",
 		"ears" = ACC_RANDOM,
 		"legs" = ACC_RANDOM,
-		"taur" = "None",
 		"fluff" = "None",
 		"wings" = "None",
 		"head_acc" = "None",

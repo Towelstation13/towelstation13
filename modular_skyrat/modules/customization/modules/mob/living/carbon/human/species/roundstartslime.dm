@@ -3,7 +3,6 @@
 		"tail" = "None",
 		"snout" = "None",
 		"ears" = "None",
-		"taur" = "None",
 		"wings" = "None",
 		"legs" = "Normal Legs",
 		"horns" = "None",
@@ -48,7 +47,7 @@
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "biohazard",
 		SPECIES_PERK_NAME = "Squishy Form",
-		SPECIES_PERK_DESC = "Being made of slime, you have the ability to alter your physical form to be whatever you choose! You may grow ears, change your hair, and even become a taur-like if you so choose, at the press of a button and the snap of a finger!"
+		SPECIES_PERK_DESC = "Being made of slime, you have the ability to alter your physical form to be whatever you choose! You may grow ears, and change your hair, at the press of a button and the snap of a finger!"
 	))
 
 	return perk_descriptions

@@ -28,7 +28,6 @@
 	icon_state = "recolorable_suitskirt"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 	body_parts_covered = CHEST|GROIN|LEGS
 	greyscale_config = /datum/greyscale_config/recolorable_suitskirt
 	greyscale_config_worn = /datum/greyscale_config/recolorable_suitskirt/worn
@@ -42,7 +41,6 @@
 	desc = "A clean white shirt with a tight-fitting black pencilskirt."
 	icon_state = "black_pencil"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/suit/skyrat/pencil/black_really
 	name = "executive pencilskirt"
@@ -96,7 +94,6 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY|FEMALE_UNIFORM_NO_BREASTS
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/suit/skyrat/inferno
 	name = "inferno suit"

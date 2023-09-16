@@ -706,38 +706,6 @@ export const skrell_hair_emissive: Feature<boolean[]> = {
   component: FeatureTriBoolInput,
 };
 
-export const taur_toggle: FeatureToggle = {
-  name: 'Taur',
-  description:
-    "Add some lore for your species! Won't show up if there's no custom species.",
-  component: CheckboxInput,
-};
-
-export const feature_taur: Feature<string> = {
-  name: 'Taur Selection',
-  description:
-    'Want to have a fancy species name? Put it here, or leave it blank.',
-  component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
-  ) => {
-    return <FeatureDropdownInput buttons {...props} />;
-  },
-};
-
-export const taur_color: Feature<string[]> = {
-  name: 'Taur Colors',
-  description:
-    'Want to have a fancy species name? Put it here, or leave it blank.',
-  component: FeatureTriColorInput,
-};
-
-export const taur_emissive: Feature<boolean[]> = {
-  name: 'Taur Emissives',
-  description:
-    'Want to have a fancy species name? Put it here, or leave it blank.',
-  component: FeatureTriBoolInput,
-};
-
 export const xenodorsal_toggle: FeatureToggle = {
   name: 'Xenodorsal',
   description:

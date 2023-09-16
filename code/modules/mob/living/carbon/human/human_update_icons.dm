@@ -120,12 +120,6 @@ There are several things that need to be remembered:
 			icon_file = DEFAULT_UNIFORM_FILE
 			handled_by_bodytype = FALSE
 
-		// SKYRAT EDIT ADDITION START - Taur-friendly suits!
-		if(bodytype & BODYTYPE_TAUR)
-			if(istype(uniform) && uniform.gets_cropped_on_taurs)
-				mutant_styles |= get_taur_mode()
-		// SKYRAT EDIT END
-
 		//END SPECIES HANDLING
 		uniform_overlay = uniform.build_worn_icon(
 			default_layer = UNIFORM_LAYER,
@@ -134,7 +128,7 @@ There are several things that need to be remembered:
 			female_uniform = woman ? uniform.female_sprite_flags : null,
 			override_state = target_overlay,
 			override_file = handled_by_bodytype ? icon_file : null,
-			mutant_styles = mutant_styles, // SKYRAT EDIT ADDITION - Taur-friendly uniforms!
+			mutant_styles = mutant_styles, // SKYRAT EDIT ADDITION - Teshari-friendly uniforms!
 		)
 
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
@@ -366,7 +360,7 @@ There are several things that need to be remembered:
 				icon_file = species_icon_file
 				mutant_override = TRUE
 		else if(bodytype & BODYTYPE_HIDE_SHOES)
-			return // We just don't want shoes that float if we're not displaying legs (useful for taurs, for now)
+			return // We just don't want shoes that float if we're not displaying legs
 		// SKYRAT EDIT END
 
 		var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, override_file = mutant_override ? icon_file : null) // SKYRAT EDIT CHANGE
@@ -516,13 +510,9 @@ There are several things that need to be remembered:
 				icon_file = species_icon_file
 				mutant_override = TRUE
 
-		if(bodytype & BODYTYPE_TAUR)
-			var/obj/item/clothing/suit/worn_suit = wear_suit
-			if(istype(worn_suit) && worn_suit.gets_cropped_on_taurs)
-				mutant_styles |= get_taur_mode()
 		// SKYRAT EDIT END
 
-		var/mutable_appearance/suit_overlay = wear_suit.build_worn_icon(default_layer = SUIT_LAYER, default_icon_file = icon_file, override_file = mutant_override ? icon_file : null, mutant_styles = mutant_styles) // SKYRAT EDIT CHANGE - Mutant bodytypes and Taur-friendly suits!
+		var/mutable_appearance/suit_overlay = wear_suit.build_worn_icon(default_layer = SUIT_LAYER, default_icon_file = icon_file, override_file = mutant_override ? icon_file : null, mutant_styles = mutant_styles) // SKYRAT EDIT CHANGE - Mutant bodytypes!
 
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		// SKYRAT EDIT ADDITION
@@ -686,7 +676,7 @@ There are several things that need to be remembered:
 	var/icon/female_clothing_icon = GLOB.female_clothing_icons[index]
 	if(!female_clothing_icon) 	//Create standing/laying icons if they don't exist
 		generate_female_clothing(index, t_color, icon, type)
-	return mutable_appearance(GLOB.female_clothing_icons[index], layer = -layer, icon_state = t_color) // SKYRAT EDIT - Taur-friendly uniforms and suits - Adds `icon_state = t_color`
+	return mutable_appearance(GLOB.female_clothing_icons[index], layer = -layer, icon_state = t_color) // SKYRAT EDIT - Adds `icon_state = t_color`
 
 /mob/living/carbon/human/proc/get_overlays_copy(list/unwantedLayers)
 	var/list/out = new
@@ -804,7 +794,7 @@ in this situation default_icon_file is expected to match either the lefthand_ or
 female_uniform: A value matching a uniform item's female_sprite_flags var, if this is anything but NO_FEMALE_UNIFORM, we
 generate/load female uniform sprites matching all previously decided variables
 
-mutant_styles: The mutant style - taur bodytype, STYLE_TESHARI, etc. // SKYRAT EDIT ADDITION - Taur-friendly suits and uniforms
+mutant_styles: The mutant style - STYLE_TESHARI, etc.
 */
 /obj/item/proc/build_worn_icon(
 	default_layer = 0,
@@ -837,10 +827,6 @@ mutant_styles: The mutant style - taur bodytype, STYLE_TESHARI, etc. // SKYRAT E
 		standing = wear_female_version(t_state, file2use, layer2use, female_uniform, greyscale_colors) //should layer2use be in sync with the adjusted value below? needs testing - shiz
 	if(!standing)
 		standing = mutable_appearance(file2use, t_state, -layer2use)
-	// SKYRAT EDIT ADDITION START - Taur-friendly uniforms and suits
-	if(mutant_styles & STYLE_TAUR_ALL)
-		standing = wear_taur_version(standing.icon_state, standing.icon, layer2use, female_uniform, greyscale_colors)
-	// SKYRAT EDIT END
 
 	//Get the overlays for this item when it's being worn
 	//eg: ammo counters, primed grenade flashes, etc.

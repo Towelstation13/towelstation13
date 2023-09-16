@@ -17,7 +17,6 @@ MUTANT_SYNTH_ANTENNA, \
 MUTANT_SYNTH_CHASSIS, \
 "neck_acc", \
 "skrell_hair", \
-"taur", \
 "xenodorsal", \
 "xenohead",))
 

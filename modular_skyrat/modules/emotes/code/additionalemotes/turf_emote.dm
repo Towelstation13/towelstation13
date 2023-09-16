@@ -15,13 +15,13 @@
 
 	if(ishuman(user))
 		//feet
-		if(!(human_user.bodytype & BODYTYPE_DIGITIGRADE) && !(human_user.dna.species.mutant_bodyparts["taur"]))
+		if(!(human_user.bodytype & BODYTYPE_DIGITIGRADE))
 			user.allowed_turfs += "footprint"
 
-		if((human_user.bodytype & BODYTYPE_DIGITIGRADE) || human_user.dna.species.mutant_bodyparts["taur"])
+		if((human_user.bodytype & BODYTYPE_DIGITIGRADE))
 			user.allowed_turfs += list("pawprint", "hoofprint", "clawprint")
 
-		//species & taurs
+		//species
 		if(islizard(user) || HAS_TRAIT(user, TRAIT_ASH_ASPECT))
 			user.allowed_turfs += "smoke"
 			user.allowed_turfs -= list("pawprint", "hoofprint")
@@ -46,10 +46,7 @@
 			user.allowed_turfs += "vines"
 
 		if(issynthetic(user))
-			if(human_user.dna.species.mutant_bodyparts["taur"])
-				user.allowed_turfs += "holobed" //taurs get the holobed instead
-			else
-				user.allowed_turfs += "holoseat"
+			user.allowed_turfs += "holoseat"
 
 		//wings
 		if((istype(user.get_organ_slot(ORGAN_SLOT_WINGS), /obj/item/organ/external/wings/moth)) || HAS_TRAIT(user, TRAIT_SPARKLE_ASPECT))
@@ -62,16 +59,10 @@
 			if(tail.fluffy)
 				user.allowed_turfs += "tails"
 
-		var/taur_mode = human_user.get_taur_mode()
-		if(taur_mode & STYLE_TAUR_SNAKE)
-			user.allowed_turfs -= list("pawprint", "hoofprint", "clawprint")
-			user.allowed_turfs += "constrict"
-
 		//clothing
 		var/obj/item/shoes = user.get_item_by_slot(ITEM_SLOT_FEET)
 		if(istype(shoes, /obj/item/clothing/shoes))
-			if(!human_user.dna.species.mutant_bodyparts["taur"])
-				user.allowed_turfs += "shoeprint"
+			user.allowed_turfs += "shoeprint"
 
 	if(issilicon(user))
 		user.allowed_turfs += list("holoseat", "holobed", "borgmat")
@@ -120,9 +111,6 @@
 			var/list/tail_emotes = list("tails")
 			if(current_turf in tail_emotes)
 				key = "tail"
-			var/list/taur_emotes = list("constrict")
-			if(current_turf in taur_emotes)
-				key = "taur"
 
 			//coloring
 			var/list/finished_list = list()

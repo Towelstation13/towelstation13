@@ -100,9 +100,7 @@
 // SKYRAT EDIT ADDITION
 ///The limb fits a modular custom shape
 #define BODYTYPE_CUSTOM (1<<9)
-///The limb fits a taur body
-#define BODYTYPE_TAUR (1<<10)
-///The limb causes shoes to no longer be displayed, useful for taurs.
+///The limb causes shoes to no longer be displayed.
 #define BODYTYPE_HIDE_SHOES (1<<11)
 ///The limb causes glasses and hats to be drawn on layers 5 and 4 respectively. Currently used for snouts with the (Top) suffix, which are drawn on layer 6 and would normally cover facewear
 #define BODYTYPE_ALT_FACEWEAR_LAYER (1<<12)

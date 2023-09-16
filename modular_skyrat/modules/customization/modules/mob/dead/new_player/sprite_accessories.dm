@@ -41,9 +41,9 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	var/always_color_customizable
 	///Whether the accessory can have a special icon_state to render, i.e. wagging tails
 	var/special_render_case
-	///Special case of whether the accessory should be shifted in the X dimension, check taur genitals for example
+	///Special case of whether the accessory should be shifted in the X dimension.
 	var/special_x_dimension
-	///Special case of whether the accessory should have a different icon, check taur genitals for example
+	///Special case of whether the accessory should have a different icon.
 	var/special_icon_case
 	///Special case for MODsuit overlays
 	var/use_custom_mod_icon

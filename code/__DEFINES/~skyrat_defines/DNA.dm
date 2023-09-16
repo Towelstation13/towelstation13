@@ -54,7 +54,6 @@
 #define ORGAN_SLOT_EXTERNAL_SKRELL_HAIR "skrell_hair"
 #define ORGAN_SLOT_EXTERNAL_SYNTH_ANTENNA "synth_antenna"
 #define ORGAN_SLOT_EXTERNAL_SYNTH_SCREEN "synth_screen"
-#define ORGAN_SLOT_EXTERNAL_TAUR "taur"
 #define ORGAN_SLOT_EXTERNAL_XENODORSAL "xenodorsal"
 #define ORGAN_SLOT_EXTERNAL_XENOHEAD "xenohead"
 
@@ -140,6 +139,3 @@
 #define SPECIES_MUTANT_INFECTIOUS "infectious_mutant"
 #define SPECIES_MUTANT_SLOW "slow_mutant"
 #define SPECIES_MUTANT_FAST "fast_mutant"
-
-// Leaving this here because it's used for bodyparts, like SPECIES_X are, but since taurs aren't a species... Named it LIMBS instead.
-#define LIMBS_TAUR "taur"

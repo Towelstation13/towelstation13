@@ -16,7 +16,6 @@
 		"horns" = "None",
 		"ears" = "None",
 		"legs" = "Normal Legs",
-		"taur" = "None",
 		"fluff" = "None",
 		"wings" = "Bee",
 		"moth_antennae" = "None"

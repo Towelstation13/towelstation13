@@ -661,32 +661,6 @@
 	relevant_mutant_bodypart = "skrell_hair"
 	type_to_check = /datum/preference/toggle/mutant_toggle/skrell_hair
 
-/// Taur
-
-/datum/preference/toggle/mutant_toggle/taur
-	savefile_key = "taur_toggle"
-	relevant_mutant_bodypart = "taur"
-
-/datum/preference/choiced/mutant_choice/taur
-	savefile_key = "feature_taur"
-	relevant_mutant_bodypart = "taur"
-	type_to_check = /datum/preference/toggle/mutant_toggle/taur
-	default_accessory_type = /datum/sprite_accessory/taur/none
-
-/datum/preference/tri_color/taur
-	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
-	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "taur_color"
-	relevant_mutant_bodypart = "taur"
-	type_to_check = /datum/preference/toggle/mutant_toggle/taur
-
-/datum/preference/tri_bool/taur
-	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
-	savefile_identifier = PREFERENCE_CHARACTER
-	savefile_key = "taur_emissive"
-	relevant_mutant_bodypart = "taur"
-	type_to_check = /datum/preference/toggle/mutant_toggle/taur
-
 /// Xenodorsal
 
 /datum/preference/toggle/mutant_toggle/xenodorsal

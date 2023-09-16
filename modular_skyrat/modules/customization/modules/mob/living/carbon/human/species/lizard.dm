@@ -9,7 +9,6 @@
 		"horns" = ACC_RANDOM,
 		"body_markings" = ACC_RANDOM,
 		"legs" = DIGITIGRADE_LEGS,
-		"taur" = "None",
 		"wings" = "None",
 	)
 	payday_modifier = 1.0

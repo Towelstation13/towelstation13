@@ -21,14 +21,7 @@
 	/// The config type to use for greyscaled worn sprites for vox primalis characters. Both this and greyscale_colors must be assigned to work.
 	var/greyscale_config_worn_better_vox
 
-	var/worn_icon_taur_snake
-	var/worn_icon_taur_paw
-	var/worn_icon_taur_hoof
 	var/worn_icon_muzzled
-
-	var/greyscale_config_worn_taur_snake
-	var/greyscale_config_worn_taur_paw
-	var/greyscale_config_worn_taur_hoof
 
 	/// Used for BODYTYPE_CUSTOM: Needs to follow this syntax: a list() with the x and y coordinates of the pixel you want to get the color from. Colors are filled in as GAGs values for fallback.
 	var/list/species_clothing_color_coords[3]

@@ -18,7 +18,6 @@
 		"xenodorsal" = ACC_RANDOM,
 		"xenohead" = ACC_RANDOM,
 		"legs" = DIGITIGRADE_LEGS,
-		"taur" = "None"
 	)
 	external_organs = list()
 	payday_modifier = 1.0

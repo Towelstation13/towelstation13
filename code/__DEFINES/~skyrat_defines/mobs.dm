@@ -24,7 +24,6 @@
 #define BODYPART_ICON_MOTH 'modular_skyrat/modules/bodyparts/icons/moth_parts_greyscale.dmi'
 #define BODYPART_ICON_ROUNDSTARTSLIME 'modular_skyrat/modules/bodyparts/icons/slime_parts_greyscale.dmi'
 #define BODYPART_ICON_SKRELL 'modular_skyrat/modules/bodyparts/icons/skrell_parts_greyscale.dmi'
-#define BODYPART_ICON_TAUR 'modular_skyrat/modules/bodyparts/icons/taur_invisible_legs.dmi'
 #define BODYPART_ICON_TESHARI 'modular_skyrat/modules/bodyparts/icons/teshari_parts_greyscale.dmi'
 #define BODYPART_ICON_VOX 'modular_skyrat/modules/bodyparts/icons/vox_parts_greyscale.dmi'
 #define BODYPART_ICON_XENO 'modular_skyrat/modules/bodyparts/icons/xeno_parts_greyscale.dmi'
