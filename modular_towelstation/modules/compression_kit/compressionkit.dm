@@ -37,23 +37,23 @@
 	s.set_up(5, 1, get_turf(src))
 	s.start()
 
-/obj/item/compressionkit/suicide_act(mob/living/carbon/M)
-	user.visible_message(span_suicide("[user] is sticking their head in [src] and turning it on! [M.p_theyre(TRUE)] going to compress their own skull!"))
-	var/obj/item/bodypart/head = M.get_bodypart("head")
+/obj/item/compressionkit/suicide_act(mob/living/user)
+	user.visible_message(span_suicide("[user] is sticking their head in [src] and turning it on! [user.p_theyre(TRUE)] going to compress their own skull!"))
+	var/obj/item/bodypart/head = user.get_bodypart("head")
 	if(!head)
 		return
-	var/turf/T = get_turf(M)
-	var/list/organs = M.get_organs_for_zone("head") + M.get_organs_for_zone("eyes") + M.get_organs_for_zone("mouth")
+	var/turf/T = get_turf(user)
+	var/list/organs = user.get_organs_for_zone("head") + user.get_organs_for_zone("eyes") + user.get_organs_for_zone("mouth")
 	for(var/internal_organ in organs)
 		var/obj/item/organ/I = internal_organ
 		I.Remove()
 		I.forceMove(T)
 	head.drop_limb()
 	qdel(head)
-	new M.gib_type(T,1,M.get_static_viruses())
-	M.add_splatter_floor(T)
-	playsound(M, 'sound/weapons/flash.ogg', 50, 1)
-	playsound(M, 'sound/effects/splat.ogg', 50, 1)
+	new user.gib_type(T,1,user.get_static_viruses())
+	user.add_splatter_floor(T)
+	playsound(user, 'sound/weapons/flash.ogg', 50, 1)
+	playsound(user, 'sound/effects/splat.ogg', 50, 1)
 
 	return OXYLOSS
 
