@@ -63,7 +63,7 @@
 	if(istype(target, /obj/item))
 		var/obj/item/O = target
 		if(O.w_class == WEIGHT_CLASS_TINY)
-			playsound(get_turf(src), 'sound/machines/buzz-two.ogg', 50, 1)
+			playsound(get_turf(src), 'sound/machines/buzz-two.ogg', 50, TRUE)
 			to_chat(user, span_notice("[target] cannot be compressed smaller!"))
 			return
 		if(istype(O.atom_storage))
