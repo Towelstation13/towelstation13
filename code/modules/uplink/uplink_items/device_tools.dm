@@ -67,7 +67,7 @@
 	surplus = 20
 
 /* // SKYRAT EDIT REMOVAL
-/datum/uplink_item/device_tools/briefcase_launchpad
+/datum/uplink_item/device_tools/briefcase_launchpad 
 	name = "Briefcase Launchpad"
 	desc = "A briefcase containing a launchpad, a device able to teleport items and people to and from targets up to eight tiles away from the briefcase. \
 			Also includes a remote control, disguised as an ordinary folder. Touch the briefcase with the remote to link it."
