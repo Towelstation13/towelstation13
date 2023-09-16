@@ -194,10 +194,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/data = list()
 
 	// SKYRAT EDIT ADDITION START
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED)
-	else
-		data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED, PREVIEW_PREF_NAKED_AROUSED)
+	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED)
 	// SKYRAT EDIT ADDITION END
 
 	data["character_profiles"] = create_character_profiles()

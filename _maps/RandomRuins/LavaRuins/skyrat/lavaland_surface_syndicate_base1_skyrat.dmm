@@ -3879,12 +3879,6 @@
 /obj/machinery/seed_extractor,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/syndicate_lava_base/bar)
-"Ns" = (
-/obj/machinery/vending/dorms{
-	onstation = 0
-	},
-/turf/open/floor/iron,
-/area/ruin/syndicate_lava_base/dormitories)
 "NC" = (
 /obj/machinery/chem_dispenser/fullupgrade,
 /obj/effect/turf_decal/stripes/line{
@@ -6301,7 +6295,7 @@ JS
 JS
 jP
 Xs
-Ns
+JS
 SE
 ab
 ab

@@ -3943,12 +3943,6 @@
 /obj/structure/dresser,
 /turf/open/floor/iron/smooth_large,
 /area/ruin/syndicate_lava_base/cargo)
-"Kb" = (
-/obj/machinery/vending/dorms{
-	onstation = 0
-	},
-/turf/open/floor/iron,
-/area/ruin/syndicate_lava_base/dormitories)
 "Kg" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -6766,7 +6760,7 @@ Jd
 Jd
 DA
 HU
-Kb
+Jd
 CR
 ab
 ab

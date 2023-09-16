@@ -296,3 +296,47 @@
       report success or failure upon round end.'
   - qol: Space Ninja spider charges will now display where they can be detonated when
       examined, if you are a ninja.
+2023-09-09:
+  LT3:
+  - qol: Supermatter common channel alerts are less frequent if the crystal's integrity
+      is rising rapidly
+  Melbert:
+  - rscadd: '[Icebox] Remaps arrivals and the maintenance around it. Aux base out,
+      mass driver into a plasma lake in.'
+  SkyratBot:
+  - rscadd: Added the Numb quirk, that makes you (almost) unable to perceive how much
+      your injuries hurt.
+  - rscadd: Ever see a robot yawn? Don't worry, it makes sense now.
+  - bugfix: The messenger app can now be used when laying down.
+2023-09-15:
+  Seven:
+  - balance: The supermatter delamination countdown has been lowered from 30 to 13
+      seconds
+  - balance: Removing a sliver from the supermatter further lowers that down to 3
+      seconds
+  - balance: Supermatter panic button warning reduced from 5 to 3 seconds
+  - balance: Supermatter suppression system healing runtime reduced from 9 to 7 seconds
+  - balance: The supermatter crystal uses bigger text on its final countdown
+  - spellcheck: Some supermatter delamination related mood descriptions have been
+      edited to explain the mood effect better
+  SkyratBot:
+  - bugfix: Dynamic now biases less heavily towards the exact average.
+  - image: When you throw up nanites, your vomit should now be appropriately nanite-colored.
+  - bugfix: Fix poor dynamic threat distribution at lower population levels, causing
+      dynamic to generate better threat curves at lower population levels than it
+      did before.
+  Wallem:
+  - qol: Examine a Dish Drive to see all the items inside of it, as well as the item
+      you'll pull out when you interact with it.
+  - qol: Dish Drive servo tier increases suction range
+  honkpocket:
+  - bugfix: Players who run the DNR quirk no longer appear as revivable when examined
+  nikothedude:
+  - qol: 'Temporary flavor text preview character limit: From 37 to 110'
+  tf-4:
+  - rscadd: You can now craft ammo pouches from four leather.
+  - spellcheck: Fixed typo in cocaine snorting message.
+2023-09-16:
+  xPokee:
+  - spellcheck: Gave lore to podpeople
+  - rscdel: Removed all of the ERP features from the code.

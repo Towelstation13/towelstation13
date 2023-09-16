@@ -73,7 +73,6 @@
 		jobs[job.title] = list(
 			"description" = job.description,
 			"department" = department_name,
-			"veteran" = job.veteran_only, // SKYRAT EDIT
 			"alt_titles" = job.alt_titles, // SKYRAT EDIT
 		)
 
@@ -98,10 +97,6 @@
 
 /datum/preference_middleware/jobs/get_ui_static_data(mob/user)
 	var/list/data = list()
-	// SKYRAT EDIT
-	if(SSplayer_ranks.is_veteran(user.client))
-		data["is_veteran"] = TRUE
-	// SKYRAT EDIT END
 	var/list/required_job_playtime = get_required_job_playtime(user)
 	if (!isnull(required_job_playtime))
 		data += required_job_playtime

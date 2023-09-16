@@ -19,8 +19,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	var/markings_alpha = 255
 	///If a species can always be picked in prefs for the purposes of customizing it for ghost roles or events
 	var/always_customizable = FALSE
-	/// If a species requires the player to be a Veteran to be able to pick it.
-	var/veteran_only = FALSE
 	///Flavor text of the species displayed on character creation screeen
 	var/flavor_text = "No description."
 	///Path to BODYTYPE_CUSTOM species worn icons. An assoc list of ITEM_SLOT_X => /icon
@@ -29,19 +27,11 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	var/body_size_restricted = FALSE
 	///What accessories can a species have aswell as their default accessory of such type e.g. "frills" = "Aquatic". Default accessory colors is dictated by the accessory properties and mutcolors of the specie
 	var/list/default_mutant_bodyparts = list()
-	/// A static list of all genital slot possibilities.
-	var/static/list/genitals_list = list(ORGAN_SLOT_VAGINA, ORGAN_SLOT_WOMB, ORGAN_SLOT_TESTICLES, ORGAN_SLOT_BREASTS, ORGAN_SLOT_ANUS, ORGAN_SLOT_PENIS)
 	/// Are we lore protected? This prevents people from changing the species lore or species name.
 	var/lore_protected = FALSE
 
 /datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/owner, forced_colour, force_update = FALSE)
 	return
-
-/datum/species/New()
-	. = ..()
-	if(can_have_genitals)
-		for(var/genital in genitals_list)
-			default_mutant_bodyparts[genital] = "None"
 
 /datum/species/dullahan
 	mutant_bodyparts = list()
@@ -80,9 +70,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 /datum/species/proc/get_random_mutant_bodyparts(list/features) //Needs features to base the colour off of
 	var/list/mutantpart_list = list()
 	var/list/bodyparts_to_add = default_mutant_bodyparts.Copy()
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		for(var/genital in genitals_list)
-			bodyparts_to_add.Remove(genital)
 	for(var/key in bodyparts_to_add)
 		var/datum/sprite_accessory/SP
 		if(bodyparts_to_add[key] == ACC_RANDOM)

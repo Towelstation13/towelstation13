@@ -23,6 +23,7 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/spacer_born, /datum/quirk/paraplegic, /datum/quirk/item_quirk/settler),
 	list(/datum/quirk/photophobia, /datum/quirk/nyctophobia),
 	list(/datum/quirk/item_quirk/settler, /datum/quirk/freerunning),
+	list(/datum/quirk/numb, /datum/quirk/selfaware),
 	//SKYRAT EDIT ADDITION BEGIN
 	list(/datum/quirk/equipping/nerve_staple, /datum/quirk/nonviolent),
 	list(/datum/quirk/equipping/nerve_staple, /datum/quirk/item_quirk/nearsighted),
@@ -81,8 +82,6 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 			continue
 
 		// SKYRAT EDIT ADDITION START
-		if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
-			continue
 		// Hidden quirks aren't visible to TGUI or the player
 		if (initial(quirk_type.hidden_quirk))
 			continue

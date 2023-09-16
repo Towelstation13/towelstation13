@@ -40,7 +40,6 @@
 		/obj/projectile/bullet/b460 = 1
 	)
 
-	veteran_only = TRUE
 	job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
 
 /datum/outfit/job/blueshield

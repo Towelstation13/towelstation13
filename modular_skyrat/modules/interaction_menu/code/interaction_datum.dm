@@ -55,22 +55,6 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	if(target == user && usage == INTERACTION_OTHER)
 		return FALSE
 
-	if(user_required_parts.len)
-		for(var/thing in user_required_parts)
-			var/obj/item/organ/external/genital/required_part = user.get_organ_slot(thing)
-			if(isnull(required_part))
-				return FALSE
-			if(!required_part.is_exposed())
-				return FALSE
-
-	if(target_required_parts.len)
-		for(var/thing in target_required_parts)
-			var/obj/item/organ/external/genital/required_part = target.get_organ_slot(thing)
-			if(isnull(required_part))
-				return FALSE
-			if(!required_part.is_exposed())
-				return FALSE
-
 	for(var/requirement in interaction_requires)
 		switch(requirement)
 			if(INTERACTION_REQUIRE_SELF_HAND)
@@ -117,14 +101,6 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		sound_cache = pick(sound_possible)
 		for(var/mob/mob in view(sound_range, user))
 			SEND_SOUND(sound_cache, mob)
-
-	if(lewd)
-		user.adjust_pleasure(user_pleasure)
-		user.adjust_arousal(user_arousal)
-		user.adjust_pain(user_pain)
-		target.adjust_pleasure(target_pleasure)
-		target.adjust_arousal(target_arousal)
-		target.adjust_pain(target_pain)
 
 /datum/interaction/proc/load_from_json(path)
 	var/fpath = path

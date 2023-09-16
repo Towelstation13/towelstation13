@@ -260,9 +260,6 @@ const SpeciesPageInner = (
                   <Button
                     key={speciesKey}
                     onClick={() => {
-                      if (species.veteran_only && !data.is_veteran) {
-                        return;
-                      }
                       setSpecies(speciesKey);
                     }}
                     selected={
@@ -280,14 +277,6 @@ const SpeciesPageInner = (
                     />
                   </Button>
                 );
-                if (species.veteran_only && !data.is_veteran) {
-                  let tooltipContent =
-                    species.name +
-                    ' - You need to be a veteran to select this race, apply today!';
-                  speciesPage = (
-                    <Tooltip content={tooltipContent}>{speciesPage}</Tooltip>
-                  );
-                }
                 return speciesPage;
                 // SKYRAT EDIT END
               })}

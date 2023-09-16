@@ -2147,7 +2147,6 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/cargodise_freighter/vault)
 "Jd" = (
-/obj/machinery/vending/dorms,
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 1
 	},
@@ -2662,7 +2661,7 @@
 /obj/item/storage/organbox{
 	pixel_y = 6
 	},
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/surgery_tray,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},

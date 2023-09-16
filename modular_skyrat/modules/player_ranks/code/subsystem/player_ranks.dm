@@ -18,8 +18,6 @@ SUBSYSTEM_DEF(player_ranks)
 	var/datum/player_rank_controller/donator/donator_controller
 	/// The mentor player rank controller.
 	var/datum/player_rank_controller/mentor/mentor_controller
-	/// The veteran player rank controller.
-	var/datum/player_rank_controller/veteran/veteran_controller
 
 
 /datum/controller/subsystem/player_ranks/Initialize()
@@ -28,7 +26,6 @@ SUBSYSTEM_DEF(player_ranks)
 
 	load_donators()
 	load_mentors()
-	load_veterans()
 
 	return SS_INIT_SUCCESS
 
@@ -38,7 +35,6 @@ SUBSYSTEM_DEF(player_ranks)
 
 	QDEL_NULL(donator_controller)
 	QDEL_NULL(mentor_controller)
-	QDEL_NULL(veteran_controller)
 
 
 /**
@@ -46,15 +42,17 @@ SUBSYSTEM_DEF(player_ranks)
  *
  * Arguments:
  * * user - The client to verify the donator status of.
+ * * admin_bypass - Whether or not admins can succeed this check, even if they
+ * do not actually possess the role. Defaults to `TRUE`.
  */
-/datum/controller/subsystem/player_ranks/proc/is_donator(client/user)
+/datum/controller/subsystem/player_ranks/proc/is_donator(client/user, admin_bypass = TRUE)
 	if(!istype(user))
 		CRASH("Invalid user type provided to is_donator(), expected 'client' and obtained '[user ? user.type : "null"]'.")
 
 	if(GLOB.donator_list[user.ckey])
 		return TRUE
 
-	if(is_admin(user))
+	if(admin_bypass && is_admin(user))
 		return TRUE
 
 	return FALSE
@@ -66,32 +64,14 @@ SUBSYSTEM_DEF(player_ranks)
  *
  * Arguments:
  * * user - The client to verify the mentor status of.
+ * * admin_bypass - Whether or not admins can succeed this check, even if they
+ * do not actually possess the role. Defaults to `TRUE`.
  */
-/datum/controller/subsystem/player_ranks/proc/is_mentor(client/user)
+/datum/controller/subsystem/player_ranks/proc/is_mentor(client/user, admin_bypass = TRUE)
 	if(!istype(user))
 		CRASH("Invalid user type provided to is_mentor(), expected 'client' and obtained '[user ? user.type : "null"]'.")
 
-	return user.is_mentor()
-
-
-/**
- * Returns whether or not the user is qualified as a veteran.
- *
- * Arguments:
- * * user - The client to verify the veteran status of.
- */
-/datum/controller/subsystem/player_ranks/proc/is_veteran(client/user)
-	if(!istype(user))
-		CRASH("Invalid user type provided to is_veteran(), expected 'client' and obtained '[user ? user.type : "null"]'.")
-
-	if(GLOB.veteran_list[user.ckey])
-		return TRUE
-
-	if(is_admin(user))
-		return TRUE
-
-	return FALSE
-
+	return user.is_mentor(admin_bypass)
 
 /// Handles loading donators either via SQL or using the legacy system,
 /// based on configs.
@@ -171,32 +151,6 @@ SUBSYSTEM_DEF(player_ranks)
 	load_player_rank_sql(mentor_controller)
 
 
-/// Handles loading veteran players either via SQL or using the legacy system,
-/// based on configs.
-/datum/controller/subsystem/player_ranks/proc/load_veterans()
-	PROTECTED_PROC(TRUE)
-
-	if(IsAdminAdvancedProcCall())
-		return
-
-	veteran_controller = new
-
-	if(CONFIG_GET(flag/veteran_legacy_system))
-		veteran_controller.load_legacy()
-		return
-
-	if(!SSdbcore.Connect())
-		var/message = "Failed to connect to database in load_veterans(). Reverting to legacy system."
-		log_config(message)
-		log_game(message)
-		message_admins(message)
-		CONFIG_SET(flag/veteran_legacy_system, TRUE)
-		veteran_controller.load_legacy()
-		return
-
-	load_player_rank_sql(veteran_controller)
-
-
 /**
  * Handles populating the player rank from the database.
  *
@@ -236,9 +190,6 @@ SUBSYSTEM_DEF(player_ranks)
 
 	if(rank_title == mentor_controller.rank_title)
 		return mentor_controller
-
-	if(rank_title == veteran_controller.rank_title)
-		return veteran_controller
 
 	CRASH("Invalid player_rank_controller \"[rank_title || "*null*"]\" used in get_controller_for_group()!")
 
