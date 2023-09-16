@@ -1,7 +1,7 @@
 /obj/item/compressionkit
 	name = "bluespace compression kit"
 	desc = "An illegally modified BSRPED, capable of reducing the size of most items."
-	icon = 'icons/obj/tools.dmi'
+	icon = 'modular_towelstation\modules\compression_kit\compressionkit.dmi'
 	icon_state = "compression_c"
 	inhand_icon_state = "BS_RPED"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
@@ -72,13 +72,13 @@
 			playsound(get_turf(src), 'sound/machines/buzz-two.ogg', 50, 1)
 			to_chat(user, span_notice("[target] cannot be compressed smaller!"))
 			return
-		if(O.GetComponent(/datum/component/storage))
+		if(istype(O.atom_storage))
 			to_chat(user, span_notice("You feel like compressing an item that stores other items would be counterproductive."))
 			return
 		if(O.w_class > 1)
 			playsound(get_turf(src), 'sound/weapons/flash.ogg', 50, 1)
 			user.visible_message(span_warning("[user] is compressing [O] with their bluespace compression kit!"))
-			if(do_mob(user, O, 40) && charges > 0 && O.w_class > 1)
+			if(do_after(user, 4 SECONDS, O) && charges > 0 && O.w_class > 1)
 				playsound(get_turf(src), 'sound/weapons/emitter2.ogg', 50, 1)
 				sparks()
 				flash_lighting_fx(3, 3, LIGHT_COLOR_CYAN)
