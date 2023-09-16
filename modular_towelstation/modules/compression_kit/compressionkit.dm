@@ -1,3 +1,7 @@
+//Whether it is on compress or expand mode
+#define COMPRESSION_MODE 0
+#define EXPAND_MODE 1
+
 /obj/item/compressionkit
 	name = "bluespace compression kit"
 	desc = "An illegally modified BSRPED, capable of reducing the size of most items."
@@ -90,3 +94,6 @@
 		charges += 2 * B.amount
 		to_chat(user, span_notice("You insert [I] into [src]. It now has [charges] charges."))
 		qdel(I)
+
+#undef COMPRESSION_MODE
+#undef EXPAND_MODE
