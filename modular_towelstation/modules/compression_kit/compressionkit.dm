@@ -90,12 +90,9 @@
 			to_chat(user, span_notice("Anomalous error. Summon a coder."))
 
 /obj/item/compressionkit/attackby(obj/item/I, mob/user, params)
-	..()
+	. = ..()
 	if(istype(I, /obj/item/stack/ore/bluespace_crystal))
 		var/obj/item/stack/ore/bluespace_crystal/B = I
-		charges += 2
+		charges += 2 * B.amount
 		to_chat(user, span_notice("You insert [I] into [src]. It now has [charges] charges."))
-		if(B.amount > 1)
-			B.amount -= 1
-		else
-			qdel(I)
+		qdel(I)
