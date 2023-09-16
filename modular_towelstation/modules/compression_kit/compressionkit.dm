@@ -38,20 +38,19 @@
 	s.start()
 
 /obj/item/compressionkit/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] is sticking their head in [src] and turning it on! [user.p_theyre(TRUE)] going to compress their own skull!"))
-	var/obj/item/bodypart/head = user.get_bodypart("head")
+	user.visible_message(span_suicide("[user] is sticking their head in [src] and turning it on! [user.p_Theyre(TRUE)] going to compress their own skull!"))
+	var/obj/item/bodypart/head = user.get_bodypart(BODY_ZONE_HEAD)
 	if(!head)
-		return
-	var/turf/T = get_turf(user)
-	var/list/organs = user.get_organs_for_zone("head") + user.get_organs_for_zone("eyes") + user.get_organs_for_zone("mouth")
-	for(var/internal_organ in organs)
-		var/obj/item/organ/I = internal_organ
-		I.Remove()
-		I.forceMove(T)
+		return SHAME
+	var/turf/droploc = user.drop_location()
+	var/list/organs = user.get_organs_for_zone(BODY_ZONE_HEAD, TRUE)
+	for(var/obj/item/organ/internal_organ in organs)
+		internal_organ.Remove()
+		internal_organ.forceMove(droploc)
 	head.drop_limb()
 	qdel(head)
 	user.spawn_gibs()
-	user.add_splatter_floor(T)
+	user.add_splatter_floor(droploc)
 	playsound(user, 'sound/weapons/flash.ogg', 50, 1)
 	playsound(user, 'sound/effects/splat.ogg', 50, 1)
 
