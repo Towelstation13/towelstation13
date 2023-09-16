@@ -32,10 +32,7 @@
 		icon_state = "compression_c"
 		to_chat(user, span_notice("Some coder cocked up or an admin broke your compressor. It's been set back to compress mode.."))
 
-/obj/item/compressionkit/proc/sparks()
-	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-	s.set_up(5, 1, get_turf(src))
-	s.start()
+do_sparks(5, 1, src)
 
 /obj/item/compressionkit/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] is sticking their head in [src] and turning it on! [user.p_theyre(TRUE)] going to compress their own skull!"))
@@ -80,7 +77,7 @@
 			user.visible_message(span_warning("[user] is compressing [O] with their bluespace compression kit!"))
 			if(do_after(user, 4 SECONDS, O) && charges > 0 && O.w_class > 1)
 				playsound(get_turf(src), 'sound/weapons/emitter2.ogg', 50, 1)
-				sparks()
+				do_sparks(5, TRUE, src)
 				flash_lighting_fx(3, 3, LIGHT_COLOR_CYAN)
 				O.w_class -= 1
 				// O.force_mult -= damage_multiplier
