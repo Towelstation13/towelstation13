@@ -69,7 +69,7 @@
 		if(istype(O.atom_storage))
 			to_chat(user, span_notice("You feel like compressing an item that stores other items would be counterproductive."))
 			return
-		if(O.w_class > 1)
+		if(O.w_class > WEIGHT_CLASS_TINY)
 			playsound(get_turf(src), 'sound/weapons/flash.ogg', 50, 1)
 			user.visible_message(span_warning("[user] is compressing [O] with their bluespace compression kit!"))
 			if(do_after(user, 4 SECONDS, O) && charges > 0 && O.w_class > 1)
