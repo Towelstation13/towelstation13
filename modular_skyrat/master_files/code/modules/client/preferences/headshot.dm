@@ -48,9 +48,11 @@
 	usr?.client?.prefs.headshot = value
 	return TRUE
 
+/* //TOWELSTATION EDIT REMOVAL
 /datum/preference/text/headshot/is_accessible(datum/preferences/preferences)
 	if(isnull(usr)) // Joining at roundstart
 		return ..()
 	if(!GLOB.donator_list[usr?.ckey] && !is_admin(usr?.client))
 		return FALSE
 	return ..()
+*/ //END TOWELSTATION EDIT

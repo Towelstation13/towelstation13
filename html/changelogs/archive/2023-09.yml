@@ -340,3 +340,12 @@
   xPokee:
   - spellcheck: Gave lore to podpeople
   - rscdel: Removed all of the ERP features from the code.
+2023-09-17:
+  xPokee:
+  - rscadd: Added the bluespace compression kit, which you can use to shrink items.
+      Purchasable through uplinks for 13 tc.
+2023-09-19:
+  xPokee:
+  - bugfix: fixes a runtime I accidentally caused
+  - rscdel: Removes sex
+  - qol: Everyone can use the headshot feature now.
