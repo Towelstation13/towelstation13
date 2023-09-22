@@ -449,7 +449,7 @@
 
 /mob/living/simple_animal/hostile/evilborg/bigguy
 	name = "Malfunctioning Military robot"
-	desc = "A military robot unit, hacked or malfunctioning. This one looks really tough.."
+	desc = "A military robot armed with a deadly gatling laser and covered in thick armor plating."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "sentrybot"
 	icon_living = "sentrybot"
@@ -458,31 +458,31 @@
 	health = 250
 	maxHealth = 250
 	ranged = 1
-	melee_damage_lower = 12
-	melee_damage_upper = 12
-	attack_verb_continuous = "gunbutts"
-	attack_verb_simple = "gunbutt"
+	melee_damage_lower = 48
+	melee_damage_upper = 72
+	attack_verb_continuous = "pulverizes"
+	attack_verb_simple = "pulverize"
 	attack_sound = 'sound/weapons/smash.ogg'
 
 /mob/living/simple_animal/hostile/evilborg/protect
 	name = "Malfunctioning Standard Robot"
-	desc = "A civlian model robot, hacked or malfunctioning with mechanical claw arms."
+	desc = "A security robot armed with deadly lasers."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "protectbot"
 	icon_living = "protectbot"
-	health = 100
-	maxHealth = 100
+	health = 130
+	maxHealth = 130
 	melee_damage_lower = 15
 	melee_damage_upper = 15
-	attack_verb_continuous = "claws"
-	attack_verb_simple = "punch"
+	attack_verb_continuous = "slaps"
+	attack_verb_simple = "slap"
 	attack_sound = 'sound/weapons/genhit2.ogg'
 
 // Beasts
 
 /mob/living/simple_animal/hostile/bigcrab
 	name = "giant crab"
-	desc = "Clickity Clack!"
+	desc = "A giant mutated crustacean, with a hardened exo-skeleton."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "giantcrab"
 	icon_living = "giantcrab"
@@ -498,14 +498,14 @@
 	emote_taunt = list("snaps")
 	taunt_chance = 30
 	move_to_delay = 20
-	speed = 2
+	speed = 1
 	maxHealth = 150
 	health = 150
 	harm_intent_damage = 3
 	obj_damage = 40
-	melee_damage_lower = 20
+	melee_damage_lower = 10
 	melee_damage_upper = 20
-	attack_verb_continuous = "claws"
+	attack_verb_continuous = "pinches"
 	attack_verb_simple = "pinch"
 	attack_sound = 'sound/weapons/genhit2.ogg'
 	speak_emote = list("gnashes")
@@ -518,7 +518,7 @@
 
 /mob/living/simple_animal/hostile/trog
 	name = "mutated human"
-	desc = "Either some kind of experiment gone wrong, or the result of mutations from plasma exposure."
+	desc = "A human who has mutated and regressed back to a primal, cannibalistic state."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "trog"
 	icon_living = "trog"
@@ -557,7 +557,7 @@
 
 /mob/living/simple_animal/hostile/plantmutant
 	name = "plant mutant"
-	desc = "Some sort of humanoid mutated by plants or fungus spores into a horrific monster."
+	desc = "A victim of the beauveria mordicana fungus, these corpses sole purpose is to spread its spores."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "plantmonster"
 	icon_living = "plantmonster"
@@ -595,7 +595,7 @@
 
 /mob/living/simple_animal/hostile/cazador
 	name = "cazador"
-	desc = "You feel a little whoozy..."
+	desc = "A mutated insect known for its fast speed, deadly sting, and being huge bastards."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "cazador"
 	icon_living = "cazador"
@@ -610,12 +610,12 @@
 	response_disarm_simple = "gently push aside"
 	emote_taunt = list("buzzes")
 	taunt_chance = 30
-	speed = 0
-	maxHealth = 60
-	health = 60
+	speed = -0.5
+	maxHealth = 40
+	health = 40
 	melee_damage_type = TOX
-	melee_damage_lower = 25
-	melee_damage_upper = 25
+	melee_damage_lower = 45
+	melee_damage_upper = 45
 	move_to_delay = 4
 	attack_verb_continuous = "stings"
 	attack_verb_simple = "sting"
@@ -634,13 +634,18 @@
 
 /mob/living/simple_animal/hostile/mutantliz
 	name = "mutant lizard"
-	desc = "A large, mutated lizard-creature with jagged teeth and sharp claws."
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs64x64.dmi'
 	icon_state = "mutantliz"
 	icon_living = "mutantliz"
 	icon_dead = "mutantliz_d"
 	mob_biotypes = MOB_ORGANIC|MOB_REPTILE
-	speak_chance = 0
+	speak = list("ROAR!","Rawr!","GRRAAGH!","Growl!")
+	speak_emote = list("growls", "roars")
+	emote_hear = list("grumbles.","grawls.")
+	emote_taunt = list("stares ferociously", "stomps")
+	speak_chance = 10
+	taunt_chance = 25
 	turns_per_move = 5
 	butcher_results = list(/obj/item/food/meat/slab/human/mutant/lizard = 6)
 	response_help_continuous = "pats"
@@ -649,15 +654,16 @@
 	response_disarm_simple = "gently push aside"
 	emote_taunt = list("roars")
 	taunt_chance = 30
-	speed = 1
-	maxHealth = 250
-	health = 250
+	speed = -1
+	maxHealth = 750
+	health = 750
 	harm_intent_damage = 8
-	obj_damage = 50
-	melee_damage_lower = 20
-	melee_damage_upper = 20
-	attack_verb_continuous = "slashes"
-	attack_verb_simple = "slash"
+	obj_damage = 200
+	melee_damage_lower = 40
+	melee_damage_upper = 50
+	attack_verb_continuous = "claws"
+	attack_verb_simple = "claw"
+	armour_penetration = 0.3
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	speak_emote = list("growls")
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -667,9 +673,23 @@
 	pressure_resistance = 200
 	gold_core_spawnable = NO_SPAWN
 
+/mob/living/simple_animal/hostile/mutantliz/combat
+	name = "power armored mutant lizard"
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. Someone had managed to put power armor on it."
+	icon = 'modular_skyrat/master_files/icons/mob/newmobs64x64.dmi'
+	icon_state = "combatliz"
+	icon_living = "combatliz"
+	icon_dead = "combatliz_d"
+	maxHealth = 2500
+	health = 2500
+	stat_attack = UNCONSCIOUS
+	melee_damage_lower = 70
+	melee_damage_upper = 80
+	armour_penetration = 0.7
+
 /mob/living/simple_animal/hostile/scorpion
 	name = "big scorpion"
-	desc = "An abnormally large scorpion. Watch that stinger!"
+	desc = "A mutated arthropod with an armored carapace and a powerful sting."
 	icon = 'modular_skyrat/master_files/icons/mob/newmobs.dmi'
 	icon_state = "scorpion"
 	icon_living = "scorpion"
@@ -681,18 +701,18 @@
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"
-	speed = 0
-	maxHealth = 75
-	health = 75
+	speed = 1.25
+	maxHealth = 150
+	health = 150
 	melee_damage_type = TOX
-	harm_intent_damage = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 15
+	harm_intent_damage = 8
+	melee_damage_lower = 35
+	melee_damage_upper = 35
 	attack_verb_continuous = "stings"
 	attack_verb_simple = "sting"
 	attack_sound = 'sound/weapons/genhit2.ogg'
-	speak_emote = list("chitters")
-	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	speak_emote = list("hisses")
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
 	maxbodytemp = 900
 	faction = list(FACTION_HOSTILE)
