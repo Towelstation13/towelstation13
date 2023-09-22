@@ -553,3 +553,23 @@
 	)
 	result = /obj/item/food/raw_pita_bread
 	category = CAT_MISCFOOD
+
+//S'mores
+/datum/crafting_recipe/food/smore
+	name = "S'more"
+	reqs = list(
+		/obj/item/food/cakeslice/mothmallow = 1,
+		/obj/item/food/graham_cracker = 2,
+		/obj/item/food/chocolatebar = 1
+	)
+	result = /obj/item/food/smore
+	category = CAT_MISCFOOD
+
+/datum/crafting_recipe/food/graham_cracker
+	name = "Graham Cracker"
+	reqs = list(
+		/datum/reagent/consumable/sugar = 5,
+		/datum/reagent/consumable/flour = 15
+	)
+	result = /obj/item/food/graham_cracker
+	category = CAT_MISCFOOD
