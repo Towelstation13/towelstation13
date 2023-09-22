@@ -7,12 +7,12 @@ MODULE ID: lobbyscreen
 Adds a brand new look to the lobby screen, adds a splash screen too, since that shit is awesome. Inspired by TauCeti, heavily modified by me.
 
 ## Guide:
-
+**TOWELSTATION EDIT - REMOVES SERVER SWAP BUTTON**
 To make sure your server doesn't/does have this feature, see config.txt
 ##Enable server swapping, uncomment to enable reading of swap_ips.txt (file directory: config/skyrat/swap_ips.txt)
 SERVER_SWAP_ENABLED
 if you use this, make sure swap_ips.txt is present in skyrat config.
-
+**TOWELSTATION EDIT END**
 We offer the option to customise the lobby HTML by giving you access to a file named lobby_html.txt in the config. The server will runtime if this file does not exist. Ensure it exists in directory config/skyrat/lobby_html.txt.
 
 DO NOT UNDER ANY CIRCUMSTANCES RENAME THE ELEMENTS WITHIN THE HTML FILE, KEEP THEM AS THEY ARE.

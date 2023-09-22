@@ -16,12 +16,12 @@
 		play_lobby_button_sound()
 		make_me_an_observer()
 		return
-
+/* //Towelstation edit - Removes swap server button
 	if(href_list["server_swap"])
 		play_lobby_button_sound()
 		server_swap()
 		return
-
+*/
 	if(href_list["view_manifest"])
 		play_lobby_button_sound()
 		ViewManifest()
@@ -116,7 +116,7 @@
 
 /**
  * Allows the player to select a server to join from any loaded servers.
- */
+//Towelstation Edit - Removes swap servers button
 /mob/dead/new_player/proc/server_swap()
 	var/list/servers = CONFIG_GET(keyed_list/cross_server)
 	if(LAZYLEN(servers) == 1)
@@ -135,7 +135,7 @@
 	if(confirm == "Connect me!")
 		to_chat_immediate(src, "So long, spaceman.")
 		src.client << link(server_ip)
-
+*/ //Towelstation Edit end
 /**
  * Shows the player a list of current polls, if any.
  */
