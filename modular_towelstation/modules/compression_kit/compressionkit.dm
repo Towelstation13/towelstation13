@@ -11,13 +11,13 @@
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
-	var/charges = 5
+	var/charges = 3
 	// var/damage_multiplier = 0.2 Not in use yet.
 	var/mode = COMPRESSION_MODE
 
 /obj/item/compressionkit/examine(mob/user)
 	. = ..()
-	. += span_notice("It has [charges] charges left. Recharge with bluespace crystals.")
+	. += span_notice("It has [charges] charges left. Recharge with telecrystals.")
 	. += span_notice("Use in-hand to swap toggle compress mode.")
 
 /obj/item/compressionkit/attack_self(mob/user)
@@ -62,7 +62,7 @@
 	else
 		if(charges == 0)
 			playsound(get_turf(src), 'sound/machines/buzz-two.ogg', 50, 1)
-			to_chat(user, span_notice("The bluespace compression kit is out of charges! Recharge it with bluespace crystals."))
+			to_chat(user, span_notice("The bluespace compression kit is out of charges! Recharge it with telecrystals."))
 			return
 	if(istype(target, /obj/item))
 		var/obj/item/O = target
@@ -89,9 +89,9 @@
 
 /obj/item/compressionkit/attackby(obj/item/I, mob/user, params)
 	. = ..()
-	if(istype(I, /obj/item/stack/ore/bluespace_crystal))
-		var/obj/item/stack/ore/bluespace_crystal/B = I
-		charges += 2 * B.amount
+	if(istype(I, /obj/item/stack/telecrystal))
+		var/obj/item/stack/telecrystal/T = I
+		charges += 1 * T.amount
 		to_chat(user, span_notice("You insert [I] into [src]. It now has [charges] charges."))
 		qdel(I)
 
