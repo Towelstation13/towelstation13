@@ -7381,5 +7381,4 @@
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\warrior.dm"
 #include "modular_towelstation\modules\compression_kit\compressionkit.dm"
 #include "modular_towelstation\modules\modular_foods\code\smores.dm"
-#include "modular_towelstation\modules\smores\code\smores.dm"
 // END_INCLUDE
