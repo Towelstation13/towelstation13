@@ -90,8 +90,8 @@
 /obj/item/compressionkit/attackby(obj/item/I, mob/user, params)
 	. = ..()
 	if(istype(I, /obj/item/stack/telecrystal))
-		var/obj/item/stack/telecrystal/T = I
-		charges += 1 * T.amount
+		var/obj/item/stack/telecrystal/crystal = I
+		charges += 1 * crystal.amount
 		to_chat(user, span_notice("You insert [I] into [src]. It now has [charges] charges."))
 		qdel(I)
 
