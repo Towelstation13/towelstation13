@@ -67,7 +67,11 @@
 	human_mob.dna.features["mcolor3"] = second_color
 
 /datum/species/unathi/get_species_description()
-	return placeholder_description
+	return "The Unathi (you-nath-ee) are a species of scaled, reptilian beings. They hail from the arid world of Moghes."
 
 /datum/species/unathi/get_species_lore()
-	return list(placeholder_lore)
+	return list("A heavily reptillian species, Unathi (or 'Sinta as they call themselves) hail from the \
+	Uuosa-Eso system, which roughly translates to 'burning mother'. Coming from a harsh, radioactive \
+	desert planet, they mostly hold ideals of honesty, virtue, martial combat and bravery above all \
+	else, frequently even their own lives. They prefer warmer temperatures than most species and \
+	their native tongue is a heavy hissing laungage called Sinta'Unathi.")

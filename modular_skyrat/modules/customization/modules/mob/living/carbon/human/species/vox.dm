@@ -97,10 +97,15 @@
 	item.worn_icon_vox = icon
 
 /datum/species/vox/get_species_description()
-	return placeholder_description
+	return "Vox are a species of space-faring and largely insular beings. They hail from large stations known as arkships."
 
 /datum/species/vox/get_species_lore()
-	return list(placeholder_lore)
+	return list("The Vox are the broken remnants of a once-proud race, now reduced to little more than \
+	scavenging vermin who prey on isolated stations, ships or planets to keep their own ancient arkships \
+	alive. They are four to five feet tall, reptillian, beaked, tailed and quilled; human crews often \
+	refer to them as 'shitbirds' for their violent and offensive nature, as well as their horrible \
+	smell. Most humans will never meet a Vox raider, instead learning of this insular species through \
+	dealing with their traders and merchants; those that do rarely enjoy the experience.")
 
 /datum/species/vox/prepare_human_for_preview(mob/living/carbon/human/vox)
 	vox.dna.features["mcolor"] = "#77DD88"

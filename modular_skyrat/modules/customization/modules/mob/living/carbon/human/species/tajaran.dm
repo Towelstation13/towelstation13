@@ -87,10 +87,14 @@
 */
 
 /datum/species/tajaran/get_species_description()
-	return placeholder_description
+	return "The Tajara (ᴛᴀʜ-jaw-run, plural ᴛᴀʜ-jaw-rah) are a bipedal, omnivorous, mammalian species. The Tajara originate from Ahdomai, an arctic moon orbiting Iluk."
 
 /datum/species/tajaran/get_species_lore()
-	return list(placeholder_lore)
+	return list("The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
+	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
+	influenced heavily by their long history of Slavemaster rule. They have a structured, clan-influenced way \
+	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \
+	using unique inflections their mouths form.")
 
 /datum/species/tajaran/prepare_human_for_preview(mob/living/carbon/human/cat)
 	var/main_color = "#AA9988"

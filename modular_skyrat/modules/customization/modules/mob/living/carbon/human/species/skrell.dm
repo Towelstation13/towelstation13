@@ -36,10 +36,14 @@
 	)
 
 /datum/species/skrell/get_species_description()
-	return placeholder_description
+	return "The Skrell are a species of aquatic, soft-fleshed beings hailing from the tropical world of Jargon 4."
 
 /datum/species/skrell/get_species_lore()
-	return list(placeholder_lore)
+	return list("An amphibious species, Skrell come from the star system known as Qerr'Vallis, which translates to 'Star of \
+	the royals' or 'Light of the Crown'. Skrell are a highly advanced and logical race who live under the rule \
+	of the Qerr'Katish, a caste within their society which keeps the empire of the Skrell running smoothly. Skrell are \
+	herbivores on the whole and tend to be co-operative with the other species of the galaxy, although they rarely reveal \
+	the secrets of their empire to their allies.")
 
 /datum/species/skrell/randomize_features(mob/living/carbon/human/human_mob)
 	var/main_color

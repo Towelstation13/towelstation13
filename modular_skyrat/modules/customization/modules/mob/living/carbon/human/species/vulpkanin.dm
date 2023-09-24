@@ -87,10 +87,15 @@
 */
 
 /datum/species/vulpkanin/get_species_description()
-	return placeholder_description
+	return "The Vulpkanin (vulp-ka-nin) are a species of humanoid canine-like beings. The Vulpkanin hail from the Vazzend binary system, and originally from its second planet, Altam."
 
 /datum/species/vulpkanin/get_species_lore()
-	return list(placeholder_lore)
+	return list("Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
+	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
+	culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominates their lifestyles \
+	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
+	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
+)
 
 /datum/species/vulpkanin/prepare_human_for_preview(mob/living/carbon/human/vulp)
 	var/main_color = "#FF8800"
