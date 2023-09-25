@@ -569,7 +569,7 @@
 	name = "Graham Cracker"
 	reqs = list(
 		/datum/reagent/consumable/sugar = 5,
-		/datum/reagent/consumable/flour = 15
+		/datum/reagent/consumable/flour = 10
 	)
 	result = /obj/item/food/graham_cracker
 	category = CAT_MISCFOOD
