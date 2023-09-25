@@ -568,8 +568,8 @@
 /datum/crafting_recipe/food/graham_cracker
 	name = "Graham Cracker"
 	reqs = list(
-		/datum/reagent/consumable/sugar = 5,
-		/datum/reagent/consumable/flour = 10
+		/datum/reagent/consumable/sugar = 2,
+		/datum/reagent/consumable/flour = 5
 	)
 	result = /obj/item/food/graham_cracker
 	category = CAT_MISCFOOD
