@@ -38,7 +38,7 @@
 /obj/machinery/gear_painter/update_icon_state()
 	if(panel_open)
 		icon_state = "colormate_open"
-	else if(var/is_operational=FALSE)
+	else if(!is_operational)
 		icon_state = "colormate_off"
 	else if(inserted)
 		icon_state = "colormate_active"
