@@ -1,7 +1,7 @@
 /obj/machinery/gear_painter
 	name = "\improper Color Mate"
 	desc = "A machine to give your apparel a fresh new color! Recommended to use with white items for best results."
-	icon = 'icons/obj/vending.dmi'
+	icon = 'modular_towelstation/modules/colormate/icons/colormate.dmi'
 	icon_state = "colormate"
 	density = TRUE
 	anchored = TRUE
@@ -38,7 +38,7 @@
 /obj/machinery/gear_painter/update_icon_state()
 	if(panel_open)
 		icon_state = "colormate_open"
-	else if(!is_operational())
+	else if(var/is_operational=FALSE)
 		icon_state = "colormate_off"
 	else if(inserted)
 		icon_state = "colormate_active"
@@ -52,7 +52,7 @@
 
 /obj/machinery/gear_painter/attackby(obj/item/I, mob/living/user)
 	if(inserted)
-		to_chat(user, "<span class='warning'>The machine is already loaded.</span>")
+		to_chat(user, span_warning("The machine is already loaded."))
 		return
 	if(default_deconstruction_screwdriver(user, "colormate_open", "colormate", I))
 		return
@@ -66,7 +66,7 @@
 		var/obj/item/clothing/head/mob_holder/H = I
 		var/mob/victim = H.held_mob
 		if(!user.transferItemToLoc(I, src))
-			to_chat(user, "<span class='warning'>[I] is stuck to your hand!</span>")
+			to_chat(user, span_warning("[I] is stuck to your hand!"))
 			return
 		if(!QDELETED(H))
 			H.release()
@@ -75,9 +75,9 @@
 
 	if(is_type_in_list(I, allowed_types) && is_operational())
 		if(!user.transferItemToLoc(I, src))
-			to_chat(user, "<span class='warning'>[I] is stuck to your hand!</span>")
+			to_chat(user, span_warning("[I] is stuck to your hand!"))
 			return
-		user.visible_message("<span class='notice'>[user] inserts [I] into [src]'s receptable.</span>")
+		user.visible_message(span_warning("[user] inserts [I] into [src]'s receptable."))
 
 		inserted = I
 		update_icon()
@@ -90,7 +90,7 @@
 	if(inserted)
 		return
 	if(user)
-		visible_message("<span class='warning'>[user] stuffs [victim] into [src]!</span>")
+		visible_message(span_warning("[user] stuffs [victim] into [src]!"))
 	inserted = victim
 	inserted.forceMove(src)
 
@@ -111,7 +111,7 @@
 		return
 	if(!inserted)
 		return
-	to_chat(usr, "<span class='notice'>You remove [inserted] from [src]")
+	to_chat(usr, span_notice("You remove [inserted] from [src]"))
 	inserted.forceMove(drop_location())
 	var/mob/living/user = usr
 	if(istype(user))
