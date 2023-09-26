@@ -1519,3 +1519,12 @@
 		/obj/item/mod/module/rad_protection = 1,
 		/obj/item/stack/sheet/plasteel = 2,
 	)
+///Towelstation Addition - COLORMATE
+/obj/item/circuitboard/machine/colormate
+	name = "Colormate"
+	greyscale_colors = CIRCUIT_COLOR_SERVICE
+	build_path = /obj/machinery/gear_painter
+	req_components = list(
+		/datum/stock_part/servo = 1,
+		/obj/item/stack/cable_coil = 2)
+///Towelstation addition end
