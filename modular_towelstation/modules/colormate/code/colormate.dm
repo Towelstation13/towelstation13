@@ -36,6 +36,7 @@
 	)
 
 /obj/machinery/gear_painter/update_icon_state()
+	. = ..()
 	if(panel_open)
 		icon_state = "colormate_open"
 	else if(!is_operational)
@@ -94,11 +95,6 @@
 
 /obj/machinery/gear_painter/AllowDrop()
 	return FALSE
-
-/obj/machinery/gear_painter/handle_atom_del(atom/movable/AM)
-	if(AM == inserted)
-		inserted = null
-	return ..()
 
 /obj/machinery/gear_painter/AltClick(mob/user)
 	. = ..()
