@@ -24833,6 +24833,13 @@
 /obj/structure/flora/bush/grassy/style_random,
 /turf/open/floor/grass,
 /area/station/commons/dorms)
+"hVl" = (
+/obj/machinery/gear_painter,
+/obj/effect/turf_decal/tile/blue/opposingcorners{
+	dir = 1
+	},
+/turf/open/floor/iron/cafeteria,
+/area/station/commons/dorms/laundry)
 "hVo" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
@@ -154550,7 +154557,7 @@ lZz
 jMe
 fSr
 rVp
-qOF
+hVl
 xmR
 xmR
 qOF

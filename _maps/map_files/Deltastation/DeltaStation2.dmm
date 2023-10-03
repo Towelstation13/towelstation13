@@ -76707,6 +76707,7 @@
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "tkF" = (
+/obj/machinery/gear_painter,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},

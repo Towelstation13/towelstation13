@@ -40331,6 +40331,7 @@
 /area/station/engineering/atmos)
 "mxu" = (
 /obj/machinery/digital_clock/directional/north,
+/obj/machinery/gear_painter,
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "mxD" = (

@@ -36318,9 +36318,10 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "ncB" = (
+/obj/machinery/gear_painter,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/newscaster/directional/south,
-/obj/effect/turf_decal/tile/neutral,
-/turf/open/floor/iron,
+/turf/open/floor/iron/dark,
 /area/station/commons/locker)
 "ncG" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -103210,8 +103211,8 @@ qsK
 nFn
 qFU
 nFn
+uUl
 ncB
-cBf
 qXB
 qnK
 qXB

@@ -16216,7 +16216,7 @@
 /area/station/medical/medbay/aft)
 "ehQ" = (
 /obj/effect/turf_decal/tile/green/full,
-/obj/structure/table/reinforced,
+/obj/machinery/gear_painter,
 /turf/open/floor/iron/smooth_large,
 /area/station/hallway/secondary/entry)
 "ehR" = (
@@ -18511,16 +18511,6 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/floor1/port/fore)
-"ePv" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
-/obj/machinery/camera/autoname/directional/west,
-/turf/open/floor/iron/checker{
-	dir = 1
-	},
-/area/station/commons/locker)
 "ePH" = (
 /obj/structure/railing{
 	dir = 4
@@ -20647,6 +20637,7 @@
 "fwK" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "fwM" = (
@@ -32511,6 +32502,7 @@
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron/cafeteria,
 /area/station/commons/locker)
 "iBB" = (
@@ -52508,9 +52500,8 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/floor2/aft)
 "nFu" = (
-/obj/machinery/newscaster/directional/east,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron/checker,
+/obj/machinery/gear_painter,
+/turf/open/floor/iron/dark,
 /area/station/commons/locker)
 "nFH" = (
 /obj/structure/cable,
@@ -182378,7 +182369,7 @@ bzF
 nGQ
 cVL
 eac
-nFu
+eEQ
 eEQ
 gkq
 iQH
@@ -182635,7 +182626,7 @@ bDU
 nGQ
 dfn
 fQf
-svX
+nFu
 hZs
 mpC
 jnh
@@ -182892,7 +182883,7 @@ kcZ
 cpo
 dfR
 eas
-ePv
+fzZ
 fzZ
 fzZ
 hbw
