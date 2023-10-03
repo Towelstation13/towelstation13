@@ -1,5 +1,5 @@
 /obj/machinery/gear_painter
-	name = "\improper Color Mate"
+	name = "Color Mate"
 	desc = "A machine to give your apparel a fresh new color! Recommended to use with white items for best results."
 	icon = 'modular_towelstation/modules/colormate/icons/colormate.dmi'
 	icon_state = "colormate"
@@ -71,7 +71,7 @@
 		insert_mob(victim, user)
 	SStgui.update_uis(src)
 
-	if(is_type_in_list(I, allowed_types) && is_operational())
+	if(is_type_in_list(I, allowed_types))
 		if(!user.transferItemToLoc(I, src))
 			to_chat(user, span_warning("[I] is stuck to your hand!"))
 			return
@@ -105,7 +105,7 @@
 	drop_item()
 
 /obj/machinery/gear_painter/proc/drop_item()
-	if(!usr.can_reach(src))
+	if(!usr.CanReach(src))
 		return
 	if(!inserted)
 		return

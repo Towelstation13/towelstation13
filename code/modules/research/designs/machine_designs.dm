@@ -1097,6 +1097,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
+//TOWELSTATION ADDITION - COLORMATE
 /datum/design/board/colormate
 	name = "ColorMate"
 	desc = "This machine lets you paint your gear."
