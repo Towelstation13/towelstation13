@@ -10,8 +10,8 @@ Ports the colormate from Fallout 13, which allows you to recolor clothes and arm
 
 ### TG Proc/File Changes:	
 
-- N/A
-
+- code/__HELPERS/matrices.dm - 188 through 193
+- code/__HELPERS/icons.dm - 1472 through 1487
 
 ### Modular Overrides:
 

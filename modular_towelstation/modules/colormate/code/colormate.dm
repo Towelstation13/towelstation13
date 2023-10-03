@@ -60,8 +60,6 @@
 		return
 	if(default_unfasten_wrench(user, I, 40))
 		return
-	if(user.a_intent == INTENT_HARM)
-		return ..()
 	if(allow_mobs && istype(I, /obj/item/clothing/head/mob_holder))
 		var/obj/item/clothing/head/mob_holder/H = I
 		var/mob/victim = H.held_mob

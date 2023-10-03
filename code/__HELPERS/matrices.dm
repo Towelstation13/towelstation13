@@ -186,6 +186,12 @@ round(cos_inv_third+sqrt3_sin, 0.001), round(cos_inv_third-sqrt3_sin, 0.001), ro
 	return output
 
 /**
+* Assembles a color matrix, defaulting to identity
+*/
+/proc/rgb_construct_color_matrix(rr = 1, rg, rb, gr, gg = 1, gb, br, bg, bb = 1, cr, cg, cb)
+	return list(rr, rg, rb, gr, gg, gb, br, bg, bb, cr, cg, cb)
+
+/**
  * Converts RGB shorthands into RGBA matrices complete of constants rows (ergo a 20 keys list in byond).
  * if return_identity_on_fail is true, stack_trace is called instead of CRASH, and an identity is returned.
  */
