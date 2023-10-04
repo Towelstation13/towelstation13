@@ -1096,14 +1096,3 @@
 		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_ROBOTICS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
-
-//TOWELSTATION ADDITION - COLORMATE
-/datum/design/board/colormate
-	name = "ColorMate"
-	desc = "This machine lets you paint your gear."
-	id = "colormate"
-	build_path = /obj/item/circuitboard/machine/colormate
-	category = list (
-		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_SERVICE
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SERVICE

@@ -26,6 +26,24 @@
 	/// Temporary messages
 	var/temp
 
+/datum/design/board/colormate
+	name = "ColorMate"
+	desc = "This machine lets you paint your gear."
+	id = "colormate"
+	build_path = /obj/item/circuitboard/machine/colormate
+	category = list (
+		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_SERVICE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
+
+/obj/item/circuitboard/machine/colormate
+	name = "Colormate"
+	greyscale_colors = CIRCUIT_COLOR_SERVICE
+	build_path = /obj/machinery/gear_painter
+	req_components = list(
+		/datum/stock_part/servo = 1,
+		/obj/item/stack/cable_coil = 2)
+
 /obj/machinery/gear_painter/Initialize(mapload)
 	. = ..()
 	color_matrix_last = list(
@@ -257,6 +275,7 @@
 		// We test using full red, green, blue, and white
 		// A predefined number of them must pass to be considered valid
 		var/passed = 0
+
 #define COLORTEST(thestring, thematrix) passed += (ReadHSV(RGBtoHSV(RGBMatrixTransform(thestring, thematrix)))[3] >= minimum_matrix_lightness)
 		COLORTEST("FF0000", cm)
 		COLORTEST("00FF00", cm)

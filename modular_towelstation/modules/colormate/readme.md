@@ -28,4 +28,4 @@ Ports the colormate from Fallout 13, which allows you to recolor clothes and arm
 - tgui/packages/tgui/interfaces/Colormate.js
 
 ### Credits:
-xPokee
+xPokee, TripleShades (The original PR creator from The Wasteland)
