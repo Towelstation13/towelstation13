@@ -118,19 +118,19 @@
 	required_languages = null
 
 /datum/job/orderly
-	required_languages = null
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
 /datum/job/science_guard
-	required_languages = null
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
 /datum/job/customs_agent
-	required_languages = null
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
 /datum/job/bouncer
-	required_languages = null
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
 /datum/job/engineering_guard
-	required_languages = null
+	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 
 /datum/job/proc/has_required_languages(datum/preferences/pref)
 	if(!required_languages)
