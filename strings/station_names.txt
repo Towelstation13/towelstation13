@@ -1,6 +1,5 @@
 Aegis
 Alium
-Aspie
 Asteroid
 Battle
 Bear
@@ -52,7 +51,6 @@ Paranoia
 Pete
 Pizza
 Prefix
-Procreatory
 Production
 Pub
 Race
