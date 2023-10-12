@@ -55,8 +55,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	var/genetic = FALSE
 	var/uses_emissives = FALSE
 	var/color_layer_names
-	/// If this sprite accessory will be inaccessable if ERP config is disabled
-	var/erp_accessory = FALSE
 
 /datum/sprite_accessory/New()
 	if(!default_color)
@@ -365,18 +363,10 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "leggings-stir"
 	use_static = null
 
-/datum/sprite_accessory/socks/leggings/latex
-	name = "Socks - Latex"
-	icon_state = "socks_latex"
-	use_static = TRUE
-	erp_accessory = TRUE
-
 /datum/sprite_accessory/underwear
 	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
 	///Whether the underwear uses a special sprite for digitigrade style (i.e. briefs, not panties). Adds a "_d" suffix to the icon state
 	var/has_digitigrade = FALSE
-	///Whether this underwear includes a top (Because gender = FEMALE doesn't actually apply here.). Hides breasts, nothing more.
-	var/hides_breasts = FALSE
 
 /datum/sprite_accessory/underwear/male_bee
 	name = "Boxers - Bee"
@@ -467,21 +457,18 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "swimming_red"
 	gender = FEMALE
 	use_static = TRUE
-	hides_breasts = TRUE
 
 /datum/sprite_accessory/underwear/swimsuit
 	name = "Swimsuit, One Piece - Black"
 	icon_state = "swimming_black"
 	gender = FEMALE
 	use_static = TRUE
-	hides_breasts = TRUE
 
 /datum/sprite_accessory/underwear/swimsuit_blue
 	name = "Swimsuit, One Piece - Striped Blue"
 	icon_state = "swimming_blue"
 	gender = FEMALE
 	use_static = TRUE
-	hides_breasts = TRUE
 
 /datum/sprite_accessory/underwear/thong
 	name = "Thong"
@@ -493,24 +480,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "thong_babydoll"
 	gender = FEMALE
 
-/datum/sprite_accessory/underwear/chastbelt
-	name = "Chastity Belt"
-	icon_state = "chastbelt"
-	use_static = TRUE
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/underwear/chastcage
-	name = "Chastity Cage"
-	icon_state = "chastcage"
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/underwear/latex
-	name = "Panties - Latex"
-	icon_state = "panties_latex"
-	use_static = TRUE
-	erp_accessory = TRUE
-
 /datum/sprite_accessory/undershirt/lizared
 	name = "LIZARED Top"
 	icon_state = "lizared_top"
@@ -520,7 +489,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	name = "LIZARED Underwear"
 	icon_state = "lizared"
 	use_static = TRUE
-	hides_breasts = TRUE
 
 /datum/sprite_accessory/underwear/boyshorts
 	name = "Boyshorts"
@@ -528,57 +496,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	has_digitigrade = TRUE
 	gender = FEMALE
 
-/*
-	Adding hides_breasts to TG underwears where applicable
-*/
-/datum/sprite_accessory/underwear/female_bikini
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_lace
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_bralette
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_sport
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_strapless
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_babydoll
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/swimsuit_onepiece
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/swimsuit_strapless_onepiece
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/swimsuit_twopiece
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/swimsuit_strapless_twopiece
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/swimsuit_stripe
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/swimsuit_halter
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_white_neko
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_black_neko
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/female_uk
-	hides_breasts = TRUE
-
-/*
-	End of adding hides_breasts to TG stuff, start of adding has_digitigrade to TG stuff
-*/
 /datum/sprite_accessory/underwear/male_briefs
 	has_digitigrade = TRUE
 
@@ -736,13 +653,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	gender = FEMALE
 	use_static = null
 
-/datum/sprite_accessory/undershirt/bra_latex
-	name = "Bra, Latex"
-	icon_state = "bra_latex"
-	gender = FEMALE
-	use_static = TRUE
-	erp_accessory = TRUE
-
 /datum/sprite_accessory/undershirt/striped_bra
 	name = "Bra - Striped"
 	icon_state = "striped_bra"
@@ -788,42 +698,6 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "corset"
 	gender = FEMALE
 	use_static = TRUE
-	hides_groin = TRUE
-
-/datum/sprite_accessory/undershirt/chastbra
-	name = "Chastity Bra"
-	icon_state = "chastbra"
-	gender = FEMALE
-	use_static = TRUE
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/pasties
-	name = "Pasties"
-	icon_state = "pasties"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/pasties_alt
-	name = "Pasties - Alt"
-	icon_state = "pasties_alt"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/shibari
-	name = "Shibari"
-	icon_state = "shibari"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
-
-/datum/sprite_accessory/undershirt/shibari_sleeves
-	name = "Shibari Sleeves"
-	icon_state = "shibari_sleeves"
-	gender = FEMALE
-	use_static = null
-	erp_accessory = TRUE
 
 /datum/sprite_accessory/undershirt/bulletclub //4 life
 	name = "Shirt - Black Skull"
