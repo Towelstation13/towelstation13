@@ -177,7 +177,6 @@
 		"Heavy" = list(SKIN_ICON = CYBORG_ICON_MED, SKIN_ICON_STATE = "heavymed"),
 		"Birdborg" = list(SKIN_ICON = CYBORG_ICON_MED, SKIN_ICON_STATE = "bird_med"),
 		"Protectron" = list(SKIN_ICON = CYBORG_ICON_MED, SKIN_ICON_STATE = "protectron_medical"),
-		"Miss M" = list(SKIN_ICON = CYBORG_ICON_MED, SKIN_ICON_STATE = "missm_med"),
 		"Insekt" = list(SKIN_ICON = CYBORG_ICON_MED, SKIN_ICON_STATE = "insekt-Med"),
 		"Mech" = list(SKIN_ICON = CYBORG_ICON_MED, SKIN_ICON_STATE = "gibbs"),
 	)
