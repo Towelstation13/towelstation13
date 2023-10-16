@@ -11,7 +11,7 @@
 	yield = 3
 	potency = 15
 	instability = 20
-	growthstages = 5
+	growthstages = 4
 	growing_icon = 'modular_towelstation/master_files/icons/obj/hydroponics/growing.dmi'
 	icon_grow = "peppercorn-grow"
 	icon_dead = "peppercorn-dead"
