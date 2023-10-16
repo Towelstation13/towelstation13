@@ -1196,6 +1196,13 @@
 /obj/structure/stone_tile/slab,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
+"Px" = (
+/obj/structure/geyser{
+	name = "salts-the-earth";
+	reagent_id = /datum/reagent/consumable/salt
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface,
+/area/ruin/unpowered/ash_walkers)
 "PB" = (
 /obj/structure/rack/shelf{
 	icon = 'modular_skyrat/modules/mapping/icons/unique/furniture.dmi';
@@ -1634,7 +1641,7 @@ oe
 dw
 dw
 XQ
-mZ
+Px
 NV
 EQ
 Ly
