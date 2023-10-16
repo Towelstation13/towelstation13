@@ -7384,4 +7384,5 @@
 #include "modular_towelstation\modules\colormate\code\colormate.dm"
 #include "modular_towelstation\modules\compression_kit\compressionkit.dm"
 #include "modular_towelstation\modules\modular_foods\code\smores.dm"
+#include "modular_towelstation\modules\modular_plants\peppercorn\peppercorn.dm"
 // END_INCLUDE
