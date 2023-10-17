@@ -129,3 +129,27 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/nri_engineer, 
 	icon_state = "nri_radar"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/nri_radar, 32)
+
+/obj/structure/sign/poster/contraband/kaniner
+	name = "Kaniner."
+	desc = "This poster depicts a particularly cute bunny, with the text 'Kaniner. Alla Äskar Kaniner.' in block capital text."
+	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
+	icon_state = "kaniner"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/kaniner, 32)
+
+/obj/structure/sign/poster/contraband/hex
+	name = "Hex Inc. poster"
+	desc = "This poster bears a pink hexagon logo, with text below reading 'Hex Inc. Automation, Thought leaders in the robotics sphere since 2314. When you think large-scale automation, think Hex Inc.'"
+	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
+	icon_state = "hex"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/hex, 32)
+
+/obj/structure/sign/poster/contraband/korpstech
+	name = "Korps Genetics"
+	desc = "This poster bears a huge, pink helix on it, with smaller text underneath it that reads 'The Korps institute, advancing the Genetics field since 2423!'"
+	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
+	icon_state = "korpsposter"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
