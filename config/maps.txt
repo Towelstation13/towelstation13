@@ -58,12 +58,14 @@ endmap
 map runtimestation
 endmap
 
-map runtimestation
-endmap
-
 ##SKYRAT MAPS##
 
 map voidraptor
 	maxplayers 100
+	votable
+endmap
+
+map ringworm
+	maxplayers 80
 	votable
 endmap
