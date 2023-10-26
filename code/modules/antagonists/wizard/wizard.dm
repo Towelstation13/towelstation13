@@ -14,6 +14,7 @@ GLOBAL_LIST_EMPTY(wizard_spellbook_purchases_by_key)
 	preview_outfit = /datum/outfit/wizard
 	can_assign_self_objectives = TRUE
 	default_custom_objective = "Demonstrate your incredible and destructive magical powers."
+	hardcore_random_bonus = TRUE
 	var/give_objectives = TRUE
 	var/strip = TRUE //strip before equipping
 	var/allow_rename = TRUE
@@ -24,11 +25,6 @@ GLOBAL_LIST_EMPTY(wizard_spellbook_purchases_by_key)
 	show_to_ghosts = TRUE
 	/// This mob's Grand Ritual ability
 	var/datum/action/cooldown/grand_ritual/ritual
-
-/datum/antagonist/wizard/New()
-	if(move_to_lair) // kick off loading of your lair, if you want to be moved to it
-		INVOKE_ASYNC(SSmapping, TYPE_PROC_REF(/datum/controller/subsystem/mapping, lazy_load_template), LAZY_TEMPLATE_KEY_WIZARDDEN)
-	return ..()
 
 /datum/antagonist/wizard_minion
 	name = "Wizard Minion"

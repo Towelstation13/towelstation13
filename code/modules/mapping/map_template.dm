@@ -133,7 +133,15 @@
 	var/y = round((world.maxy - height) * 0.5) + 1
 
 	var/datum/space_level/level = SSmapping.add_new_zlevel(name, secret ? ZTRAITS_AWAY_SECRET : ZTRAITS_AWAY, contain_turfs = FALSE)
-	var/datum/parsed_map/parsed = load_map(file(mappath), x, y, level.z_value, no_changeturf=(SSatoms.initialized == INITIALIZATION_INSSATOMS), placeOnTop=should_place_on_top, new_z = TRUE)
+	var/datum/parsed_map/parsed = load_map(
+		file(mappath),
+		x,
+		y,
+		level.z_value,
+		no_changeturf = (SSatoms.initialized == INITIALIZATION_INSSATOMS),
+		place_on_top = should_place_on_top,
+		new_z = TRUE,
+	)
 	var/list/bounds = parsed.bounds
 	if(!bounds)
 		return FALSE
@@ -158,7 +166,6 @@
 
 	// Cache for sonic speed
 	var/list/to_rebuild = SSair.adjacent_rebuild
-
 	// iterate over turfs in the border and clear them from active atmos processing
 	for(var/turf/border_turf as anything in CORNER_BLOCK_OFFSET(T, width + 2, height + 2, -1, -1))
 		SSair.remove_from_active(border_turf)
@@ -177,7 +184,14 @@
 
 	UNSETEMPTY(turf_blacklist)
 	parsed.turf_blacklist = turf_blacklist
-	if(!parsed.load(T.x, T.y, T.z, cropMap=TRUE, no_changeturf=(SSatoms.initialized == INITIALIZATION_INSSATOMS), placeOnTop=should_place_on_top))
+	if(!parsed.load(
+		T.x,
+		T.y,
+		T.z,
+		crop_map = TRUE,
+		no_changeturf = (SSatoms.initialized == INITIALIZATION_INSSATOMS),
+		place_on_top = should_place_on_top,
+	))
 		return
 
 	var/list/bounds = parsed.bounds

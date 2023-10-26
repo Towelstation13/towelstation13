@@ -378,6 +378,7 @@
 	current_range = 2
 	spray_range = 2
 	spray_sound = 'sound/effects/snap.ogg'
+	possible_transfer_amounts = list(5)
 
 /obj/item/reagent_containers/spray/chemsprayer/party/spray(atom/A, mob/user)
 	. = ..()
@@ -442,6 +443,7 @@
 
 /obj/item/reagent_containers/spray/hercuri
 	name = "medical spray (hercuri)"
-	desc = "A medical spray bottle.This one contains hercuri, a medicine used to negate the effects of dangerous high-temperature environments. Careful not to freeze the patient!"
-	icon_state = "sprayer_large"
+	desc = "A medical spray bottle. This one contains hercuri, a medicine used to negate the effects of dangerous high-temperature environments. Careful not to freeze the patient!"
+	icon = 'icons/obj/medical/chemical.dmi'
+	icon_state = "sprayer_med_yellow"
 	list_reagents = list(/datum/reagent/medicine/c2/hercuri = 100)

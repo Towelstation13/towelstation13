@@ -51,7 +51,7 @@
 	new /obj/item/clothing/suit/hooded/wintercoat/miner(src)
 
 /obj/structure/closet/secure_closet/miner
-	name = "miner's equipment"
+	name = "miner's equipment locker"
 	icon_state = "mining"
 	req_access = list(ACCESS_MINING)
 
@@ -90,7 +90,7 @@
 	desc = "Used to call and send the mining shuttle."
 	circuit = /obj/item/circuitboard/computer/mining_shuttle
 	shuttleId = "mining"
-	possible_destinations = "mining_home;mining_away;landing_zone_dock"
+	possible_destinations = "mining_home;mining_away;landing_zone_dock;mining_public"
 	no_destination_swap = TRUE
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE

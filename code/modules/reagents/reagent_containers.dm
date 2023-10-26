@@ -115,9 +115,6 @@
 	balloon_alert(user, "transferring [amount_per_transfer_from_this]u")
 	mode_change_message(user)
 
-/obj/item/reagent_containers/attack(mob/M, mob/living/user, def_zone)
-	if(user.combat_mode)
-		return ..()
 /obj/item/reagent_containers/pre_attack_secondary(atom/target, mob/living/user, params)
 	if(HAS_TRAIT(target, TRAIT_DO_NOT_SPLASH))
 		return ..()
@@ -144,7 +141,7 @@
 		span_danger("You splash the contents of [src] onto [target][punctuation]"),
 		ignored_mobs = target,
 	)
-
+	SEND_SIGNAL(target, COMSIG_ATOM_SPLASHED)
 	if (ismob(target))
 		var/mob/target_mob = target
 		target_mob.show_message(

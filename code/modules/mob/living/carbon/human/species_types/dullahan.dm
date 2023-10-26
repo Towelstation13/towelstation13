@@ -268,4 +268,3 @@
 			owner.gib()
 	owner = null
 	return ..()
-

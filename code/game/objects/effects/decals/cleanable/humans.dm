@@ -128,7 +128,7 @@
 	. = ..()
 	if(!.)
 		return
-	//AddComponent(/datum/component/rot, 0, 5 MINUTES, 0.7) skyrat edit
+	AddComponent(/datum/component/rot, 0, 5 MINUTES, 0.7)
 
 /obj/effect/decal/cleanable/blood/gibs/ex_act(severity, target)
 	return FALSE
@@ -159,8 +159,9 @@
 		return
 	if(mapload)
 		for (var/i in 1 to range)
-			if(!isgroundlessturf(loc) || GET_TURF_BELOW(loc))
-				new /obj/effect/decal/cleanable/blood/splatter(loc)
+			var/turf/my_turf = get_turf(src)
+			if(!isgroundlessturf(my_turf) || GET_TURF_BELOW(my_turf))
+				new /obj/effect/decal/cleanable/blood/splatter(my_turf)
 			if (!step_to(src, get_step(src, direction), 0))
 				break
 		return

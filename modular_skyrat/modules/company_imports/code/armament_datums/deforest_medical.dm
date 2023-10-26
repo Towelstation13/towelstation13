@@ -120,10 +120,6 @@
 	item_type = /obj/item/defibrillator/loaded
 	cost = PAYCHECK_COMMAND
 
-/datum/armament_entry/company_import/deforest/equipment/surgical_tools
-	item_type = /obj/item/storage/backpack/duffelbag/med/surgery
-	cost = PAYCHECK_COMMAND
-
 /datum/armament_entry/company_import/deforest/equipment/advanced_health_analyer
 	item_type = /obj/item/healthanalyzer/advanced
 	cost = PAYCHECK_COMMAND * 3

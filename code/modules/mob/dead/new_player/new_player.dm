@@ -123,11 +123,11 @@
 			return "[jobtitle] is already filled to capacity."
 		//SKYRAT EDIT ADDITION
 		if(JOB_UNAVAILABLE_QUIRK)
-			return "[jobtitle] is restricted from your quirks."
+			return "[jobtitle] is restricted due to your selected quirks."
 		if(JOB_UNAVAILABLE_LANGUAGE)
-			return "[jobtitle] is restricted from your languages."
+			return "[jobtitle] is restricted due to your selected languages."
 		if(JOB_UNAVAILABLE_SPECIES)
-			return "[jobtitle] is restricted from your species."
+			return "[jobtitle] is restricted due to your selected species."
 		if(JOB_UNAVAILABLE_FLAVOUR)
 			return "[jobtitle] requires you to have flavour text for your character."
 		//SKYRAT EDIT END

@@ -27,6 +27,7 @@
 /turf/open/water/jungle
 
 /turf/open/water/beach
+	planetary_atmos = FALSE
 	gender = PLURAL
 	desc = "Come on in, it's great!"
 	icon = 'icons/turf/beach.dmi'

@@ -75,7 +75,7 @@
 
 /datum/symptom/heal/starlight/proc/CanTileHealDirectional(turf/turf_to_check, direction)
 	if(direction == UP)
-		turf_to_check = turf_to_check.above()
+		turf_to_check = GET_TURF_ABOVE(turf_to_check)
 		if(!turf_to_check)
 			return STARLIGHT_CANNOT_HEAL
 	var/area/area_to_check = get_area(turf_to_check)
@@ -98,9 +98,9 @@
 		if(istransparentturf(turf_to_check) || istype(turf_to_check, /turf/open/openspace))
 			// Check above or below us
 			if(direction == UP)
-				turf_to_check = turf_to_check.above()
+				turf_to_check = GET_TURF_ABOVE(turf_to_check)
 			else
-				turf_to_check = turf_to_check.below()
+				turf_to_check = GET_TURF_BELOW(turf_to_check)
 
 			// If we found a turf above or below us,
 			// then we can rerun the loop on the newly found turf / area
@@ -161,8 +161,8 @@
 	if(!parts.len)
 		return
 
-	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len, BODYTYPE_ORGANIC))
+	for(var/obj/item/bodypart/bodypart in parts)
+		if(bodypart.heal_damage(heal_amt/parts.len, heal_amt/parts.len, required_bodytype = BODYTYPE_ORGANIC))
 			M.update_damage_overlays()
 	return 1
 
@@ -303,8 +303,8 @@
 	if(prob(5))
 		to_chat(M, span_notice("The darkness soothes and mends your wounds."))
 
-	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len * 0.5, BODYTYPE_ORGANIC)) //more effective on brute
+	for(var/obj/item/bodypart/bodypart in parts)
+		if(bodypart.heal_damage(heal_amt/parts.len, heal_amt/parts.len * 0.5, required_bodytype = BODYTYPE_ORGANIC)) //more effective on brute
 			M.update_damage_overlays()
 	return 1
 
@@ -378,7 +378,7 @@
 			return power * 0.9
 		if(SOFT_CRIT)
 			return power * 0.5
-	if(M.getBruteLoss() + M.getFireLoss() >= 103 && !active_coma) //SKYRAT EDIT: ORIGINAL: 70 - Adjusts this to remain 37.5% of total health(plus crit health). Because 70 is alot less health here then it is on tg.
+	if(M.getBruteLoss() + M.getFireLoss() >= 70 && !active_coma)
 		to_chat(M, span_warning("You feel yourself slip into a regenerative coma..."))
 		active_coma = TRUE
 		addtimer(CALLBACK(src, PROC_REF(coma), M), 60)
@@ -405,8 +405,8 @@
 	if(!parts.len)
 		return
 
-	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len, BODYTYPE_ORGANIC))
+	for(var/obj/item/bodypart/bodypart in parts)
+		if(bodypart.heal_damage(heal_amt/parts.len, heal_amt/parts.len, required_bodytype = BODYTYPE_ORGANIC))
 			M.update_damage_overlays()
 
 	if(active_coma && M.getBruteLoss() + M.getFireLoss() == 0)
@@ -469,8 +469,8 @@
 	if(prob(5))
 		to_chat(M, span_notice("You feel yourself absorbing the water around you to soothe your damaged skin."))
 
-	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len * 0.5, heal_amt/parts.len, BODYTYPE_ORGANIC))
+	for(var/obj/item/bodypart/bodypart in parts)
+		if(bodypart.heal_damage(heal_amt/parts.len * 0.5, heal_amt/parts.len, required_bodytype = BODYTYPE_ORGANIC))
 			M.update_damage_overlays()
 
 	return 1
@@ -592,8 +592,8 @@
 		return
 	if(prob(5))
 		to_chat(M, span_notice("The pain from your wounds fades rapidly."))
-	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len, BODYTYPE_ORGANIC))
+	for(var/obj/item/bodypart/bodypart in parts)
+		if(bodypart.heal_damage(heal_amt/parts.len, heal_amt/parts.len, required_bodytype = BODYTYPE_ORGANIC))
 			M.update_damage_overlays()
 	return 1
 
@@ -637,10 +637,13 @@
 /datum/symptom/heal/radiation/Heal(mob/living/carbon/M, datum/disease/advance/A, actual_power)
 	var/heal_amt = actual_power
 
+	var/need_mob_update = FALSE
 	if(cellular_damage)
-		M.adjustCloneLoss(-heal_amt * 0.5)
+		need_mob_update += M.adjustCloneLoss(-heal_amt * 0.5, updating_health = FALSE)
 
-	M.adjustToxLoss(-(2 * heal_amt))
+	need_mob_update += M.adjustToxLoss(-(2 * heal_amt), updating_health = FALSE)
+	if(need_mob_update)
+		M.updatehealth()
 
 	var/list/parts = M.get_damaged_bodyparts(1,1, BODYTYPE_ORGANIC)
 
@@ -650,8 +653,8 @@
 	if(prob(4))
 		to_chat(M, span_notice("Your skin glows faintly, and you feel your wounds mending themselves."))
 
-	for(var/obj/item/bodypart/L in parts)
-		if(L.heal_damage(heal_amt/parts.len, heal_amt/parts.len, BODYTYPE_ORGANIC))
+	for(var/obj/item/bodypart/bodypart in parts)
+		if(bodypart.heal_damage(heal_amt/parts.len, heal_amt/parts.len, required_bodytype = BODYTYPE_ORGANIC))
 			M.update_damage_overlays()
 	return 1
 

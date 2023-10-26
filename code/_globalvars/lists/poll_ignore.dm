@@ -1,14 +1,15 @@
 //Each lists stores ckeys for "Never for this round" option category
 
 #define POLL_IGNORE_ACADEMY_WIZARD "academy_wizard"
-#define POLL_IGNORE_CORTICAL_BORER "cortical_borer" // SKYRAT EDIT - Cortical Borer
 #define POLL_IGNORE_ALIEN_LARVA "alien_larva"
 #define POLL_IGNORE_ASH_SPIRIT "ash_spirit"
 #define POLL_IGNORE_ASHWALKER "ashwalker"
+#define POLL_IGNORE_BLOB "blob"
 #define POLL_IGNORE_BOTS "bots"
 #define POLL_IGNORE_CARGORILLA "cargorilla"
 #define POLL_IGNORE_CONTRACTOR_SUPPORT "contractor_support"
 #define POLL_IGNORE_CONSTRUCT "construct"
+#define POLL_IGNORE_CORTICAL_BORER "cortical_borer" // SKYRAT EDIT - Cortical Borer
 #define POLL_IGNORE_DRONE "drone"
 #define POLL_IGNORE_FIRE_SHARK "fire_shark"
 #define POLL_IGNORE_FUGITIVE "fugitive"
@@ -39,14 +40,15 @@
 //Skyrat Edit Start: Cortical Borer
 GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_ACADEMY_WIZARD = "Academy Wizard Defender",
-	POLL_IGNORE_CORTICAL_BORER = "Cortical Borer",
 	POLL_IGNORE_ALIEN_LARVA = "Xenomorph larva",
 	POLL_IGNORE_ASH_SPIRIT = "Ash Spirit",
 	POLL_IGNORE_ASHWALKER = "Ashwalker eggs",
+	POLL_IGNORE_BLOB = "Blob spores",
 	POLL_IGNORE_BOTS = "Bots",
 	POLL_IGNORE_CARGORILLA = "Cargorilla",
 	POLL_IGNORE_CONTRACTOR_SUPPORT = "Contractor Support Unit",
 	POLL_IGNORE_CONSTRUCT = "Construct",
+	POLL_IGNORE_CORTICAL_BORER = "Cortical Borer",
 	POLL_IGNORE_DRONE = "Drone shells",
 	POLL_IGNORE_FIRE_SHARK = "Fire Shark",
 	POLL_IGNORE_FUGITIVE = "Fugitive Hunter",

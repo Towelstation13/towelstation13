@@ -46,6 +46,7 @@ type KnowledgeInfo = {
 
 type Info = {
   charges: number;
+  side_charges: number;
   total_sacrifices: number;
   ascended: BooleanLike;
   objectives: Objective[];
@@ -67,15 +68,14 @@ const IntroductionSection = (props, context) => {
             <Stack.Divider />
             <InformationSection />
             <Stack.Divider />
-
             {!ascended && (
               <Stack.Item>
                 <ObjectivePrintout
                   fill
                   titleMessage={
                     can_change_objective
-                      ? 'Your OPFOR objectives are your primary ones, but in order to ascend, you have these tasks to fulfill' /* SKYRAT EDIT CHANGE - opfor objectives */
-                      : 'Your OPFOR objectives are your primary ones. Use your dark knowledge to fulfill your personal goal' /* SKYRAT EDIT CHANGE - opfor objectives  */
+                      ? 'In order to ascend, you have these tasks to fulfill'
+                      : 'Use your dark knowledge to fulfil your personal goal'
                   }
                   objectives={objectives}
                   objectiveFollowup={
@@ -179,7 +179,7 @@ const GuideSection = () => {
 
 const InformationSection = (props, context) => {
   const { data } = useBackend<Info>(context);
-  const { charges, total_sacrifices, ascended } = data;
+  const { charges, side_charges, total_sacrifices, ascended } = data;
   return (
     <Stack.Item>
       <Stack vertical fill>
@@ -201,6 +201,13 @@ const InformationSection = (props, context) => {
           <span style={hereticBlue}>
             knowledge point{charges !== 1 ? 's' : ''}
           </span>
+          {!!side_charges && (
+            <span>
+              {' '}
+              and <b>{side_charges}</b> side point
+              {side_charges !== 1 ? 's' : ''}
+            </span>
+          )}{' '}
           .
         </Stack.Item>
         <Stack.Item>
@@ -275,7 +282,7 @@ const KnowledgeShop = (props, context) => {
 
 const ResearchInfo = (props, context) => {
   const { data } = useBackend<Info>(context);
-  const { charges } = data;
+  const { charges, side_charges } = data;
 
   return (
     <Stack justify="space-evenly" height="100%" width="100%">
@@ -285,7 +292,14 @@ const ResearchInfo = (props, context) => {
             You have <b>{charges || 0}</b>&nbsp;
             <span style={hereticBlue}>
               knowledge point{charges !== 1 ? 's' : ''}
-            </span>{' '}
+            </span>
+            {!!side_charges && (
+              <span>
+                {' '}
+                and <b>{side_charges}</b> side point
+                {side_charges !== 1 ? 's' : ''}
+              </span>
+            )}{' '}
             to spend.
           </Stack.Item>
           <Stack.Item grow>

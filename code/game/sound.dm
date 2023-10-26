@@ -150,8 +150,8 @@
 			sound_to_use.environment = A.sound_environment
 
 		if(use_reverb && sound_to_use.environment != SOUND_ENVIRONMENT_NONE) //We have reverb, reset our echo setting
-			sound_to_use.echo[3] = -1300 //Room setting, 0 means normal reverb //SKYRAT EDIT CHANGE
-			sound_to_use.echo[4] = -1300 //RoomHF setting, 0 means normal reverb. //SKYRAT EDIT CHANGE
+			sound_to_use.echo[3] = 0 //Room setting, 0 means normal reverb
+			sound_to_use.echo[4] = 0 //RoomHF setting, 0 means normal reverb.
 
 	SEND_SOUND(src, sound_to_use)
 

@@ -6,6 +6,8 @@ const BASEICONS = {
   'Assistant': 'toolbox',
   'Atmospheric Technician': 'fan',
   'Bartender': 'cocktail',
+  'Bit Avatar': 'code',
+  'Bitrunner': 'gamepad',
   'Botanist': 'seedling',
   'Captain': 'crown',
   'Cargo Technician': 'box',

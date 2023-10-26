@@ -197,6 +197,9 @@
 	fade_in = 20
 	fade_out = 20
 
+/datum/client_colour/monochrome/colorblind
+	priority = PRIORITY_HIGH
+
 /datum/client_colour/monochrome/trance
 	priority = PRIORITY_NORMAL
 
@@ -220,6 +223,10 @@
 	priority = PRIORITY_ABSOLUTE
 	override = TRUE
 	colour = list(0.8,0,0,0, 0,0,0,0, 0,0,1,0, 0,0,0,1, 0,0,0,0)
+
+/datum/client_colour/manual_heart_blood
+	priority = PRIORITY_ABSOLUTE
+	colour = COLOR_RED
 
 #undef PRIORITY_ABSOLUTE
 #undef PRIORITY_HIGH

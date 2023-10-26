@@ -183,9 +183,10 @@
 	new /obj/item/pinpointer/crew(src)
 	new /obj/item/binoculars(src)
 	new /obj/item/storage/box/rxglasses/spyglasskit(src)
+	new /obj/item/clothing/head/fedora/inspector_hat(src)
 
 /obj/structure/closet/secure_closet/injection
-	name = "lethal injections"
+	name = "lethal injections locker"
 	req_access = list(ACCESS_HOS)
 
 /obj/structure/closet/secure_closet/injection/PopulateContents()
@@ -265,7 +266,7 @@
 
 /obj/structure/closet/secure_closet/contraband/armory
 	anchored = TRUE
-	name = "Contraband Locker"
+	name = "contraband locker"
 	req_access = list(ACCESS_ARMORY)
 
 /obj/structure/closet/secure_closet/contraband/heads

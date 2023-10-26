@@ -305,9 +305,6 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/listeningstation)
 "rr" = (
-/obj/machinery/door/airlock{
-	name = "Emergency Backup"
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -813,6 +810,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/machinery/door/airlock{
+	name = "Emergency Backup"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/listeningstation)
 "RK" = (

@@ -471,7 +471,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/unanchored/spawner, 0)
 //2022 BABYYYYY ~lewc
 //2023 ONE YEAR TO GO! -LT3
 /datum/armor/window_reinforced
-	melee = 50
+	melee = 80
 	bomb = 25
 	fire = 80
 	acid = 100

@@ -41,6 +41,10 @@
 		item = "[name_part] = /icon (<span class='value'>[value]</span>)"
 		#endif
 
+	else if(isappearance(value))
+		var/image/actually_an_appearance = value
+		item = "[name_part] = /appearance (<span class='value'>[actually_an_appearance.icon]</span>)"
+
 	else if (isfile(value))
 		item = "[name_part] = <span class='value'>'[value]'</span>"
 
@@ -90,7 +94,10 @@
 		for (var/i in GLOB.bitfields[name])
 			if (value & GLOB.bitfields[name][i])
 				flags += i
+		if(length(flags))
 			item = "[name_part] = [VV_HTML_ENCODE(jointext(flags, ", "))]"
+		else
+			item = "[name_part] = NONE"
 	else
 		item = "[name_part] = <span class='value'>[VV_HTML_ENCODE(value)]</span>"
 

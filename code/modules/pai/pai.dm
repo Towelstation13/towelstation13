@@ -1,6 +1,6 @@
 /mob/living/silicon/pai
 	can_be_held = TRUE
-	can_buckle_to = FALSE
+	can_buckle_to = TRUE
 	density = FALSE
 	desc = "A generic pAI hard-light holographics emitter."
 	health = 500

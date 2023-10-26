@@ -25,11 +25,11 @@
 /datum/preferences/proc/hardcore_random_setup(mob/living/carbon/human/character)
 	var/next_hardcore_score = select_hardcore_quirks()
 	character.hardcore_survival_score = next_hardcore_score ** 1.2  //30 points would be about 60 score
+	log_admin("[character] started hardcore random with [english_list(all_quirks)], for a score of [next_hardcore_score].")
 
 	//Add a sixpack because honestly
 	var/obj/item/bodypart/chest/chest = character.get_bodypart(BODY_ZONE_CHEST)
 	chest.add_bodypart_overlay(new /datum/bodypart_overlay/simple/sixpack() )
-
 
 /**
  * Goes through all quirks that can be used in hardcore mode and select some based on a random budget.
@@ -94,8 +94,6 @@
 /* SKYRAT EDIT REMOVE - MOVED TO MASTER FILES
 /datum/preferences/proc/render_new_preview_appearance(mob/living/carbon/human/dummy/mannequin)
 	var/datum/job/preview_job = get_highest_priority_job()
-	mannequin.dna.mutant_bodyparts = list()
-
 	if(preview_job)
 		// Silicons only need a very basic preview since there is no customization for them.
 		if (istype(preview_job,/datum/job/ai))

@@ -48,6 +48,12 @@ Assistant
 
 /datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/target)
 	..()
+	for(var/holidayname in GLOB.holidays)
+		var/datum/holiday/holiday_today = GLOB.holidays[holidayname]
+		var/obj/item/special_hat = holiday_today.holiday_hat
+		if(prob(HOLIDAY_HAT_CHANCE) && !isnull(special_hat) && isnull(head))
+			head = special_hat
+
 	give_jumpsuit(target)
 
 /datum/outfit/job/assistant/proc/give_jumpsuit(mob/living/carbon/human/target)
@@ -60,11 +66,6 @@ Assistant
 
 	var/index = (jumpsuit_number % GLOB.colored_assistant.jumpsuits.len) + 1
 
-	// SKYRAT EDIT - Loadouts (we don't want jumpsuits to override the person's loadout item)
-	if(modified_outfit_slots & ITEM_SLOT_ICLOTHING)
-		return
-	// SKYRAT EDIT END
-
 	//We don't cache these, because they can delete on init
 	//Too fragile, better to just eat the cost
 	if (target.jumpsuit_style == PREF_SUIT)
@@ -74,7 +75,6 @@ Assistant
 
 /datum/outfit/job/assistant/consistent
 	name = "Assistant - Consistent"
-
 
 /datum/outfit/job/assistant/consistent/give_jumpsuit(mob/living/carbon/human/target)
 	uniform = /obj/item/clothing/under/color/grey
@@ -86,7 +86,6 @@ Assistant
 	if (SSatoms.initialized == INITIALIZATION_INSSATOMS)
 		H.w_uniform?.update_greyscale()
 		H.update_worn_undersuit()
-
 
 /proc/get_configured_colored_assistant_type()
 	return CONFIG_GET(flag/grey_assistants) ? /datum/colored_assistant/grey : /datum/colored_assistant/random

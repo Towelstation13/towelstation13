@@ -85,7 +85,7 @@
 	if(!length(required_ingredients))
 		return
 
-	// If a food item is supposed to be made, remove relevant ingredients from the pot, then make the item 
+	// If a food item is supposed to be made, remove relevant ingredients from the pot, then make the item
 	if(!isnull(resulting_food_path))
 		var/list/tracked_ingredients
 		LAZYINITLIST(tracked_ingredients)
@@ -112,7 +112,7 @@
 			for(var/reagent_path as anything in required_reagents)
 				holder.add_reagent(reagent_path,(required_reagents[reagent_path])*(created_volume-ingredient_max_multiplier))
 
-	
+
 	// This only happens if we're being instant reacted so let's just skip to what we really want
 	if(isnull(reaction))
 		testing("Soup reaction of type [type] instant reacted, cleaning up.")
@@ -584,8 +584,8 @@
 
 /datum/chemical_reaction/food/soup/chili_sin_carne
 	required_reagents = list(
-		/datum/reagent/water = 40,
-		/datum/reagent/consumable/salt = 5,
+		/datum/reagent/water = 30,
+		/datum/reagent/water/salt = 10,
 	)
 	required_ingredients = list(
 		/obj/item/food/grown/chili = 1,
@@ -1121,8 +1121,8 @@
 
 /datum/chemical_reaction/food/soup/electron
 	required_reagents = list(
-		/datum/reagent/water = 45,
-		/datum/reagent/consumable/salt = 5,
+		/datum/reagent/water = 40,
+		/datum/reagent/water/salt = 10,
 	)
 	required_ingredients = list(
 		/obj/item/food/grown/mushroom/jupitercup = 1,
@@ -1685,8 +1685,8 @@
 
 /datum/chemical_reaction/food/soup/rice_porridge
 	required_reagents = list(
-		/datum/reagent/water = 30,
-		/datum/reagent/consumable/salt = 5,
+		/datum/reagent/water = 20,
+		/datum/reagent/water/salt = 10,
 	)
 	required_ingredients = list(
 		/obj/item/food/boiledrice = 1,
@@ -1827,7 +1827,7 @@
 		/obj/item/food/spaghetti/rawnoodles = 1
 	)
 	required_catalysts = list(
-		/datum/reagent/water = 30
+		/datum/reagent/water/salt = 10,
 	)
 	resulting_food_path = /obj/item/food/spaghetti/boilednoodles
 	ingredient_reagent_multiplier = 0
@@ -2103,7 +2103,7 @@
 	name = "\improper Hong Kong macaroni soup"
 	icon = 'icons/obj/food/martian.dmi'
 	icon_state = "hong_kong_macaroni"
-	drink_type = MEAT | VEGETABLES | GRAIN 
+	drink_type = MEAT | VEGETABLES | GRAIN
 
 /datum/chemical_reaction/food/soup/hong_kong_macaroni
 	required_reagents = list(

@@ -55,6 +55,13 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 	)
 	AddElement(/datum/element/contextual_screentip_tools, tool_behaviors)
 
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/spear, /datum/crafting_recipe/stunprod, /datum/crafting_recipe/teleprod) // snatcher prod isn't here as a spoopy secret
+
+	AddComponent(
+		/datum/component/slapcrafting,\
+		slapcraft_recipes = slapcraft_recipe_list,\
+	)
+
 /obj/item/stack/rods/handle_openspace_click(turf/target, mob/user, proximity_flag, click_parameters)
 	if(proximity_flag)
 		target.attackby(src, user, click_parameters)
@@ -84,19 +91,6 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 			ignored_mobs = user
 		)
 		use(2)
-		user.put_in_inactive_hand(new_item)
-		return TOOL_ACT_TOOLTYPE_SUCCESS
-
-/obj/item/stack/rods/welder_act_secondary(mob/living/user, obj/item/tool)
-	if(tool.use_tool(src, user, delay = 0, volume = 40))
-		var/obj/item/stack/tile/iron/two/new_item = new(user.loc)
-		user.visible_message(
-			span_notice("[user.name] shaped [src] into floor tiles with [tool]."),
-			blind_message = span_hear("You hear welding."),
-			vision_distance = COMBAT_MESSAGE_RANGE,
-			ignored_mobs = user
-		)
-		use(1)
 		user.put_in_inactive_hand(new_item)
 		return TOOL_ACT_TOOLTYPE_SUCCESS
 

@@ -14,11 +14,9 @@
 	harmful = TRUE
 	mech_flags = EXOSUIT_MODULE_RIPLEY
 	///Bool for whether we beat the hell out of things we punch (and tear off their arms)
-	//var/killer_clamp = FALSE -------SKYRAT EDIT - A clamp is a clamp, just like it was on the oldbase.
-	var/killer_clamp = TRUE
+	var/killer_clamp = FALSE
 	///How much base damage this clamp does
-	var/clamp_damage = 30	//SKYRAT EDIT - We've removed instant arm delimbs, so this is a buff to make up for it.
-//	var/clamp_damage = 20 SKYRAT EDIT - Original line
+	var/clamp_damage = 20
 	///Var for the chassis we are attached to, needed to access ripley contents and such
 	var/obj/vehicle/sealed/mecha/ripley/cargo_holder
 	///Audio for using the hydraulic clamp
@@ -100,8 +98,7 @@
 				chassis.visible_message(span_notice("[chassis] pushes [target] out of the way."), \
 				span_notice("[chassis] pushes you aside."))
 			return ..()
-
-		/*else if(LAZYACCESS(modifiers, RIGHT_CLICK) && iscarbon(M))//meme clamp here
+		else if(LAZYACCESS(modifiers, RIGHT_CLICK) && iscarbon(M))//meme clamp here
 			if(!killer_clamp)
 				to_chat(source, span_notice("You longingly wish to tear [M]'s arms off."))
 				return
@@ -123,7 +120,7 @@
 						span_userdanger("[chassis] rips your arms off!"))
 			log_combat(source, M, "removed both arms with a real clamp,", "[name]", "(COMBAT MODE: [uppertext(source.combat_mode)] (DAMTYPE: [uppertext(damtype)])")
 			return ..()
-*/	// SKYRAT REMOVAL - No instant arm-removals.
+
 		M.take_overall_damage(clamp_damage)
 		if(!M) //get gibbed stoopid
 			return

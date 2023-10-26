@@ -53,8 +53,12 @@
 	if(dna?.species && !skipface)
 		apparent_species = ", \an [dna.species.name]"
 	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"][apparent_species]</EM>!")
+			obscure_examine = TRUE
 
-	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
+	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
+
+	if(obscure_examine)
+		return list("<span class='warning'>You're struggling to make out any details...")
 
 	if(obscure_examine)
 		return list("<span class='warning'>You're struggling to make out any details...")

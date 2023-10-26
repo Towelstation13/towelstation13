@@ -175,7 +175,6 @@ GLOBAL_LIST_INIT(chem_master_containers, list(
 			filling.color = mix_color_from_reagents(reagents.reagent_list)
 			. += filling
 
-
 /obj/machinery/chem_master/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)

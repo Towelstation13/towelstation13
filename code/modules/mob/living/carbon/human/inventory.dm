@@ -28,6 +28,7 @@
 			return r_store
 		if(ITEM_SLOT_SUITSTORE)
 			return s_store
+
 	return ..()
 
 /mob/living/carbon/human/get_slot_by_item(obj/item/looking_for)
@@ -177,14 +178,7 @@
 		if(ITEM_SLOT_GLOVES)
 			if(gloves)
 				return
-
 			gloves = equipping
-			//SKYRAT EDIT ADDITION - ERP UPDATE
-			if(gloves.breakouttime)
-				ADD_TRAIT(src, TRAIT_RESTRAINED, GLOVES_TRAIT)
-				stop_pulling()
-				update_mob_action_buttons()
-			//SKYRAT EDIT ADDITION END
 			update_worn_gloves()
 		if(ITEM_SLOT_FEET)
 			if(shoes)
@@ -221,7 +215,6 @@
 				return
 			s_store = equipping
 			update_suit_storage()
-
 		else
 			to_chat(src, span_danger("You are trying to equip this item to an unsupported inventory slot. Report this to a coder!"))
 
@@ -321,7 +314,6 @@
 		s_store = null
 		if(!QDELETED(src))
 			update_suit_storage()
-
 	update_equipment_speed_mods()
 
 	// Send a signal for when we unequip an item that used to cover our feet/shoes. Used for bloody feet

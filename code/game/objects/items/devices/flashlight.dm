@@ -40,9 +40,15 @@
 		on = TRUE
 	update_brightness()
 	register_context()
-
 	if(toggle_context)
 		RegisterSignal(src, COMSIG_HIT_BY_SABOTEUR, PROC_REF(on_saboteur))
+
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/flashlight_eyes)
+
+	AddComponent(
+		/datum/component/slapcrafting,\
+		slapcraft_recipes = slapcraft_recipe_list,\
+	)
 
 /obj/item/flashlight/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
 	// single use lights can be toggled on once
@@ -271,7 +277,7 @@
 	if(on)
 		toggle_light()
 	COOLDOWN_START(src, disabled_time, disrupt_duration)
-	return TRUE
+	return COMSIG_SABOTEUR_SUCCESS
 
 /obj/item/flashlight/pen
 	name = "penlight"

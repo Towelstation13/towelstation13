@@ -58,6 +58,9 @@ endmap
 map runtimestation
 endmap
 
+map runtimestation
+endmap
+
 ##SKYRAT MAPS##
 
 map voidraptor

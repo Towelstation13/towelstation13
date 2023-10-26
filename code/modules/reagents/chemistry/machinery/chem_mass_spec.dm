@@ -78,7 +78,6 @@ This will not clean any inverted reagents. Inverted reagents will still be corre
 	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /*			beaker swapping/attack code			*/
-
 /obj/machinery/chem_mass_spec/attackby(obj/item/item, mob/user, params)
 	if(processing_reagents)
 		to_chat(user, "<span class='notice'> The [src] is currently processing a batch!")

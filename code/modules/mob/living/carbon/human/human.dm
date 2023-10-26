@@ -121,6 +121,8 @@
 			return
 		var/datum/record/crew/target_record = find_record(perpname)
 		if(href_list["photo_front"] || href_list["photo_side"])
+			if(!target_record)
+				return
 			if(!human_user.canUseHUD())
 				return
 			if(!HAS_TRAIT(human_user, TRAIT_SECURITY_HUD) && !HAS_TRAIT(human_user, TRAIT_MEDICAL_HUD))
@@ -242,7 +244,7 @@
 				return
 			target_record = find_record(perpname)
 			if(!target_record)
-				to_chat(usr, span_warning("ERROR: Unable to locate data core entry for target."))
+				to_chat(human_user, span_warning("ERROR: Unable to locate data core entry for target."))
 				return
 			if(href_list["status"])
 				var/new_status = tgui_input_list(human_user, "Specify a new criminal status for this person.", "Security HUD", WANTED_STATUSES(), target_record.wanted_status)
@@ -372,7 +374,7 @@
 	var/obj/item/bodypart/the_part = isbodypart(target_zone) ? target_zone : get_bodypart(check_zone(target_zone)) //keep these synced
 	// Loop through the clothing covering this bodypart and see if there's any thiccmaterials
 	if(!(injection_flags & INJECT_CHECK_PENETRATE_THICK))
-		for(var/obj/item/clothing/iter_clothing in clothingonpart(the_part))
+		for(var/obj/item/clothing/iter_clothing in get_clothing_on_part(the_part))
 			if(iter_clothing.clothing_flags & THICKMATERIAL)
 				. = FALSE
 				break
@@ -446,7 +448,7 @@
 
 	/* SKYRAT EDIT - REMOVAL
 	//Check for nonhuman scum
-	if(dna && dna.species.id && dna.species.id != "human")
+	if(dna && dna.species.id && dna.species.id != SPECIES_HUMAN)
 		threatcount += 1
 	*/
 
@@ -752,6 +754,9 @@
 		)
 	if(vomit_flags & MOB_VOMIT_STUN)
 		Stun(20 SECONDS)
+	if(vomit_flags & MOB_VOMIT_KNOCKDOWN)
+		Knockdown(20 SECONDS)
+
 	return TRUE
 
 /mob/living/carbon/human/vv_edit_var(var_name, var_value)
@@ -783,6 +788,7 @@
 	VV_DROPDOWN_OPTION(VV_HK_MOD_QUIRKS, "Add/Remove Quirks")
 	VV_DROPDOWN_OPTION(VV_HK_SET_SPECIES, "Set Species")
 	VV_DROPDOWN_OPTION(VV_HK_PURRBATION, "Toggle Purrbation")
+	VV_DROPDOWN_OPTION(VV_HK_APPLY_DNA_INFUSION, "Apply DNA Infusion")
 
 /mob/living/carbon/human/vv_do_topic(list/href_list)
 	. = ..()
@@ -820,6 +826,7 @@
 
 			if(initial(quirk_type.abstract_parent_type) == type)
 				continue
+
 			var/qname = initial(quirk_type.name)
 			options[has_quirk(quirk_type) ? "[qname] (Remove)" : "[qname] (Add)"] = quirk_type
 
@@ -862,6 +869,19 @@
 			var/msg = span_notice("[key_name_admin(usr)] has removed [key_name(src)] from purrbation.")
 			message_admins(msg)
 			admin_ticket_log(src, msg)
+	if(href_list[VV_HK_APPLY_DNA_INFUSION])
+		if(!check_rights(R_SPAWN))
+			return
+		if(!ishuman(src))
+			to_chat(usr, "This can only be done to human species.")
+			return
+		var/result = usr.client.grant_dna_infusion(src)
+		if(result)
+			to_chat(usr, "Successfully applied DNA Infusion [result] to [src].")
+			log_admin("[key_name(usr)] has applied DNA Infusion [result] to [key_name(src)].")
+		else
+			to_chat(usr, "Failed to apply DNA Infusion to [src].")
+			log_admin("[key_name(usr)] failed to apply a DNA Infusion to [key_name(src)].")
 
 /mob/living/carbon/human/limb_attack_self()
 	var/obj/item/bodypart/arm = hand_bodyparts[active_hand_index]

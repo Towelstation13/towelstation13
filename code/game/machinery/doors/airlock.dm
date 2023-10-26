@@ -191,12 +191,12 @@
 
 	diag_hud_set_electrified()
 
-	RegisterSignal(src, COMSIG_MACHINERY_BROKEN, PROC_REF(on_break))
-
 	// Click on the floor to close airlocks
 	AddComponent(/datum/component/redirect_attack_hand_from_turf)
 
-	return INITIALIZE_HINT_LATELOAD
+	RegisterSignal(src, COMSIG_MACHINERY_BROKEN, PROC_REF(on_break))
+
+	RegisterSignal(SSdcs, COMSIG_GLOB_GREY_TIDE, PROC_REF(grey_tide))
 
 /obj/machinery/door/airlock/connect_to_shuttle(mapload, obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	if(id_tag)

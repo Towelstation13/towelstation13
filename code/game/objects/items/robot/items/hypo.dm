@@ -248,9 +248,9 @@
 /obj/item/reagent_containers/borghypo/AltClick(mob/living/user)
 	. = ..()
 /* SKYRAT REMOVAL START - Changing transfer amounts is now handled by the parent proc in modular files.
-	if(user.stat == DEAD || user != loc) 
+	if(user.stat == DEAD || user != loc)
 		return //IF YOU CAN HEAR ME SET MY TRANSFER AMOUNT TO 1
-	change_transfer_amount(user)	
+	change_transfer_amount(user)
 */ // SKYRAT REMOVAL END
 
 /// Default Medborg Hypospray

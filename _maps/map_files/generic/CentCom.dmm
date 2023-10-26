@@ -7002,18 +7002,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/smooth_edge,
 /area/centcom/central_command_areas/evacuation/ship)
-"Hh" = (
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp,
-/obj/machinery/requests_console/directional/north{
-	department = "Captain's Desk";
-	name = "CentCom Requests Console"
-	},
-/obj/effect/mapping_helpers/requests_console/announcement,
-/obj/effect/mapping_helpers/requests_console/information,
-/obj/effect/mapping_helpers/requests_console/assistance,
-/turf/open/floor/iron/grimy,
-/area/centcom/central_command_areas/admin)
 "Hi" = (
 /obj/effect/turf_decal/tile/green,
 /obj/machinery/light/directional/south,
@@ -9680,7 +9668,7 @@
 /area/centcom/central_command_areas/armory)
 "Vh" = (
 /obj/structure/table/reinforced,
-/obj/item/surgery_tray{
+/obj/item/surgery_tray/full{
 	pixel_y = 10;
 	pixel_x = 2
 	},
@@ -10547,6 +10535,18 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/armory)
+"Zw" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp,
+/obj/machinery/requests_console/directional/north{
+	department = "Captain's Desk";
+	name = "CentCom Requests Console"
+	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/assistance,
+/turf/open/floor/iron/grimy,
+/area/centcom/central_command_areas/admin)
 "Zx" = (
 /obj/machinery/computer/records/security{
 	dir = 8
@@ -48880,7 +48880,7 @@ On
 vo
 fP
 On
-Hh
+Zw
 XV
 hd
 To

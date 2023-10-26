@@ -115,7 +115,6 @@
 
 	return TRUE
 
-
 /obj/machinery/dna_scannernew/relaymove(mob/living/user, direction)
 	if(user.stat || locked)
 		if(message_cooldown <= world.time)

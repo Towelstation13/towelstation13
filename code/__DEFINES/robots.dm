@@ -1,4 +1,4 @@
-/** AI defines */
+// AI defines
 
 #define DEFAULT_AI_LAWID "default"
 #define LAW_ZEROTH "zeroth"
@@ -27,7 +27,10 @@
 ///Malfunctioning AI hijacking mecha
 #define AI_MECH_HACK 3
 
-/** Cyborg defines */
+// Cyborg defines
+
+/// If an item does this or more throwing damage it will slow a borg down on hit
+#define CYBORG_THROW_SLOWDOWN_THRESHOLD 10
 
 /// Special value to reset cyborg's lamp_cooldown
 #define BORG_LAMP_CD_RESET -1
@@ -47,15 +50,6 @@
 #define BORG_CHOOSE_MODULE_TWO 2
 ///Third Borg module slot.
 #define BORG_CHOOSE_MODULE_THREE 3
-
-// SKYRAT EDIT START - TODO - Move this upstream later
-/// To store all the different cyborg models, instead of creating that for each cyborg.
-GLOBAL_LIST_EMPTY(cyborg_model_list)
-/// To store all of the different base cyborg model icons, instead of creating them every time the pick_module() proc is called.
-GLOBAL_LIST_EMPTY(cyborg_base_models_icon_list)
-/// To store all of the different cyborg model icons, instead of creating them every time the be_transformed_to() proc is called.
-GLOBAL_LIST_EMPTY(cyborg_all_models_icon_list)
-// SKYRAT EDIT END
 
 #define SKIN_ICON "skin_icon"
 #define SKIN_ICON_STATE "skin_icon_state"
@@ -77,6 +71,15 @@ GLOBAL_LIST_EMPTY(cyborg_all_models_icon_list)
 #define ASSEMBLY_SEVENTH_STEP 7
 #define ASSEMBLY_EIGHTH_STEP 8
 #define ASSEMBLY_NINTH_STEP 9
+
+// SKYRAT EDIT START - TODO - Move this upstream later
+/// To store all the different cyborg models, instead of creating that for each cyborg.
+GLOBAL_LIST_EMPTY(cyborg_model_list)
+/// To store all of the different base cyborg model icons, instead of creating them every time the pick_module() proc is called.
+GLOBAL_LIST_EMPTY(cyborg_base_models_icon_list)
+/// To store all of the different cyborg model icons, instead of creating them every time the be_transformed_to() proc is called.
+GLOBAL_LIST_EMPTY(cyborg_all_models_icon_list)
+// SKYRAT EDIT END
 
 //Bot defines, placed here so they can be read by other things!
 /// Delay between movemements

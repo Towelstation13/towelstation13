@@ -20,4 +20,4 @@
 /// Stops people from changing things in the character creator. Entirely.
 #define DISABLE_CREATOR 9
 // SKYRAT EDIT END
-#define MEASURES_AMOUNT 9 // The total number of switches defined above // SKYRAT EDIT ADDITION
+#define MEASURES_AMOUNT 9 // The total number of switches defined above

@@ -406,7 +406,6 @@
 /obj/machinery/power/smes/proc/log_smes(mob/user)
 	investigate_log("Input/Output: [input_level]/[output_level] | Charge: [charge] | Output-mode: [output_attempt?"ON":"OFF"] | Input-mode: [input_attempt?"AUTO":"OFF"] by [user ? key_name(user) : "outside forces"]", INVESTIGATE_ENGINE)
 
-
 /obj/machinery/power/smes/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)

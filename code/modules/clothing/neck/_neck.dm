@@ -468,7 +468,7 @@
 			new /obj/item/holochip(get_turf(user),true_price)
 	else
 		to_chat(user, span_warning("There is no export value for [I] or any items within it."))
-		
+
 	return .
 
 /obj/item/clothing/neck/beads

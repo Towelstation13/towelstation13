@@ -65,6 +65,7 @@
 	icon_state = "deagle"
 	force = 14
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m50
+	accepted_magazine_type = /obj/item/ammo_box/magazine/m50
 	can_suppress = FALSE
 	mag_display = TRUE
 	fire_sound = 'sound/weapons/gun/rifle/shot.ogg'
@@ -81,9 +82,6 @@
 	desc = "A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo."
 	icon_state = "deaglecamo"
 	inhand_icon_state = "deagleg"
-	// SKYRAT EDIT - We don't actually have the right icons for this. When you add the icons you can remove this line!
-	show_bolt_icon = FALSE
-	// SKYRAT EDIT END
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/regal
 	name = "\improper Regal Condor"

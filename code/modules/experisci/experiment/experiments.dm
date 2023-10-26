@@ -44,7 +44,7 @@
 		/mob/living/basic/chicken,
 		/mob/living/basic/cow,
 		/mob/living/basic/pet/dog/corgi,
-		/mob/living/simple_animal/hostile/retaliate/snake,
+		/mob/living/basic/snake,
 		/mob/living/simple_animal/pet/cat,
 	)
 
@@ -133,14 +133,6 @@
 	target_amount = list(15,55,250)
 	experiment_proper = TRUE
 	required_gas = /datum/gas/hypernoblium
-
-/datum/experiment/ordnance/gaseous/halon
-	name = "Halon Gas Shells"
-	description = "The delivery of Halon gas into an area of operation might prove useful. Perform research and publish papers on this field."
-	gain = list(10,30,60)
-	target_amount = list(15,55,250)
-	experiment_proper = TRUE
-	required_gas = /datum/gas/halon
 
 /datum/experiment/scanning/random/material/meat
 	name = "Biological Material Scanning Experiment"
@@ -234,7 +226,7 @@
 		/obj/machinery/biogenerator = 3,
 		/obj/machinery/gibber = 3,
 		/obj/machinery/chem_master = 3,
-		/obj/machinery/atmospherics/components/unary/cryo_cell = 3,
+		/obj/machinery/cryo_cell = 3,
 		/obj/machinery/harvester = 5,
 		/obj/machinery/quantumpad = 5
 	)
@@ -291,7 +283,6 @@
 		/obj/machinery/rnd/experimentor = 1,
 		/obj/machinery/medical_kiosk = 2,
 		/obj/machinery/piratepad/civilian = 2,
-		/obj/machinery/rnd/bepis = 3
 	)
 	required_stock_part = /obj/item/stock_parts/scanning_module/adv
 
@@ -332,7 +323,7 @@
 	///Damage percent that each mech needs to be at for a scan to work.
 	var/damage_percent
 
-/datum/experiment/scanning/random/mecha_damage_scan/New()
+/datum/experiment/scanning/random/mecha_damage_scan/New(datum/techweb/techweb)
 	. = ..()
 	damage_percent = rand(15, 95)
 	//updating the description with the damage_percent var set

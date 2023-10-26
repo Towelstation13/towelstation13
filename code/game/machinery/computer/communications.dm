@@ -704,6 +704,13 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 		ui = new(user, src, "CommunicationsConsole")
 		ui.open()
 
+/obj/machinery/computer/communications/ui_interact(mob/user, datum/tgui/ui)
+	. = ..()
+	ui = SStgui.try_update_ui(user, src, ui)
+	if (!ui)
+		ui = new(user, src, "CommunicationsConsole")
+		ui.open()
+
 /obj/machinery/computer/communications/ui_static_data(mob/user)
 	return list(
 		"callShuttleReasonMinLength" = CALL_SHUTTLE_REASON_LENGTH,

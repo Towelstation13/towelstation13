@@ -53,7 +53,7 @@
 	if(cavity_item)
 		cavity_item.forceMove(drop_location())
 		cavity_item = null
-	..()
+	return ..()
 
 /obj/item/bodypart/chest/monkey
 	icon = 'icons/mob/human/species/monkey/bodyparts.dmi'
@@ -100,7 +100,7 @@
 	desc = "Hey buddy give me a HAND and report this to the github because you shouldn't be seeing this."
 	attack_verb_continuous = list("slaps", "punches")
 	attack_verb_simple = list("slap", "punch")
-	max_damage = 60 //SKYRAT EDIT CHANGE - ORIGINAL: 50
+	max_damage = 50
 	aux_layer = BODYPARTS_HIGH_LAYER
 	body_damage_coeff = 0.75
 	can_be_disabled = TRUE
@@ -114,7 +114,7 @@
 	/// Datum describing how to offset things held in the hands of this arm, the x offset IS functional here
 	var/datum/worn_feature_offset/held_hand_offset
 
-	biological_state = (BIO_STANDARD|BIO_JOINTED)
+	biological_state = BIO_STANDARD_JOINTED
 
 /obj/item/bodypart/arm/Destroy()
 	QDEL_NULL(worn_glove_offset)
@@ -334,7 +334,7 @@
 	desc = "This item shouldn't exist. Talk about breaking a leg. Badum-Tss!"
 	attack_verb_continuous = list("kicks", "stomps")
 	attack_verb_simple = list("kick", "stomp")
-	max_damage = 60 // SKYRAT EDIT - ORIGINAL: 50
+	max_damage = 50
 	body_damage_coeff = 0.75
 	can_be_disabled = TRUE
 	unarmed_attack_effect = ATTACK_EFFECT_KICK
@@ -346,7 +346,7 @@
 	/// Datum describing how to offset things worn on the foot of this leg, note that an x offset won't do anything here
 	var/datum/worn_feature_offset/worn_foot_offset
 
-	biological_state = (BIO_STANDARD|BIO_JOINTED)
+	biological_state = BIO_STANDARD_JOINTED
 
 /obj/item/bodypart/leg/Destroy()
 	QDEL_NULL(worn_foot_offset)

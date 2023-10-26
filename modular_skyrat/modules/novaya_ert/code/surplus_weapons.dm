@@ -59,7 +59,7 @@
 	weak_against_armour = TRUE
 
 /obj/projectile/beam/laser/plasma_glob/on_hit(atom/target, blocked)
-	if(istype(target, /obj/structure/blob) || istype(target, /mob/living/simple_animal/hostile/blob))
+	if(istype(target, /obj/structure/blob))
 		damage = damage * 0.75
 	return ..()
 

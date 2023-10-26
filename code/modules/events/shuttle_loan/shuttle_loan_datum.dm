@@ -17,6 +17,8 @@
 	. = ..()
 	if(!logging_desc)
 		stack_trace("No logging blurb set for [src.type]!")
+	if(HAS_TRAIT(SSstation, STATION_TRAIT_LOANER_SHUTTLE))
+		bonus_points *= 1.15
 
 /// Spawns paths added to `spawn_list`, and passes empty shuttle turfs so you can spawn more complicated things like dead bodies.
 /datum/shuttle_loan_situation/proc/spawn_items(list/spawn_list, list/empty_shuttle_turfs)
@@ -163,7 +165,7 @@
 	logging_desc = "Pizza delivery"
 
 /datum/shuttle_loan_situation/pizza_delivery/spawn_items(list/spawn_list, list/empty_shuttle_turfs)
-	var/naughtypizza = list(/obj/item/pizzabox/bomb /*/obj/item/pizzabox/margherita/robo*/) // SKYRAT EDIT: oh look another blacklist, for pizza nonetheless! removes borg pizza
+	var/naughtypizza = list(/obj/item/pizzabox/bomb, /obj/item/pizzabox/margherita/robo) //oh look another blacklist, for pizza nonetheless!
 	var/nicepizza = list(/obj/item/pizzabox/margherita, /obj/item/pizzabox/meat, /obj/item/pizzabox/vegetable, /obj/item/pizzabox/mushroom)
 	for(var/i in 1 to 6)
 		spawn_list.Add(pick(prob(5) ? naughtypizza : nicepizza))

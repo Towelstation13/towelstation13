@@ -523,7 +523,7 @@
 	threat_reduction = 30
 	dynamic_threat_id = "Radioactive Nebula"
 
-	intensity_increment_time = 10 MINUTES // SKYRAT EDIT longer shield duration - ORIGINAL: intensity_increment_time = 5 MINUTES /
+	intensity_increment_time = 5 MINUTES
 	maximum_nebula_intensity = 1 HOURS + 40 MINUTES
 
 	nebula_layer = /atom/movable/screen/parallax_layer/random/space_gas/radioactive

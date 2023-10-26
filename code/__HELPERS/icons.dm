@@ -40,22 +40,27 @@ icon/UseAlphaMask(mask, mode)
 	Sometimes you may want to take the alpha values from one icon and use them on a different icon.
 	This proc will do that. Just supply the icon whose alpha mask you want to use, and src will change
 	so it has the same colors as before but uses the mask for opacity.
+
 COLOR MANAGEMENT AND HSV
 RGB isn't the only way to represent color. Sometimes it's more useful to work with a model called HSV, which stands for hue, saturation, and value.
+
 	* The hue of a color describes where it is along the color wheel. It goes from red to yellow to green to
 	cyan to blue to magenta and back to red.
 	* The saturation of a color is how much color is in it. A color with low saturation will be more gray,
 	and with no saturation at all it is a shade of gray.
 	* The value of a color determines how bright it is. A high-value color is vivid, moderate value is dark,
 	and no value at all is black.
+
 Just as BYOND uses "#rrggbb" to represent RGB values, a similar format is used for HSV: "#hhhssvv". The hue is three
 hex digits because it ranges from 0 to 0x5FF.
+
 	* 0 to 0xFF - red to yellow
 	* 0x100 to 0x1FF - yellow to green
 	* 0x200 to 0x2FF - green to cyan
 	* 0x300 to 0x3FF - cyan to blue
 	* 0x400 to 0x4FF - blue to magenta
 	* 0x500 to 0x5FF - magenta to red
+
 Knowing this, you can figure out that red is "#000ffff" in HSV format, which is hue 0 (red), saturation 255 (as colorful as possible),
 value 255 (as bright as possible). Green is "#200ffff" and blue is "#400ffff".
 More than one HSV color can match the same RGB color.
@@ -1088,6 +1093,23 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 /proc/generate_asset_name(file)
 	return "asset.[md5(fcopy_rsc(file))]"
 
+/// Gets a dummy savefile for usage in icon generation.
+/// Savefiles generated from this proc will be empty.
+/proc/get_dummy_savefile(from_failure = FALSE)
+	var/static/next_id = 0
+	if(next_id++ > 9)
+		next_id = 0
+	var/savefile_path = "tmp/dummy-save-[next_id].sav"
+	try
+		if(fexists(savefile_path))
+			fdel(savefile_path)
+		return new /savefile(savefile_path)
+	catch(var/exception/error)
+		// if we failed to create a dummy once, try again; maybe someone slept somewhere they shouldnt have
+		if(from_failure) // this *is* the retry, something fucked up
+			CRASH("get_dummy_savefile failed to create a dummy savefile: '[error]'")
+		return get_dummy_savefile(from_failure = TRUE)
+
 /**
  * Converts an icon to base64. Operates by putting the icon in the iconCache savefile,
  * exporting it as text, and then parsing the base64 from that.
@@ -1096,14 +1118,11 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 /proc/icon2base64(icon/icon)
 	if (!isicon(icon))
 		return FALSE
-	var/savefile/dummySave = new("tmp/dummySave.sav")
+	var/savefile/dummySave = get_dummy_savefile()
 	WRITE_FILE(dummySave["dummy"], icon)
 	var/iconData = dummySave.ExportText("dummy")
 	var/list/partial = splittext(iconData, "{")
-	. = replacetext(copytext_char(partial[2], 3, -5), "\n", "") //if cleanup fails we want to still return the correct base64
-	dummySave.Unlock()
-	dummySave = null
-	fdel("tmp/dummySave.sav") //if you get the idea to try and make this more optimized, make sure to still call unlock on the savefile after every write to unlock it.
+	return replacetext(copytext_char(partial[2], 3, -5), "\n", "") //if cleanup fails we want to still return the correct base64
 
 ///given a text string, returns whether it is a valid dmi icons folder path
 /proc/is_valid_dmi_file(icon_path)
@@ -1257,7 +1276,6 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 		return SSassets.transport.get_asset_url(key)
 	return "<img class='[extra_classes] icon icon-[icon_state]' src='[SSassets.transport.get_asset_url(key)]'>"
 
-
 /proc/icon2base64html(thing)
 	if (!thing)
 		return
@@ -1305,6 +1323,7 @@ GLOBAL_LIST_EMPTY(friendly_animal_types)
 	return icon2html(I, target, sourceonly = sourceonly)
 
 GLOBAL_LIST_EMPTY(transformation_animation_objects)
+
 
 /*
  * Creates animation that turns current icon into result appearance from top down.

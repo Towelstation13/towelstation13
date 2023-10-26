@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	var/has_fov = TRUE
 	///Cigarette in the mask
 	var/obj/item/clothing/mask/cigarette/cig
-
+	voice_filter = "lowpass=f=750,volume=2"
 /datum/armor/mask_gas
 	bio = 100
 
@@ -274,6 +274,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	dog_fashion = /datum/dog_fashion/head/clown
 	has_fov = FALSE
 	var/list/clownmask_designs = list()
+	voice_filter = null // performer masks expect to be talked through
 
 /obj/item/clothing/mask/gas/clown_hat/plasmaman
 	starting_filter_type = /obj/item/gas_filter/plasmaman
@@ -287,7 +288,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 		"The Madman" = image(icon = src.icon, icon_state = "joker"),
 		"The Rainbow Color" = image(icon = src.icon, icon_state = "rainbow")
 		)
-	//AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0) //SKYRAT EDIT REMOVAL
+	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
 
 /obj/item/clothing/mask/gas/clown_hat/ui_action_click(mob/user)
 	if(!istype(user) || user.incapacitated())
