@@ -560,6 +560,9 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	gender = FEMALE
 	use_static = null
 
+/datum/sprite_accessory/bra
+	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
+
 /datum/sprite_accessory/bra/bra
 	name = "Bra"
 	icon_state = "bra"
