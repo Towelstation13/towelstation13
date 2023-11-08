@@ -165,9 +165,6 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define ismining(A) (istype(A, /mob/living/simple_animal/hostile/asteroid) || istype(A, /mob/living/basic/mining))
 
-/// constructs, which are both simple and basic for now
-#define isconstruct(A) (istype(A, /mob/living/basic/construct))
-
 //Simple animals
 #define isanimal(A) (istype(A, /mob/living/simple_animal))
 
