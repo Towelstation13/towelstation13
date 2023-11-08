@@ -108,6 +108,15 @@
 		slapcraft_recipes = slapcraft_recipe_list,\
 	)
 
+/obj/item/clothing/gloves/color/fingerless/Initialize(mapload)
+	. = ..()
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/gripperoffbrand)
+
+	AddComponent(
+		/datum/component/slapcrafting,\
+		slapcraft_recipes = slapcraft_recipe_list,\
+	)
+
 /obj/item/clothing/gloves/color/orange
 	name = "orange gloves"
 	desc = "A pair of gloves, they don't look special in any way."

@@ -137,7 +137,10 @@ VOTE_PERIOD 600
 # DEFAULT_NO_VOTE
 
 ## Determines if players can respawn after death
-# NORESPAWN
+## 0 = Cannot respawn (default)
+## 1 = Can respawn
+## 2 = Can respawn if choosing a different character
+ALLOW_RESPAWN 1
 
 ## Respawn delay (deciseconds), which doesn't allow to return to lobby
 RESPAWN_DELAY 0

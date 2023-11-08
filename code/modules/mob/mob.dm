@@ -28,7 +28,7 @@
 	if(client)
 		stack_trace("Mob with client has been deleted.")
 	else if(ckey)
-		stack_trace("Mob without client but with associated ckey has been deleted.")
+		stack_trace("Mob without client but with associated ckey, [ckey], has been deleted.")
 
 	remove_from_mob_list()
 	remove_from_dead_mob_list()
@@ -46,7 +46,7 @@
 
 	qdel(hud_used)
 	QDEL_LIST(client_colours)
-	ghostize() //False, since we're deleting it currently
+	ghostize(can_reenter_corpse = FALSE) //False, since we're deleting it currently
 	if(mind?.current == src) //Let's just be safe yeah? This will occasionally be cleared, but not always. Can't do it with ghostize without changing behavior
 		mind.set_current(null)
 
@@ -808,18 +808,26 @@
  *
  * This sends you back to the lobby creating a new dead mob
  *
- * Only works if flag/norespawn is allowed in config
+ * Only works if flag/allow_respawn is allowed in config
  */
 /mob/verb/abandon_mob()
 	set name = "Respawn"
 	set category = "OOC"
 
-	if (CONFIG_GET(flag/norespawn))
-		if (!check_rights_for(usr.client, R_ADMIN))
-			to_chat(usr, span_boldnotice("Respawning is not enabled!"))
-			return
-		else if (tgui_alert(usr, "Respawning is currently disabled, do you want to use your permissions to circumvent it?", "Respawn", list("Yes", "No")) != "Yes")
-			return
+	switch(CONFIG_GET(flag/allow_respawn))
+		if(RESPAWN_FLAG_NEW_CHARACTER)
+			if(tgui_alert(usr, "Note, respawning is only allowed as another character. If you don't have another free slot you may not be able to respawn.", "Respawn", list("Ok", "Nevermind")) != "Ok")
+				return
+
+		if(RESPAWN_FLAG_FREE)
+			pass() // Normal respawn
+
+		if(RESPAWN_FLAG_DISABLED)
+			if (!check_rights_for(usr.client, R_ADMIN))
+				to_chat(usr, span_boldnotice("Respawning is not enabled!"))
+				return
+			if (tgui_alert(usr, "Respawning is currently disabled, do you want to use your permissions to circumvent it?", "Respawn", list("Yes", "No")) != "Yes")
+				return
 
 	if (stat != DEAD)
 		to_chat(usr, span_boldnotice("You must be dead to use this!"))
@@ -856,15 +864,14 @@
 
 	M.key = key
 
+/// Checks if the mob can respawn yet according to the respawn delay
 /mob/proc/check_respawn_delay(override_delay = 0)
 	if(!override_delay && !CONFIG_GET(number/respawn_delay))
 		return TRUE
 
 	var/death_time = world.time - client.player_details.time_of_death
 
-	var/required_delay = override_delay
-	if(!required_delay)
-		required_delay = CONFIG_GET(number/respawn_delay)
+	var/required_delay = override_delay || CONFIG_GET(number/respawn_delay)
 
 	if(death_time < required_delay)
 		if(!check_rights_for(usr.client, R_ADMIN))
