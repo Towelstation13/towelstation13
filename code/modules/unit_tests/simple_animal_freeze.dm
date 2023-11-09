@@ -88,6 +88,7 @@
 		/mob/living/simple_animal/hostile/megafauna/dragon/lesser,
 		/mob/living/simple_animal/hostile/megafauna/hierophant,
 		/mob/living/simple_animal/hostile/megafauna/legion,
+		/mob/living/simple_animal/hostile/megafauna/legion/virtual_domain,
 		/mob/living/simple_animal/hostile/megafauna/legion/medium,
 		/mob/living/simple_animal/hostile/megafauna/legion/medium/eye,
 		/mob/living/simple_animal/hostile/megafauna/legion/medium/left,
