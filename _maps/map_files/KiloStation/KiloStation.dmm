@@ -32552,10 +32552,6 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/station/command/gateway)
-"kGU" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/space/basic,
-/area/station/bitrunning/den)
 "kHh" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -45828,9 +45824,6 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
-"pgI" = (
-/turf/open/space/basic,
-/area/station/cargo/miningoffice)
 "pgQ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
@@ -116307,8 +116300,8 @@ mjW
 pmk
 mDt
 mDt
-kGU
-kGU
+ycp
+ycp
 bBV
 iSb
 dMq
@@ -116563,7 +116556,7 @@ oUz
 dez
 oUz
 gKI
-pgI
+acm
 aaa
 aaa
 aaa
