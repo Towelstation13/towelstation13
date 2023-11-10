@@ -646,6 +646,21 @@ CREATE TABLE `discord_links` (
 ) ENGINE=InnoDB;
 
 --
+-- Table structure for table `game_log`
+--
+DROP TABLE IF EXISTS `game_log`;
+CREATE TABLE `game_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `datetime` datetime NOT NULL,
+  `round_id` int(11) NOT NULL,
+  `ckey` varchar(32) NOT NULL,
+  `loc` varchar(60) NOT NULL,
+  `type` varchar(10) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
 -- Table structure for table `admin_connections`
 --
 DROP TABLE IF EXISTS `admin_connections`;

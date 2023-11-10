@@ -2,6 +2,7 @@
 /obj/item/organ/internal/legion_tumour
 	name = "legion tumour"
 	desc = "A mass of pulsing flesh and dark tendrils, containing the power to regenerate flesh at a terrible cost."
+	failing_desc = "pulses and writhes with horrible life, reaching towards you with its tendrils!"
 	icon = 'icons/obj/medical/organs/mining_organs.dmi'
 	icon_state = "legion_remains"
 	zone = BODY_ZONE_CHEST

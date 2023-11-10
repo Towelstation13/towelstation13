@@ -37,7 +37,6 @@
 		/obj/item/stack/spacecash/c500 = 3,
 		/obj/item/disk/nuclear/fake/obvious = 2,
 		/obj/item/clothing/head/collectable/captain = 4,
-		/obj/projectile/bullet/b460 = 1
 	)
 
 	job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
@@ -52,9 +51,6 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	ears = /obj/item/radio/headset/headset_bs/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	backpack_contents = list(
-		/obj/item/storage/box/gunset/blueshield = 1,
-	)
 	implants = list(/obj/item/implant/mindshield)
 	backpack = /obj/item/storage/backpack/blueshield
 	satchel = /obj/item/storage/backpack/satchel/blueshield

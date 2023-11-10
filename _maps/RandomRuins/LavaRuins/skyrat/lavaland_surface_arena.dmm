@@ -113,9 +113,9 @@
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/mob/living/basic/mining/hivelord{
-	name = "gate guardian";
-	color = "red"
+/mob/living/basic/mining/hivelord/no_wander{
+	color = "red";
+	name = "gate guardian"
 	},
 /turf/open/lava/smooth/lava_land_surface{
 	slowdown = 0
@@ -307,9 +307,9 @@
 /obj/structure/stone_tile{
 	dir = 1
 	},
-/mob/living/basic/mining/hivelord{
-	name = "gate guardian";
-	color = "red"
+/mob/living/basic/mining/hivelord/no_wander{
+	color = "red";
+	name = "gate guardian"
 	},
 /turf/open/lava/smooth/lava_land_surface{
 	slowdown = 0
@@ -625,9 +625,9 @@
 /obj/structure/stone_tile{
 	dir = 1
 	},
-/mob/living/basic/mining/hivelord{
-	name = "gate guardian";
-	color = "red"
+/mob/living/basic/mining/hivelord/no_wander{
+	color = "red";
+	name = "gate guardian"
 	},
 /turf/open/indestructible/boss,
 /area/lavaland/surface/outdoors)
@@ -775,9 +775,9 @@
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/mob/living/basic/mining/hivelord{
-	name = "gate guardian";
-	color = "red"
+/mob/living/basic/mining/hivelord/no_wander{
+	color = "red";
+	name = "gate guardian"
 	},
 /turf/open/indestructible/boss,
 /area/lavaland/surface/outdoors)

@@ -23,7 +23,7 @@
 		if(PREVIEW_PREF_UNDERWEAR)
 			mannequin.underwear_visibility = NONE
 		if(PREVIEW_PREF_NAKED)
-			mannequin.underwear_visibility = UNDERWEAR_HIDE_UNDIES | UNDERWEAR_HIDE_SHIRT | UNDERWEAR_HIDE_SOCKS
+			mannequin.underwear_visibility = UNDERWEAR_HIDE_UNDIES | UNDERWEAR_HIDE_SHIRT | UNDERWEAR_HIDE_SOCKS | UNDERWEAR_HIDE_BRA
 	// Apply visual quirks
 	// Yes we do it every time because it needs to be done after job gear
 	if(SSquirks?.initialized)

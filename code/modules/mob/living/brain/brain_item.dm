@@ -69,7 +69,6 @@
 		brain_owner.update_body_parts()
 		return
 
-	// Not a ling? Now you get to assume direct control.
 	if(brainmob)
 		// If it's a ling decoy brain, nothing to transfer, just throw it out
 		if(decoy_override)

@@ -128,9 +128,7 @@
 /// Returns true if we have enough players to run
 /datum/dynamic_ruleset/proc/is_valid_population(population)
 	if(minimum_players > population)
-		log_dynamic("FAIL: [src] failed acceptable: minimum_players ([minimum_players]) > population ([population])")
 		return FALSE
-
 	if(maximum_players > 0 && population > maximum_players)
 		return FALSE
 	return TRUE

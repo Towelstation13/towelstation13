@@ -851,9 +851,9 @@
 
 /datum/chemical_reaction/food/soup/monkey
 	required_reagents = list(
-		/datum/reagent/water = 25,
+		/datum/reagent/water = 20,
 		/datum/reagent/consumable/flour = 5,
-		/datum/reagent/consumable/salt = 5,
+		/datum/reagent/water/salt = 10,
 		/datum/reagent/consumable/blackpepper = 5,
 	)
 	required_ingredients = list(

@@ -52,42 +52,51 @@
 	dead_players = trim_list(GLOB.dead_player_list)
 	list_observers = trim_list(GLOB.current_observers_list)
 
-/datum/dynamic_ruleset/midround/proc/trim_list(list/L = list())
-	var/list/trimmed_list = L.Copy()
-	for(var/mob/M in trimmed_list)
-		if (!istype(M, required_type))
-			trimmed_list.Remove(M)
+/datum/dynamic_ruleset/midround/proc/trim_list(list/to_trim = list())
+	var/list/trimmed_list = to_trim.Copy()
+	for(var/mob/creature in trimmed_list)
+		if (!istype(creature, required_type))
+			trimmed_list.Remove(creature)
 			continue
-		if (!M.client) // Are they connected?
-			trimmed_list.Remove(M)
+		if (isnull(creature.client)) // Are they connected?
+			trimmed_list.Remove(creature)
 			continue
 		//SKYRAT EDIT ADDITION
-		if(is_banned_from(M.client.ckey, BAN_ANTAGONIST))
-			trimmed_list.Remove(M)
+		if(is_banned_from(creature.client.ckey, BAN_ANTAGONIST))
+			trimmed_list.Remove(creature)
 			continue
-		if(!M.client?.prefs?.read_preference(/datum/preference/toggle/be_antag))
-			trimmed_list.Remove(M)
+		if(!creature.client?.prefs?.read_preference(/datum/preference/toggle/be_antag))
+			trimmed_list.Remove(creature)
 			continue
 		//SKYRAT EDIT END
-		if(M.client.get_remaining_days(minimum_required_age) > 0)
-			trimmed_list.Remove(M)
+		if(creature.client.get_remaining_days(minimum_required_age) > 0)
+			trimmed_list.Remove(creature)
 			continue
-		if (!((antag_preference || antag_flag) in M.client.prefs.be_special))
-			trimmed_list.Remove(M)
+		if (!((antag_preference || antag_flag) in creature.client.prefs.be_special))
+			trimmed_list.Remove(creature)
 			continue
-		if (is_banned_from(M.ckey, list(antag_flag_override || antag_flag, ROLE_SYNDICATE)))
-			trimmed_list.Remove(M)
+		if (is_banned_from(creature.ckey, list(antag_flag_override || antag_flag, ROLE_SYNDICATE)))
+			trimmed_list.Remove(creature)
 			continue
-		if (M.mind)
-			if (restrict_ghost_roles && (M.mind.assigned_role.title in GLOB.exp_specialmap[EXP_TYPE_SPECIAL])) // Are they playing a ghost role?
-				trimmed_list.Remove(M)
-				continue
-			if (M.mind.assigned_role.title in restricted_roles) // Does their job allow it?
-				trimmed_list.Remove(M)
-				continue
-			if ((exclusive_roles.len > 0) && !(M.mind.assigned_role.title in exclusive_roles)) // Is the rule exclusive to their job?
-				trimmed_list.Remove(M)
-				continue
+
+		if (isnull(creature.mind))
+			continue
+
+		if (restrict_ghost_roles && (creature.mind.assigned_role.title in GLOB.exp_specialmap[EXP_TYPE_SPECIAL])) // Are they playing a ghost role?
+			trimmed_list.Remove(creature)
+			continue
+		if (creature.mind.assigned_role.title in restricted_roles) // Does their job allow it?
+			trimmed_list.Remove(creature)
+			continue
+		if (length(exclusive_roles) && !(creature.mind.assigned_role.title in exclusive_roles)) // Is the rule exclusive to their job?
+			trimmed_list.Remove(creature)
+			continue
+		if(HAS_TRAIT(creature, TRAIT_MIND_TEMPORARILY_GONE)) // are they out of body?
+			trimmed_list.Remove(creature)
+			continue
+		if(HAS_TRAIT(creature, TRAIT_TEMPORARY_BODY)) // are they an avatar?
+			trimmed_list.Remove(creature)
+			continue
 	return trimmed_list
 
 // You can then for example prompt dead players in execute() to join as strike teams or whatever
@@ -176,7 +185,12 @@
 		if(makeBody)
 			new_character = generate_ruleset_body(applicant)
 		finish_setup(new_character, i)
-		notify_ghosts("[applicant.name] has been picked for the ruleset [name]!", source = new_character, action = NOTIFY_ORBIT, header="Something Interesting!")
+		notify_ghosts(
+			"[applicant.name] has been picked for the ruleset [name]!",
+			source = new_character,
+			action = NOTIFY_ORBIT,
+			header = "Something Interesting!",
+		)
 
 /datum/dynamic_ruleset/midround/from_ghosts/proc/generate_ruleset_body(mob/applicant)
 	var/mob/living/carbon/human/new_character = make_body(applicant)
@@ -218,7 +232,7 @@
 /datum/dynamic_ruleset/midround/from_living/autotraitor
 	name = "Syndicate Sleeper Agent"
 	midround_ruleset_style = MIDROUND_RULESET_STYLE_LIGHT
-	antag_datum = /datum/antagonist/traitor
+	antag_datum = /datum/antagonist/traitor/infiltrator/sleeper_agent
 	antag_flag = ROLE_SLEEPER_AGENT
 	antag_flag_override = ROLE_TRAITOR
 	protected_roles = list(
@@ -256,7 +270,7 @@
 	var/mob/M = pick(candidates)
 	assigned += M
 	candidates -= M
-	var/datum/antagonist/traitor/newTraitor = new
+	var/datum/antagonist/traitor/infiltrator/sleeper_agent/newTraitor = new
 	M.mind.add_antag_datum(newTraitor)
 	message_admins("[ADMIN_LOOKUPFLW(M)] was selected by the [name] ruleset and has been made into a midround traitor.")
 	log_dynamic("[key_name(M)] was selected by the [name] ruleset and has been made into a midround traitor.")
@@ -581,7 +595,7 @@
 	var/datum/mind/player_mind = new /datum/mind(applicant.key)
 	player_mind.active = TRUE
 
-	var/mob/living/simple_animal/hostile/space_dragon/S = new (pick(spawn_locs))
+	var/mob/living/basic/space_dragon/S = new (pick(spawn_locs))
 	player_mind.transfer_to(S)
 	player_mind.add_antag_datum(/datum/antagonist/space_dragon)
 
@@ -729,7 +743,7 @@
 	. = ..()
 
 /datum/dynamic_ruleset/midround/from_ghosts/revenant/generate_ruleset_body(mob/applicant)
-	var/mob/living/simple_animal/revenant/revenant = new(pick(spawn_locs))
+	var/mob/living/basic/revenant/revenant = new(pick(spawn_locs))
 	revenant.key = applicant.key
 	message_admins("[ADMIN_LOOKUPFLW(revenant)] has been made into a revenant by the midround ruleset.")
 	log_game("[key_name(revenant)] was spawned as a revenant by the midround ruleset.")

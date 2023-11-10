@@ -73,9 +73,9 @@
 	var/comp_light_color = "#FFFFFF"
 
 	///Power usage when the computer is open (screen is active) and can be interacted with.
-	var/base_active_power_usage = 125
+	var/base_active_power_usage = 15 // SKYRAT EDIT CHANGE - Original: 125
 	///Power usage when the computer is idle and screen is off.
-	var/base_idle_power_usage = 5
+	var/base_idle_power_usage = 2 // SKYRAT EDIT CHANGE - Original: 5
 
 	// Modular computers can run on various devices. Each DEVICE (Laptop, Console & Tablet)
 	// must have it's own DMI file. Icon states must be called exactly the same in all files, but may look differently
@@ -500,7 +500,7 @@
 	if(!caller || !caller.alert_able || caller.alert_silenced || !alerttext) //Yeah, we're checking alert_able. No, you don't get to make alerts that the user can't silence.
 		return FALSE
 	playsound(src, sound, 50, TRUE)
-	loc.visible_message(span_notice("[icon2html(src)] [span_notice("The [src] displays a [caller.filedesc] notification: [alerttext]")]"))
+	physical.loc.visible_message(span_notice("[icon2html(physical, viewers(physical.loc))] \The [src] displays a [caller.filedesc] notification: [alerttext]"))
 
 /obj/item/modular_computer/proc/ring(ringtone) // bring bring
 	if(HAS_TRAIT(SSstation, STATION_TRAIT_PDA_GLITCHED))
@@ -517,7 +517,6 @@
 	var/list/data = list()
 
 	data["PC_device_theme"] = device_theme
-	data["PC_showbatteryicon"] = !!internal_cell
 
 	if(internal_cell)
 		switch(internal_cell.percent())
@@ -535,8 +534,8 @@
 				data["PC_batteryicon"] = "batt_5.gif"
 		data["PC_batterypercent"] = "[round(internal_cell.percent())]%"
 	else
-		data["PC_batteryicon"] = "batt_5.gif"
-		data["PC_batterypercent"] = "N/C"
+		data["PC_batteryicon"] = null
+		data["PC_batterypercent"] = null
 
 	switch(get_ntnet_status())
 		if(NTNET_NO_SIGNAL)

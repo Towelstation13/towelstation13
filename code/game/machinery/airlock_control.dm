@@ -31,17 +31,6 @@
 	locked = FALSE
 	return ..()
 
-/obj/machinery/door/airlock/proc/grey_tide(datum/source, list/grey_tide_areas)
-	SIGNAL_HANDLER
-
-	if(!is_station_level(z) || critical_machine)
-		return //Skip doors in critical positions, such as the SM chamber.
-
-	for(var/area_type in grey_tide_areas)
-		if(!istype(get_area(src), area_type))
-			continue
-		INVOKE_ASYNC(src, PROC_REF(prison_open)) //Sleep gets called further down in open(), so we have to invoke async
-
 /obj/machinery/airlock_sensor
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "airlock_sensor_off"

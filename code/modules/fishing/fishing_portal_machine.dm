@@ -2,7 +2,7 @@
 	name = "fish-porter 3000"
 	desc = "Fishing anywhere, anytime... anyway what was I talking about?"
 	icon = 'icons/obj/fishing.dmi'
-	icon_state = "portal_off"
+	icon_state = "portal"
 	idle_power_usage = 0
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 2
 	anchored = FALSE

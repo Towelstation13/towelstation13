@@ -57,6 +57,11 @@
 	setup_device()
 	find_and_hang_on_wall()
 
+/obj/machinery/button/Destroy()
+	QDEL_NULL(device)
+	QDEL_NULL(board)
+	return ..()
+
 /obj/machinery/button/update_icon_state()
 	icon_state = "[base_icon_state][skin]"
 	if(panel_open)

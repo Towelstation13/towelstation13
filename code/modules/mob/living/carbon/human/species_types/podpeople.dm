@@ -74,23 +74,9 @@
 	if(chem.type == /datum/reagent/toxin/plantbgone)
 		affected.adjustToxLoss(3 * REM * seconds_per_tick)
 
-// SKYRAT EDIT ADDITION //TOWELSTATION EDIT - Adds podpeople lore
-/datum/species/pod/get_species_description()
-	return "Podpeople are a race of humanoid plant people who grow in pods, and are known for their green skin, \
-		leafy hair, and symbiotic relationship with the natural world." //Originally said "Plant lore!"
-
-/datum/species/pod/get_species_lore()
-	return list(
-		"Originally hailing from a planet called Sylva, the podpeople are a mysterious species, \
-			and there is still much that we do not know about them. However, we can be sure that they are a peaceful and intelligent species \
-			who have a deep respect for nature.",
-
-		"On their home planet, the podpeople live in small villages and communities. They have developed \
-			a symbiotic relationship with the planet's ecosystem, working together to care for the land. \
-			Each village is led by a podmother, who makes decisions that affect the community." //Originally said "You're a plant!"
-
-	)
-// SKYRAT EDIT END //TOWELSTATION EDIT END
+/datum/species/pod/get_physical_attributes()
+	return "Podpeople are in many ways the inverse of shadows, healing in light and starving with the dark. \
+		Their bodies are like tinder and easy to char."
 
 /datum/species/pod/create_pref_unique_perks()
 	var/list/to_add = list()

@@ -152,7 +152,7 @@
 	user.say("[war_cry]", forced="spear warcry")
 	explosive.forceMove(user)
 	explosive.detonate()
-	user.gib()
+	user.gib(DROP_ALL_REMAINS)
 	qdel(src)
 	return BRUTELOSS
 
@@ -237,6 +237,14 @@
 	reach = 2
 	//SKYRAT EDIT ADDITION END
 
+/obj/item/spear/bonespear/add_headpike_component()
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/headpikebone)
+
+	AddComponent(
+		/datum/component/slapcrafting,\
+		slapcraft_recipes = slapcraft_recipe_list,\
+	)
+
 /*
  * Bamboo Spear
  */
@@ -251,13 +259,10 @@
 	custom_materials = list(/datum/material/bamboo = SHEET_MATERIAL_AMOUNT * 20)
 	force_unwielded = 10
 	force_wielded = 18
-	armour_penetration = 15 //Enhanced armor piercing
-	custom_materials = list(/datum/material/bone = HALF_SHEET_MATERIAL_AMOUNT * 7)
-	force_unwielded = 12
-	force_wielded = 20
 
-/obj/item/spear/bonespear/add_headpike_component()
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/headpikebone)
+
+/obj/item/spear/bamboospear/add_headpike_component()
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/headpikebamboo)
 
 	AddComponent(
 		/datum/component/slapcrafting,\

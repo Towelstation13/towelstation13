@@ -44,6 +44,15 @@
 
 	return ..()
 
+/datum/wound/muscle/set_victim(new_victim)
+	if (victim)
+		UnregisterSignal(victim, COMSIG_LIVING_EARLY_UNARMED_ATTACK)
+
+	if (new_victim)
+		RegisterSignal(new_victim, COMSIG_LIVING_EARLY_UNARMED_ATTACK, PROC_REF(attack_with_hurt_hand))
+
+	return ..()
+
 /datum/wound/muscle/remove_wound(ignore_limb, replaced)
 	limp_slowdown = 0
 	return ..()
@@ -165,3 +174,9 @@
 	id = "torn muscle"
 /datum/status_effect/wound/muscle/severe
 	id = "ruptured tendon"
+
+/datum/status_effect/wound/muscle/robotic/moderate
+	id = "worn servo"
+
+/datum/status_effect/wound/muscle/robotic/severe
+	id = "severed hydraulic"

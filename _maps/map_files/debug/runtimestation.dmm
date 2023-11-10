@@ -634,22 +634,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/station/medical/medbay)
-"cH" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/structure/table,
-/obj/item/gun/magic/wand/resurrection/debug,
-/obj/item/gun/magic/wand/death/debug{
-	pixel_y = 10
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/turf/open/floor/iron/white/corner{
-	dir = 1
-	},
-/area/station/medical/medbay)
 "cI" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -932,11 +916,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
-"dQ" = (
-/obj/structure/table,
-/obj/machinery/light/directional/south,
-/turf/open/floor/iron,
-/area/station/commons/storage/primary)
 "dR" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron,
@@ -2066,6 +2045,26 @@
 	},
 /turf/open/floor/iron,
 /area/station/science)
+"AS" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/item/gun/magic/wand/resurrection/debug,
+/obj/item/gun/magic/wand/death/debug{
+	pixel_y = 10
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/item/debug/human_spawner{
+	pixel_x = 6;
+	pixel_y = -4
+	},
+/turf/open/floor/iron/white/corner{
+	dir = 1
+	},
+/area/station/medical/medbay)
 "BD" = (
 /obj/structure/closet/secure_closet/chief_medical{
 	locked = 0
@@ -2184,7 +2183,7 @@
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "FW" = (
-/obj/effect/landmark/bitrunning/station_reward_spawn,
+/obj/machinery/byteforge,
 /turf/open/floor/circuit/green,
 /area/station/bitrunning/den)
 "Ht" = (
@@ -2488,6 +2487,12 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"VV" = (
+/obj/structure/table,
+/obj/machinery/light/directional/south,
+/obj/item/debug/human_spawner,
+/turf/open/floor/iron,
+/area/station/commons/storage/primary)
 "We" = (
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron,
@@ -3196,7 +3201,7 @@ aa
 aa
 aa
 uI
-FW
+hU
 hU
 jR
 Oq
@@ -3288,8 +3293,8 @@ aa
 aa
 aa
 uI
-FW
 hU
+FW
 jR
 Oq
 uI
@@ -7907,7 +7912,7 @@ dJ
 dJ
 dJ
 dJ
-dQ
+VV
 cS
 gz
 fO
@@ -7984,7 +7989,7 @@ Ot
 cl
 cl
 cl
-cH
+AS
 cu
 cJ
 by

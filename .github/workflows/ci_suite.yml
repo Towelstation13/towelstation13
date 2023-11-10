@@ -83,22 +83,7 @@ jobs:
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: |
           tools/bootstrap/python -m mapmerge2.dmm_test
-          tools/bootstrap/python -m tools.maplint.source
-      - name: Run DMI Tests
-        if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: tools/bootstrap/python -m dmi.test
-      - name: Check File Directories
-        if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: bash tools/ci/check_filedirs.sh tgstation.dme
-      - name: Check Changelogs
-        if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: bash tools/ci/check_changelogs.sh
-      - name: Check Miscellaneous Files
-        if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: bash tools/ci/check_misc.sh
-      - name: Run TGUI Checks
-        if: steps.linter-setup.conclusion == 'success' && !cancelled()
-        run: tools/build/build --ci lint tgui-test
+          ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
 
   compile_all_maps:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )

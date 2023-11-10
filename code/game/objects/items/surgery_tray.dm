@@ -6,11 +6,13 @@
 /datum/storage/surgery_tray/New()
 	. = ..()
 	set_holdable(list(
+		/obj/item/autopsy_scanner,
 		/obj/item/blood_filter,
 		/obj/item/bonesetter,
 		/obj/item/cautery,
 		/obj/item/circular_saw,
 		/obj/item/clothing/mask/surgical,
+		/obj/item/clothing/suit/toggle/labcoat/skyrat/hospitalgown, // SKYRAT EDIT ADDITION
 		/obj/item/hemostat,
 		/obj/item/razor,
 		/obj/item/reagent_containers/medigel,
@@ -195,6 +197,7 @@
 	new /obj/item/cautery(src)
 	new /obj/item/circular_saw(src)
 	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/suit/toggle/labcoat/skyrat/hospitalgown(src) // SKYRAT EDIT ADDITION
 	new /obj/item/hemostat(src)
 	new /obj/item/razor/surgery(src)
 	new /obj/item/retractor(src)
@@ -216,6 +219,7 @@
 	new /obj/item/cautery/cruel(src)
 	new /obj/item/circular_saw(src)
 	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/suit/toggle/labcoat/skyrat/hospitalgown(src) // SKYRAT EDIT ADDITION
 	new /obj/item/hemostat/cruel(src)
 	new /obj/item/razor/surgery(src)
 	new /obj/item/retractor/cruel(src)
