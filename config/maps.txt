@@ -72,3 +72,9 @@ map blueshift
 	minplayers 70
 	votable
 endmap
+
+##TOWEL MAPS##
+
+map kilostation
+	votable
+endmap
