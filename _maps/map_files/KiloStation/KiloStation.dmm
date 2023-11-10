@@ -7231,6 +7231,7 @@
 	},
 /obj/machinery/netpod,
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/effect/landmark/start/bitrunner,
 /turf/open/floor/iron,
 /area/station/bitrunning/den)
 "cup" = (
@@ -7815,6 +7816,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
+/obj/item/stamp/head/hop,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/hop)
 "cHL" = (
@@ -9580,6 +9582,7 @@
 /obj/effect/turf_decal/tile/purple/anticorner/contrasted{
 	dir = 8
 	},
+/obj/item/stamp/head/rd,
 /turf/open/floor/iron/showroomfloor,
 /area/station/command/heads_quarters/rd)
 "dlI" = (
@@ -16313,6 +16316,7 @@
 "fwR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/netpod,
+/obj/effect/landmark/start/bitrunner,
 /turf/open/floor/iron,
 /area/station/bitrunning/den)
 "fxd" = (
@@ -18649,6 +18653,7 @@
 	},
 /obj/item/clothing/glasses/hud/health,
 /obj/effect/turf_decal/tile/blue,
+/obj/item/stamp/head/cmo,
 /turf/open/floor/iron/showroomfloor,
 /area/station/command/heads_quarters/cmo)
 "gii" = (
@@ -30222,6 +30227,7 @@
 /obj/item/lighter,
 /obj/item/clothing/mask/cigarette/cigar/cohiba,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/item/stamp/head/ce,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "jNR" = (
@@ -48014,6 +48020,7 @@
 /obj/item/pen/fountain/captain,
 /obj/item/radio/intercom/directional/south,
 /obj/structure/table/wood,
+/obj/item/stamp/head/captain,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/captain)
 "pOV" = (
@@ -56258,6 +56265,8 @@
 	},
 /obj/item/storage/box/lights/mixed,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/item/stamp/granted,
+/obj/item/stamp/denied,
 /turf/open/floor/iron/dark,
 /area/station/cargo/sorting)
 "sAV" = (
@@ -63643,6 +63652,7 @@
 /area/station/medical/chemistry)
 "uRB" = (
 /obj/machinery/netpod,
+/obj/effect/landmark/start/bitrunner,
 /turf/open/floor/iron,
 /area/station/bitrunning/den)
 "uRG" = (
@@ -69956,6 +69966,9 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 4
 	},
+/obj/item/stamp/granted,
+/obj/item/stamp/denied,
+/obj/item/stamp/head/qm,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/qm)
 "wNf" = (
@@ -70631,6 +70644,7 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
+/obj/item/stamp/head/hos,
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/hos)
 "wYX" = (
