@@ -8674,10 +8674,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
-"cXf" = (
-/obj/effect/mapping_helpers/requests_console/announcement,
-/turf/closed/wall/r_wall/rust,
-/area/station/maintenance/central)
 "cXg" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/structure/railing,
@@ -9600,10 +9596,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/engine_equipment,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
-"dmk" = (
-/obj/effect/mapping_helpers/requests_console/announcement,
-/turf/closed/wall/r_wall/rust,
-/area/station/security/courtroom)
 "dmp" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
@@ -19760,10 +19752,6 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
-"gAL" = (
-/obj/effect/mapping_helpers/requests_console/announcement,
-/turf/closed/wall/r_wall,
-/area/station/maintenance/starboard/aft)
 "gAO" = (
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 8
@@ -20274,10 +20262,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/qm)
-"gHS" = (
-/obj/effect/mapping_helpers/requests_console/announcement,
-/turf/closed/wall,
-/area/station/maintenance/starboard)
 "gIo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/wrench,
@@ -38331,10 +38315,6 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/station/security/brig)
-"mxP" = (
-/obj/effect/mapping_helpers/requests_console/announcement,
-/turf/closed/wall/r_wall,
-/area/station/command/heads_quarters/cmo)
 "myc" = (
 /obj/structure/rack,
 /obj/item/wirecutters{
@@ -58296,10 +58276,6 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
-"teJ" = (
-/obj/effect/mapping_helpers/requests_console/announcement,
-/turf/closed/wall,
-/area/station/command/heads_quarters/hos)
 "teL" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/candle_box,
@@ -92963,7 +92939,7 @@ oKW
 joh
 mDJ
 afL
-teJ
+afL
 afL
 joh
 acm
@@ -93414,7 +93390,7 @@ vsJ
 xFt
 kUp
 itZ
-mxP
+xxk
 wSU
 hEI
 muN
@@ -102186,7 +102162,7 @@ jPB
 ulS
 nby
 nby
-dmk
+gLO
 nby
 mqa
 nby
@@ -107327,7 +107303,7 @@ qaF
 teb
 bJR
 dmD
-cXf
+tqz
 fxd
 civ
 rNZ
@@ -110170,7 +110146,7 @@ cuV
 cGm
 koc
 qZX
-gAL
+qZX
 qZX
 sxF
 xRm
@@ -113993,7 +113969,7 @@ rZV
 wPB
 wCY
 wtt
-gHS
+rZV
 pKv
 wTU
 cRO
