@@ -17,7 +17,9 @@
 		#include "map_files\VoidRaptor\VoidRaptor.dmm"
 		#include "map_files\NSVBlueshift\Blueshift.dmm"
 		// SKYRAT EDIT END
-
+		//TOWEL EDIT START
+		#include "map_files\KiloStation\KiloStation.dmm"
+		//TOWEL EDIT END
 		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
