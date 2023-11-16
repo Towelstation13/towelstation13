@@ -8176,12 +8176,9 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/dock)
 "cOT" = (
-/obj/machinery/door/airlock/external{
-	name = "Arrival Shuttle Airlock"
-	},
-/obj/effect/landmark/navigate_destination,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/iron/dark,
+/obj/machinery/light/small/directional/east,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "cPp" = (
 /obj/effect/turf_decal/stripes/line,
@@ -22502,10 +22499,6 @@
 	dir = 4
 	},
 /area/station/hallway/primary/fore)
-"huf" = (
-/obj/effect/turf_decal/bot,
-/turf/open/floor/iron/dark,
-/area/station/hallway/secondary/entry)
 "huo" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -40556,12 +40549,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
-"nmv" = (
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "nmR" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/requests_console/directional/east{
@@ -58126,15 +58113,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos)
-"tch" = (
-/obj/item/radio/intercom/directional/east,
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "tck" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/bot,
@@ -58636,11 +58614,9 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance)
 "tla" = (
-/obj/machinery/modular_computer/preset/id{
-	dir = 1
-	},
-/turf/closed/wall/r_wall,
-/area/station/maintenance/central)
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark,
+/area/station/hallway/secondary/entry)
 "tlb" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
@@ -69215,6 +69191,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
+"wAg" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "wAn" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/effect/turf_decal/tile/red/opposingcorners{
@@ -69994,9 +69976,12 @@
 /turf/open/floor/iron,
 /area/station/security/courtroom)
 "wNr" = (
-/obj/machinery/light/small/directional/east,
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron,
+/obj/machinery/door/airlock/external{
+	name = "Arrival Shuttle Airlock"
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry)
 "wNs" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -74364,6 +74349,15 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
+"yjn" = (
+/obj/item/radio/intercom/directional/east,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/blue/opposingcorners{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "yjq" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/duct,
@@ -108108,7 +108102,7 @@ rcM
 lpt
 jlh
 owG
-tla
+jlh
 hfp
 ivF
 pVQ
@@ -115066,7 +115060,7 @@ rCi
 qUb
 hUL
 pBR
-nmv
+wAg
 nuh
 lAB
 bPX
@@ -115324,7 +115318,7 @@ mjU
 kPE
 pBR
 pZj
-huf
+tla
 lAB
 bPX
 bUN
@@ -115837,9 +115831,9 @@ fSC
 lia
 qYy
 vtF
-tch
-cOT
+yjn
 wNr
+cOT
 gJj
 bUN
 bUN
