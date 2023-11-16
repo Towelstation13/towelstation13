@@ -3999,6 +3999,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/announcement,
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/computer)
 "bso" = (
@@ -8176,8 +8179,12 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/dock)
 "cOT" = (
-/obj/machinery/light/small/directional/east,
+/obj/item/radio/intercom/directional/east,
 /obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/blue/opposingcorners{
+	dir = 1
+	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "cPp" = (
@@ -9640,6 +9647,9 @@
 /obj/machinery/modular_computer/preset/id{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/information,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain)
 "dmU" = (
@@ -32359,6 +32369,8 @@
 	pixel_x = 6;
 	req_access = list("engine_equip")
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/information,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "kDw" = (
@@ -40558,6 +40570,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/assistance,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "nny" = (
@@ -46980,6 +46995,9 @@
 	department = "Head of Security's Desk";
 	name = "Head of Security's Requests Console"
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/information,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "pyg" = (
@@ -47685,6 +47703,8 @@
 	pixel_x = 32
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/supplies,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/qm)
 "pKB" = (
@@ -51471,6 +51491,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"qYC" = (
+/obj/effect/turf_decal/bot,
+/turf/open/floor/iron/dark,
+/area/station/hallway/secondary/entry)
 "qZf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -51888,6 +51912,12 @@
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
 /turf/open/floor/iron/dark,
+/area/station/hallway/secondary/entry)
+"rgU" = (
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "rgY" = (
 /obj/machinery/light/directional/south,
@@ -58614,7 +58644,11 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance)
 "tla" = (
-/obj/effect/turf_decal/bot,
+/obj/machinery/door/airlock/external{
+	name = "Arrival Shuttle Airlock"
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry)
 "tlb" = (
@@ -69110,6 +69144,9 @@
 	name = "Head of Personnel's Requests Console"
 	},
 /obj/machinery/light/directional/west,
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/announcement,
 /turf/open/floor/carpet/blue,
 /area/station/command/heads_quarters/hop)
 "wzp" = (
@@ -69191,12 +69228,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
-"wAg" = (
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "wAn" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/effect/turf_decal/tile/red/opposingcorners{
@@ -69976,12 +70007,9 @@
 /turf/open/floor/iron,
 /area/station/security/courtroom)
 "wNr" = (
-/obj/machinery/door/airlock/external{
-	name = "Arrival Shuttle Airlock"
-	},
-/obj/effect/landmark/navigate_destination,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/iron/dark,
+/obj/machinery/light/small/directional/east,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "wNs" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -70255,6 +70283,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/information,
+/obj/effect/mapping_helpers/requests_console/assistance,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "wSq" = (
@@ -70314,6 +70345,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/effect/mapping_helpers/requests_console/assistance,
+/obj/effect/mapping_helpers/requests_console/information,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "wSY" = (
@@ -74349,15 +74383,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
-"yjn" = (
-/obj/item/radio/intercom/directional/east,
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "yjq" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/duct,
@@ -115060,7 +115085,7 @@ rCi
 qUb
 hUL
 pBR
-wAg
+rgU
 nuh
 lAB
 bPX
@@ -115318,7 +115343,7 @@ mjU
 kPE
 pBR
 pZj
-tla
+qYC
 lAB
 bPX
 bUN
@@ -115831,9 +115856,9 @@ fSC
 lia
 qYy
 vtF
-yjn
-wNr
 cOT
+tla
+wNr
 gJj
 bUN
 bUN
