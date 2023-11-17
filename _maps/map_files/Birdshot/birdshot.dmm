@@ -487,6 +487,9 @@
 	},
 /obj/effect/turf_decal/trimline/yellow/line,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
+	dir = 1
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "ajG" = (
@@ -2017,7 +2020,7 @@
 /area/station/science/ordnance/bomb)
 "aPG" = (
 /obj/effect/spawner/structure/window/reinforced/plasma,
-/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+/obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
 	dir = 5
 	},
 /turf/open/floor/plating,
@@ -2058,7 +2061,7 @@
 /turf/open/floor/iron/dark/small,
 /area/station/security/checkpoint/customs)
 "aQn" = (
-/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible,
+/obj/machinery/atmospherics/pipe/smart/manifold/pink/visible,
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/station/engineering/supermatter)
 "aQr" = (
@@ -2077,7 +2080,7 @@
 /area/station/engineering/engine_smes)
 "aQB" = (
 /obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+/obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
 	dir = 9
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -2305,6 +2308,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
+	dir = 1
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "aTG" = (
@@ -2323,10 +2329,16 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
+	dir = 1
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "aTW" = (
 /obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
+	dir = 9
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter/room)
 "aUA" = (
@@ -2341,6 +2353,9 @@
 	},
 /obj/effect/turf_decal/trimline/yellow/arrow_cw,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+	dir = 4
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "aVj" = (
@@ -2349,9 +2364,11 @@
 	},
 /obj/effect/turf_decal/trimline/yellow/corner,
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/engineering/tracking_beacon,
+/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
+	dir = 4
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "aVq" = (
@@ -2668,9 +2685,6 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
-	dir = 8
-	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "bcv" = (
@@ -2682,10 +2696,10 @@
 /area/station/medical/medbay/lobby)
 "bcK" = (
 /obj/effect/turf_decal/stripes/corner,
-/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "bcR" = (
@@ -3275,8 +3289,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/trinary/filter/critical{
-	dir = 4
+/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
+	dir = 8
 	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
@@ -4473,8 +4487,10 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible,
 /obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+	dir = 5
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "bJZ" = (
@@ -8480,7 +8496,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
-	dir = 9
+	dir = 4
 	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
@@ -9170,10 +9186,11 @@
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/disposal/incinerator)
 "dyH" = (
-/obj/machinery/atmospherics/components/trinary/filter/critical{
-	dir = 4
-	},
 /obj/effect/landmark/start/station_engineer,
+/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
+	dir = 8;
+	filter_type = list(/datum/gas/nitrogen)
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "dyO" = (
@@ -9868,6 +9885,13 @@
 /obj/item/clothing/glasses/meson,
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
+"dLE" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
+	dir = 10
+	},
+/turf/open/floor/iron/dark,
+/area/station/engineering/supermatter/room)
 "dLQ" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -10225,6 +10249,14 @@
 /obj/machinery/meter,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
+"dSV" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 5
+	},
+/obj/structure/transport/linear/tram,
+/obj/structure/tram,
+/turf/open/floor/tram,
+/area/station/maintenance/port/aft)
 "dTa" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18765,6 +18797,9 @@
 	},
 /obj/effect/turf_decal/trimline/yellow/corner,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+	dir = 8
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "gPN" = (
@@ -25238,6 +25273,12 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/cmo)
+"jbt" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/turf/open/floor/tram,
+/area/station/maintenance/department/medical/central)
 "jbV" = (
 /obj/machinery/photocopier,
 /turf/open/floor/iron/dark,
@@ -29107,7 +29148,9 @@
 /area/station/maintenance/hallway/abandoned_recreation)
 "kvh" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/visible,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
+	dir = 4
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "kvl" = (
@@ -30574,6 +30617,9 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+	dir = 6
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "kYQ" = (
@@ -33137,9 +33183,6 @@
 /area/station/maintenance/hallway/abandoned_command)
 "lOh" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
-	dir = 8
-	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "lOi" = (
@@ -42872,10 +42915,10 @@
 /turf/open/floor/iron/textured_large,
 /area/station/security/checkpoint/escape)
 "poI" = (
-/obj/machinery/atmospherics/components/trinary/filter/critical{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
+	dir = 8
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "poM" = (
@@ -43860,10 +43903,12 @@
 /area/station/medical/paramedic)
 "pEu" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/visible,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/meter,
 /obj/machinery/light/directional/south,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
+	dir = 4
+	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/supermatter/room)
 "pEy" = (
@@ -46377,7 +46422,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/service/theater)
 "qrP" = (
-/obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
+/obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
 	dir = 6
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -82435,8 +82480,8 @@ geQ
 aRR
 pbt
 aPG
-aTW
 bAq
+dLE
 aTW
 bhc
 bng
@@ -89281,7 +89326,7 @@ dsU
 aYv
 dmG
 aLv
-rQM
+dSV
 vJH
 xAR
 trp
@@ -91859,7 +91904,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -92117,7 +92162,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -92375,7 +92420,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -92633,7 +92678,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -92891,7 +92936,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -93149,7 +93194,7 @@ blb
 blb
 blb
 blb
-uJZ
+wte
 blb
 blb
 blb
@@ -93407,7 +93452,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -93475,7 +93520,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (83,1,1) = {"
 dDB
@@ -93665,7 +93709,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -93733,7 +93777,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (84,1,1) = {"
 dDB
@@ -93923,7 +93966,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -93991,7 +94034,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (85,1,1) = {"
 dDB
@@ -94181,7 +94223,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -94249,7 +94291,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (86,1,1) = {"
 dDB
@@ -94439,7 +94480,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -94507,7 +94548,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (87,1,1) = {"
 dDB
@@ -94697,7 +94737,7 @@ blb
 blb
 blb
 blb
-uJZ
+wte
 blb
 blb
 blb
@@ -94765,7 +94805,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (88,1,1) = {"
 dDB
@@ -94955,7 +94994,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -95023,7 +95062,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (89,1,1) = {"
 dDB
@@ -95213,7 +95251,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -95471,7 +95509,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -95539,7 +95577,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (91,1,1) = {"
 dDB
@@ -95729,7 +95766,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -95797,7 +95834,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (92,1,1) = {"
 dDB
@@ -95987,7 +96023,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -96245,7 +96281,7 @@ blb
 blb
 blb
 blb
-uJZ
+wte
 blb
 blb
 blb
@@ -96313,7 +96349,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (94,1,1) = {"
 dDB
@@ -96503,7 +96538,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -96571,7 +96606,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (95,1,1) = {"
 dDB
@@ -96761,7 +96795,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -96829,7 +96863,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (96,1,1) = {"
 dDB
@@ -97019,7 +97052,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -97087,7 +97120,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (97,1,1) = {"
 dDB
@@ -97277,7 +97309,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -97535,7 +97567,7 @@ blb
 blb
 blb
 blb
-uJZ
+wte
 blb
 blb
 blb
@@ -97603,7 +97635,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (99,1,1) = {"
 dDB
@@ -97793,7 +97824,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -98051,7 +98082,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -98119,7 +98150,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (101,1,1) = {"
 dDB
@@ -98309,7 +98339,7 @@ blb
 dDB
 dDB
 dDB
-uJZ
+wte
 dDB
 dDB
 bSo
@@ -98377,7 +98407,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (102,1,1) = {"
 dDB
@@ -98893,7 +98922,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (104,1,1) = {"
 dDB
@@ -99082,9 +99110,9 @@ sqV
 nFy
 sSQ
 goB
-fWh
+jbt
 pfd
-fWh
+jbt
 qAq
 sSQ
 rwq
@@ -99151,7 +99179,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (105,1,1) = {"
 dDB
@@ -99409,7 +99436,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (106,1,1) = {"
 dDB
@@ -99667,7 +99693,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (107,1,1) = {"
 dDB
@@ -99925,7 +99950,6 @@ dDB
 dDB
 dDB
 dDB
-uJZ
 "}
 (108,1,1) = {"
 dDB
