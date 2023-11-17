@@ -686,10 +686,6 @@
 /obj/structure/stone_tile/slab,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
-"xo" = (
-/mob/living/basic/mining/gutlunch/grub,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
 "xY" = (
 /obj/structure/stone_tile/surrounding_tile{
 	dir = 4
@@ -885,13 +881,6 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
-"Eg" = (
-/obj/structure/geyser{
-	reagent_id = /datum/reagent/consumable/salt;
-	name = "Salts-The-Earth"
-	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
 "Eh" = (
 /turf/closed/indestructible/riveted/boss,
 /area/lavaland/surface/outdoors)
@@ -944,13 +933,6 @@
 	dir = 8
 	},
 /obj/structure/stone_tile,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ash_walkers)
-"GS" = (
-/obj/structure/stone_tile/block{
-	dir = 4
-	},
-/mob/living/basic/mining/gutlunch/warrior,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ash_walkers)
 "Hf" = (
@@ -1702,7 +1684,7 @@ jh
 vg
 vg
 wu
-Eg
+tu
 lS
 UD
 DN
@@ -1811,7 +1793,7 @@ Yx
 UO
 lf
 DW
-xo
+tu
 gn
 dN
 IM
@@ -1821,7 +1803,7 @@ QI
 xl
 KO
 Yo
-GS
+za
 dN
 em
 Ks
