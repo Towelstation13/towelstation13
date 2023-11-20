@@ -38209,7 +38209,7 @@
 /area/station/engineering/atmos)
 "mwe" = (
 /obj/machinery/smartfridge,
-/turf/closed/wall,
+/turf/open/floor/iron/dark,
 /area/station/service/kitchen)
 "mwj" = (
 /obj/effect/turf_decal/stripes/line,
@@ -39288,11 +39288,6 @@
 "mPE" = (
 /obj/structure/sink/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/camera/directional/east{
-	c_tag = "Xenobiology Computers";
-	name = "xenobiology camera";
-	network = list("ss13","rd","xeno")
-	},
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 4
@@ -40168,7 +40163,15 @@
 /area/station/command/bridge)
 "ndz" = (
 /obj/machinery/smartfridge/extract/preloaded,
-/turf/closed/wall,
+/obj/machinery/camera/directional/east{
+	c_tag = "Xenobiology Computers";
+	name = "xenobiology camera";
+	network = list("ss13","rd","xeno")
+	},
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "ndP" = (
 /obj/machinery/atmospherics/pipe/bridge_pipe/green/visible,
@@ -57675,7 +57678,8 @@
 /area/station/engineering/gravity_generator)
 "sVz" = (
 /obj/machinery/smartfridge,
-/turf/closed/wall,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
 /area/station/service/hydroponics)
 "sVB" = (
 /obj/machinery/door/airlock/maintenance{
@@ -85396,7 +85400,7 @@ aeu
 aeu
 aeu
 aeu
-aeu
+aeU
 aeu
 aeu
 aeu
@@ -85653,10 +85657,10 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
-aeu
+aeU
+aeU
+aeU
+aeU
 aeu
 aeu
 aeu
@@ -85907,10 +85911,10 @@ aaa
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
-aeu
+aeU
+aeU
+aeU
+aeU
 aeu
 aeu
 aeu
@@ -86167,10 +86171,10 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
-aeu
+aeU
+aeU
+aeU
+aeU
 aeu
 aeu
 aeu
@@ -86424,7 +86428,7 @@ aeu
 aeu
 aeu
 aeu
-aeu
+aeU
 aeu
 aeu
 aeu
@@ -86676,17 +86680,17 @@ aaa
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
 aeu
 aeu
 aeu
@@ -86938,7 +86942,7 @@ aeu
 aeu
 aeu
 aeu
-aeu
+aeU
 aeu
 aeu
 aeu
@@ -87192,13 +87196,13 @@ aeu
 aeu
 aeu
 aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
-aeu
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
+aeU
 aeu
 aeu
 aeu
@@ -87452,10 +87456,10 @@ aeu
 aeu
 aeu
 aeu
+aeU
 aeu
 aeu
-aeu
-aeu
+aeU
 aeu
 aeu
 aeu
@@ -87707,12 +87711,12 @@ aeu
 aeu
 aeu
 aeu
+aeU
+aeU
+aeU
 aeu
 aeu
-aeu
-aeu
-aeu
-aeu
+aeU
 aeu
 aeu
 aeu
@@ -87966,10 +87970,10 @@ aeu
 aeu
 aeu
 aeu
+aeU
 aeu
 aeu
-aeu
-aeu
+aeU
 aeu
 aeu
 aeu
