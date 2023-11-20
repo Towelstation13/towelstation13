@@ -21034,9 +21034,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/east,
-/obj/structure/sign/poster/contraband/missing_gloves{
-	pixel_x = 32
-	},
+/obj/structure/sign/poster/contraband/missing_gloves/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/department/electrical)
 "gVg" = (
@@ -26995,7 +26993,7 @@
 /area/station/command/bridge)
 "iJO" = (
 /obj/structure/reflector/single/anchored{
-	dir = 10
+	dir = 9
 	},
 /obj/effect/turf_decal/box/corners{
 	dir = 1
@@ -41886,6 +41884,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red/fourcorners,
+/obj/structure/sign/poster/official/fruit_bowl/directional/west,
 /turf/open/floor/iron/white,
 /area/station/security/prison/safe)
 "nIX" = (
@@ -50593,9 +50592,6 @@
 /obj/machinery/space_heater,
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/light/directional/south,
-/obj/structure/sign/poster/contraband/fun_police{
-	pixel_y = -32
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -50604,6 +50600,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/contraband/fun_police/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/security/execution/education)
 "qKR" = (
@@ -59891,12 +59888,10 @@
 	pixel_y = 5
 	},
 /obj/structure/table/glass,
-/obj/structure/sign/poster/official/no_erp{
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/structure/sign/poster/official/no_erp/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "tEE" = (
@@ -70265,10 +70260,6 @@
 "wRU" = (
 /turf/closed/wall,
 /area/station/engineering/atmos)
-"wSh" = (
-/obj/structure/sign/poster/official/fruit_bowl,
-/turf/closed/wall/r_wall,
-/area/station/security/prison/safe)
 "wSi" = (
 /obj/structure/cable,
 /obj/machinery/computer/atmos_alert{
@@ -79340,7 +79331,7 @@ aeU
 aeU
 aeu
 dWG
-wSh
+dWG
 dWG
 nKO
 mWy
