@@ -3251,6 +3251,9 @@
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
+/obj/machinery/modular_computer/preset/curator{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "bdo" = (
@@ -6503,9 +6506,6 @@
 /area/station/maintenance/department/crew_quarters/bar)
 "cjq" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/secure/briefcase{
-	pixel_y = 6
-	},
 /obj/item/radio{
 	pixel_y = 6
 	},
@@ -28304,7 +28304,6 @@
 "jfK" = (
 /obj/structure/table/glass,
 /obj/item/stack/package_wrap,
-/obj/item/storage/secure/briefcase,
 /obj/item/hand_labeler,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/structure/cable,
@@ -30288,9 +30287,6 @@
 "jPq" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/cobweb,
-/obj/item/storage/secure/briefcase{
-	pixel_y = 4
-	},
 /obj/item/radio{
 	desc = "An old handheld radio. You could use it, if you really wanted to.";
 	icon_state = "radio";
@@ -35261,9 +35257,6 @@
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/newscaster/directional/south,
 /obj/item/stack/package_wrap,
-/obj/item/storage/secure/briefcase{
-	pixel_y = 4
-	},
 /obj/item/hand_labeler,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
@@ -37516,7 +37509,6 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/storage/secure/briefcase,
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
@@ -40573,6 +40565,9 @@
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/assistance,
+/obj/machinery/modular_computer/preset/research{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "nny" = (
@@ -41067,10 +41062,6 @@
 "nvA" = (
 /obj/machinery/suit_storage_unit/hos,
 /obj/effect/turf_decal/delivery,
-/obj/item/storage/secure/safe/hos{
-	pixel_x = 36;
-	pixel_y = 28
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
@@ -42190,6 +42181,9 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
 "nPo" = (
+/obj/machinery/modular_computer/preset/id{
+	dir = 1
+	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "nPS" = (
@@ -43653,7 +43647,6 @@
 /area/station/service/library)
 "otO" = (
 /obj/structure/table,
-/obj/item/storage/secure/briefcase,
 /obj/item/taperecorder,
 /obj/structure/sign/warning/electric_shock/directional/south,
 /turf/open/floor/iron/dark,
@@ -45443,13 +45436,13 @@
 /obj/structure/table,
 /obj/item/healthanalyzer,
 /obj/item/hand_labeler,
-/obj/item/storage/secure/safe/caps_spare/directional/north,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/structure/secure_safe/caps_spare/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "oZX" = (
@@ -51944,6 +51937,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "rhy" = (
@@ -53058,10 +53054,6 @@
 /area/station/service/chapel)
 "rxt" = (
 /obj/structure/table/wood,
-/obj/item/storage/secure/briefcase{
-	pixel_x = 5;
-	pixel_y = 5
-	},
 /obj/item/storage/lockbox/medal,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
@@ -58624,6 +58616,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/machinery/modular_computer/preset/id{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "tkO" = (
@@ -59751,6 +59746,10 @@
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/medbay/lobby)
+"tCg" = (
+/obj/structure/secure_safe/hos,
+/turf/closed/wall,
+/area/station/security/office)
 "tCh" = (
 /obj/machinery/computer/robotics{
 	dir = 1
@@ -65163,9 +65162,11 @@
 	},
 /obj/machinery/light/directional/east,
 /obj/item/lighter,
-/obj/item/storage/secure/safe/directional/east,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
+	},
+/obj/structure/secure_safe/sc_ssafe{
+	pixel_x = 32
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/captain)
@@ -94014,7 +94015,7 @@ oKW
 oKW
 dKK
 xpa
-oKW
+tCg
 afL
 dMH
 crh
