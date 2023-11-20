@@ -3251,9 +3251,7 @@
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
-/obj/machinery/modular_computer/preset/curator{
-	dir = 8
-	},
+/obj/machinery/modular_computer/preset/curator,
 /turf/open/floor/iron/dark,
 /area/station/service/library)
 "bdo" = (
@@ -18722,9 +18720,9 @@
 /turf/open/floor/iron/dark,
 /area/station/science/research)
 "giH" = (
-/obj/structure/sign/poster/official/help_others,
-/turf/closed/wall/r_wall/rust,
-/area/station/security/prison/shower)
+/obj/structure/secure_safe/hos,
+/turf/closed/wall,
+/area/station/security/office)
 "giJ" = (
 /obj/structure/table,
 /obj/item/clipboard,
@@ -39609,6 +39607,7 @@
 /obj/effect/spawner/random/contraband/prison,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/structure/sign/poster/official/help_others/directional/north,
 /turf/open/floor/vault,
 /area/station/security/prison/shower)
 "mTK" = (
@@ -40212,6 +40211,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/machinery/modular_computer/preset/engineering,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "nes" = (
@@ -51144,7 +51144,7 @@
 /area/station/hallway/secondary/entry)
 "qUj" = (
 /obj/machinery/smartfridge/food,
-/turf/closed/wall,
+/turf/open/floor/iron,
 /area/station/service/kitchen)
 "qUp" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -52254,11 +52254,9 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/storage)
 "rnp" = (
-/obj/structure/sign/poster/contraband/missing_gloves{
-	pixel_x = 32
-	},
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable,
+/obj/structure/sign/poster/contraband/missing_gloves/directional/east,
 /turf/open/floor/circuit/red,
 /area/station/engineering/supermatter/room)
 "rnB" = (
@@ -59746,10 +59744,6 @@
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/medbay/lobby)
-"tCg" = (
-/obj/structure/secure_safe/hos,
-/turf/closed/wall,
-/area/station/security/office)
 "tCh" = (
 /obj/machinery/computer/robotics{
 	dir = 1
@@ -65999,7 +65993,7 @@
 /area/station/engineering/supermatter/room)
 "vDD" = (
 /obj/machinery/smartfridge/drinks,
-/turf/closed/wall,
+/turf/open/floor/wood,
 /area/station/hallway/secondary/service)
 "vDO" = (
 /obj/machinery/door/firedoor,
@@ -72103,14 +72097,12 @@
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance)
 "xym" = (
-/obj/structure/sign/poster/official/enlist{
-	pixel_y = -32
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /obj/effect/turf_decal/tile/neutral,
+/obj/structure/sign/poster/official/enlist/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "xyp" = (
@@ -72826,10 +72818,8 @@
 /obj/item/clothing/head/helmet/toggleable/justice/escape{
 	name = "justice helmet"
 	},
-/obj/structure/sign/poster/official/the_owl{
-	pixel_y = 32
-	},
 /obj/effect/mapping_helpers/broken_floor,
+/obj/structure/sign/poster/official/the_owl/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "xJN" = (
@@ -82948,7 +82938,7 @@ aaa
 aaa
 aaa
 aaa
-giH
+nQK
 mTJ
 tMu
 lhv
@@ -94015,7 +94005,7 @@ oKW
 oKW
 dKK
 xpa
-tCg
+giH
 afL
 dMH
 crh
