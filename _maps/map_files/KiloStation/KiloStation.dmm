@@ -2203,7 +2203,7 @@
 "aIH" = (
 /obj/structure/transit_tube/crossing,
 /obj/effect/turf_decal/sand/plating,
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "aII" = (
@@ -2665,10 +2665,6 @@
 /area/station/service/library)
 "aPT" = (
 /obj/structure/window/reinforced/spawner{
-	dir = 4
-	},
-/obj/structure/window/reinforced/spawner,
-/obj/structure/window/reinforced/spawner{
 	dir = 8
 	},
 /obj/structure/flora/bush/sparsegrass/style_random,
@@ -2679,6 +2675,8 @@
 	id = "emmd";
 	name = "Emergency Medical Lockdown Shutters"
 	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/grass,
 /area/station/medical/paramedic)
 "aQl" = (
@@ -3393,6 +3391,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
+"bgd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/holosign/barrier/atmos,
+/obj/structure/sign/poster/contraband/rebels_unite/directional/north,
+/turf/open/floor/plating/airless,
+/area/station/maintenance/space_hut/plasmaman)
 "bgl" = (
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/hop)
@@ -9407,12 +9411,10 @@
 	id = "QMLoad2";
 	name = "on ramp"
 	},
-/obj/structure/sign/poster/contraband/red_rum{
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/structure/sign/poster/contraband/red_rum/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "diZ" = (
@@ -10757,9 +10759,7 @@
 /area/station/service/chapel/dock)
 "dFA" = (
 /obj/machinery/pdapainter,
-/obj/structure/sign/poster/official/ian{
-	pixel_y = 32
-	},
+/obj/structure/sign/poster/official/ian/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "dFM" = (
@@ -16598,9 +16598,6 @@
 /area/station/maintenance/department/cargo)
 "fBm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced/spawner{
-	dir = 8
-	},
 /obj/structure/table,
 /obj/item/raw_anomaly_core/random,
 /obj/item/raw_anomaly_core/random{
@@ -16614,6 +16611,7 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
 	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance)
 "fBt" = (
@@ -18037,9 +18035,7 @@
 /area/station/hallway/secondary/service)
 "fWK" = (
 /obj/structure/chair/sofa/right/brown,
-/obj/structure/sign/poster/official/love_ian{
-	pixel_y = 32
-	},
+/obj/structure/sign/poster/official/love_ian/directional/north,
 /turf/open/floor/carpet,
 /area/station/medical/psychology)
 "fWL" = (
@@ -20473,7 +20469,7 @@
 /turf/closed/wall,
 /area/station/security/medical)
 "gLp" = (
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/misc/asteroid/airless,
 /area/space/nearstation)
 "gLH" = (
@@ -21560,12 +21556,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/assist,
 /obj/effect/turf_decal/bot_white,
-/obj/structure/sign/poster/contraband/punch_shit{
-	pixel_x = 30
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/contraband/punch_shit/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/fore)
 "hhc" = (
@@ -22415,12 +22409,10 @@
 /turf/open/floor/iron/dark,
 /area/station/service/hydroponics)
 "hsJ" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 4
-	},
 /obj/structure/flora/bush/grassy/style_random,
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/leavy/style_random,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/hallway/primary/fore)
 "hsO" = (
@@ -24892,12 +24884,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/brig)
-"iep" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/holosign/barrier/atmos,
-/obj/structure/sign/poster/contraband/rebels_unite/directional/north,
-/turf/open/floor/plating/airless,
-/area/station/maintenance/space_hut/plasmaman)
 "ieu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/purple,
@@ -25049,15 +25035,13 @@
 "igR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/sign/poster/official/fruit_bowl{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/structure/sign/poster/official/fruit_bowl/directional/east,
 /turf/open/floor/iron/dark/corner,
 /area/station/hallway/primary/port)
 "ihg" = (
@@ -30074,9 +30058,6 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/obj/structure/sign/poster/official/help_others{
-	pixel_y = 32
-	},
 /obj/structure/table,
 /obj/item/paper_bin{
 	pixel_x = -4;
@@ -30084,6 +30065,7 @@
 	},
 /obj/item/pen,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/structure/sign/poster/official/help_others/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/aft)
 "jLK" = (
@@ -32576,7 +32558,7 @@
 /area/station/medical/storage)
 "kHG" = (
 /obj/machinery/smartfridge/chemistry/preloaded,
-/turf/closed/wall,
+/turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
 "kHI" = (
 /obj/effect/turf_decal/stripes/corner{
@@ -36661,12 +36643,6 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
-"lWO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/holosign/barrier/atmos,
-/obj/structure/sign/poster/contraband/rebels_unite/directional/south,
-/turf/open/floor/plating/airless,
-/area/station/maintenance/space_hut/plasmaman)
 "lWQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -36742,11 +36718,9 @@
 /turf/closed/wall,
 /area/station/science/robotics/lab)
 "lYv" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 1
-	},
 /obj/structure/flora/bush/leavy/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/grass,
 /area/station/hallway/primary/fore)
 "lYE" = (
@@ -37425,15 +37399,11 @@
 /turf/open/floor/plating,
 /area/station/security/execution/transfer)
 "mjc" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 4
-	},
 /obj/structure/flora/bush/sparsegrass/style_random,
 /obj/structure/flora/bush/grassy/style_random,
-/obj/structure/window/reinforced/spawner{
-	dir = 1
-	},
 /obj/structure/flora/bush/flowers_yw/style_random,
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/grass,
 /area/station/hallway/primary/fore)
 "mjh" = (
@@ -44591,12 +44561,10 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "oLs" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 1
-	},
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/grassy/style_random,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/grass,
 /area/station/hallway/primary/fore)
 "oLG" = (
@@ -52679,6 +52647,12 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
+"rtm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/holosign/barrier/atmos,
+/obj/structure/sign/poster/contraband/rebels_unite/directional/south,
+/turf/open/floor/plating/airless,
+/area/station/maintenance/space_hut/plasmaman)
 "rtr" = (
 /obj/structure/table/glass,
 /obj/item/folder/white,
@@ -53734,9 +53708,6 @@
 /area/station/ai_monitored/command/storage/eva)
 "rKT" = (
 /obj/structure/window/reinforced/spawner{
-	dir = 4
-	},
-/obj/structure/window/reinforced/spawner{
 	dir = 8
 	},
 /obj/structure/flora/bush/sparsegrass/style_random,
@@ -53747,6 +53718,7 @@
 	id = "emmd";
 	name = "Emergency Medical Lockdown Shutters"
 	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/medical/paramedic)
 "rKV" = (
@@ -54832,6 +54804,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/official/the_owl/directional,
 /turf/open/floor/iron/dark/corner{
 	dir = 8
 	},
@@ -57196,8 +57169,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "sOS" = (
-/obj/structure/window/reinforced/spawner,
 /obj/effect/turf_decal/siding/green,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/misc/sandy_dirt,
 /area/station/service/hydroponics/garden)
 "sOV" = (
@@ -62192,7 +62165,7 @@
 "urA" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "urE" = (
@@ -62484,12 +62457,10 @@
 "uwG" = (
 /obj/effect/spawner/random/vending/colavend,
 /obj/effect/turf_decal/delivery,
-/obj/structure/sign/poster/official/no_erp{
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
+/obj/structure/sign/poster/official/no_erp/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/commons/locker)
 "uwP" = (
@@ -63767,12 +63738,6 @@
 /area/station/hallway/primary/port)
 "uVJ" = (
 /obj/structure/window/reinforced/spawner{
-	dir = 4
-	},
-/obj/structure/window/reinforced/spawner{
-	dir = 1
-	},
-/obj/structure/window/reinforced/spawner{
 	dir = 8
 	},
 /obj/structure/flora/bush/lavendergrass/style_random,
@@ -63782,6 +63747,8 @@
 	id = "emmd";
 	name = "Emergency Medical Lockdown Shutters"
 	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/grass,
 /area/station/medical/paramedic)
 "uVK" = (
@@ -66090,13 +66057,11 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/starboard/fore)
 "vFW" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 8
-	},
 /obj/machinery/research/anomaly_refinery,
 /obj/effect/turf_decal/tile/purple/anticorner/contrasted{
 	dir = 8
 	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/ordnance)
 "vFY" = (
@@ -72244,13 +72209,11 @@
 /area/station/service/chapel)
 "xCq" = (
 /obj/effect/spawner/random/vending/snackvend,
-/obj/structure/sign/poster/official/the_owl{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/official/the_owl/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/port)
 "xCr" = (
@@ -123972,8 +123935,8 @@ aaa
 aeo
 acm
 dwz
-iep
-lWO
+bgd
+rtm
 dwz
 aeo
 aaa
@@ -125000,8 +124963,8 @@ aaa
 acm
 acm
 dwz
-iep
-lWO
+bgd
+rtm
 dwz
 aeo
 aaa
