@@ -1662,6 +1662,8 @@
 /area/station/science/genetics)
 "aAP" = (
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
+/obj/structure/sign/poster/official/safety_eye_protection/directional/east,
+/obj/structure/sign/poster/contraband/grey_tide/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/chemistry)
 "aAQ" = (
@@ -21904,17 +21906,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit/departure_lounge)
-"hlb" = (
-/obj/structure/sign/poster/official/safety_eye_protection{
-	pixel_x = 32;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron/showroomfloor,
-/area/station/medical/chemistry)
 "hlC" = (
 /obj/machinery/turretid{
 	icon_state = "control_stun";
@@ -24315,13 +24306,11 @@
 "hVL" = (
 /obj/machinery/computer/slot_machine,
 /obj/effect/turf_decal/bot_white,
-/obj/structure/sign/poster/contraband/smoke{
-	pixel_x = 32
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/contraband/smoke/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/greater)
 "hVT" = (
@@ -26562,9 +26551,6 @@
 /area/station/maintenance/department/crew_quarters/bar)
 "iEy" = (
 /obj/structure/table/wood,
-/obj/structure/sign/poster/official/cohiba_robusto_ad{
-	pixel_y = -32
-	},
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/box/matches{
@@ -26579,6 +26565,7 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 1
 	},
+/obj/structure/sign/poster/official/cohiba_robusto_ad/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/greater)
 "iEB" = (
@@ -54120,13 +54107,9 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
 "rPU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/grey_tide{
-	pixel_y = 32
-	},
-/obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/plating,
-/area/station/maintenance/port/greater)
+/obj/structure/sign/poster/contraband/smoke/directional,
+/turf/open/space/basic,
+/area/space)
 "rQl" = (
 /obj/effect/turf_decal/plaque{
 	icon_state = "L11"
@@ -65746,9 +65729,6 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
 "vzV" = (
-/obj/structure/sign/poster/official/anniversary_vintage_reprint{
-	pixel_y = 32
-	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Chemistry North";
 	network = list("ss13","medbay")
@@ -65757,6 +65737,7 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
+/obj/structure/sign/poster/official/anniversary_vintage_reprint/directional/north,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/chemistry)
 "vzZ" = (
@@ -68898,10 +68879,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
-"wuI" = (
-/obj/structure/sign/poster/contraband/missing_gloves,
-/turf/closed/wall/rust,
-/area/station/maintenance/port/greater)
 "wuK" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
 	dir = 5
@@ -72633,6 +72610,7 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible/layer4{
 	dir = 1
 	},
+/obj/structure/sign/poster/contraband/missing_gloves/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/greater)
 "xHc" = (
@@ -83417,7 +83395,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+rPU
 aaa
 aaa
 aaa
@@ -85991,7 +85969,7 @@ aqt
 lMx
 tuP
 xGQ
-wuI
+ycx
 aeu
 evE
 aaa
@@ -89844,10 +89822,10 @@ wYR
 xFE
 tWn
 juL
-hlb
+wYR
 aAP
 mtV
-rPU
+dBg
 dHL
 tPC
 lbK
