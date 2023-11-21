@@ -7031,14 +7031,12 @@
 /obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/the_griffin{
-	pixel_y = 32
-	},
 /mob/living/simple_animal/bot/mulebot{
 	home_destination = "QM #1";
 	suffix = "#1"
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/structure/sign/poster/contraband/the_griffin/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "cre" = (
@@ -9322,12 +9320,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/station/service/bar/atrium)
-"dhX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/holosign/barrier/atmos,
-/obj/structure/sign/poster/contraband/rebels_unite/directional/south,
-/turf/open/floor/plating/airless,
-/area/station/maintenance/space_hut/plasmaman)
 "dhY" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
@@ -11533,13 +11525,11 @@
 /obj/item/crowbar/red,
 /obj/item/restraints/handcuffs,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/revolver{
-	pixel_y = 32
-	},
 /obj/structure/grille/broken,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/structure/sign/poster/contraband/revolver/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore)
 "dSn" = (
@@ -24902,6 +24892,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/brig)
+"iep" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/holosign/barrier/atmos,
+/obj/structure/sign/poster/contraband/rebels_unite/directional/north,
+/turf/open/floor/plating/airless,
+/area/station/maintenance/space_hut/plasmaman)
 "ieu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/purple,
@@ -31280,10 +31276,6 @@
 /area/station/security/prison)
 "kiZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/sign/poster/official/space_cops{
-	pixel_x = 32;
-	pixel_y = -32
-	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -31821,10 +31813,8 @@
 /turf/closed/wall,
 /area/station/security/lockers)
 "ktc" = (
-/obj/structure/sign/poster/contraband/random{
-	pixel_x = -32
-	},
 /obj/effect/spawner/random/structure/girder,
+/obj/structure/sign/poster/contraband/random/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "ktu" = (
@@ -32394,9 +32384,7 @@
 /area/station/engineering/storage/tech)
 "kEm" = (
 /obj/item/kirbyplants/random,
-/obj/structure/sign/poster/contraband/self_ai_liberation{
-	pixel_x = -32
-	},
+/obj/structure/sign/poster/contraband/self_ai_liberation/directional/west,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "kEz" = (
@@ -32808,12 +32796,10 @@
 /area/station/maintenance/solars/port/aft)
 "kMs" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/structure/sign/poster/random{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/structure/sign/poster/random/directional/east,
 /turf/open/floor/iron/dark/corner{
 	dir = 4
 	},
@@ -34000,14 +33986,12 @@
 "lcN" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/box,
-/obj/structure/sign/poster/official/safety_internals{
-	pixel_x = 32
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/east,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/official/safety_internals/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/department/crew_quarters/bar)
 "lcZ" = (
@@ -36677,6 +36661,12 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
+"lWO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/holosign/barrier/atmos,
+/obj/structure/sign/poster/contraband/rebels_unite/directional/south,
+/turf/open/floor/plating/airless,
+/area/station/maintenance/space_hut/plasmaman)
 "lWQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -46063,10 +46053,8 @@
 "pjX" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/secure_closet/hydroponics,
-/obj/structure/sign/poster/contraband/kudzu{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/tile/green/fourcorners,
+/obj/structure/sign/poster/contraband/kudzu/directional/east,
 /turf/open/floor/iron/checker,
 /area/station/service/hydroponics)
 "pjZ" = (
@@ -50849,12 +50837,10 @@
 /area/station/security/execution/transfer)
 "qQf" = (
 /obj/machinery/vending/wardrobe/chap_wardrobe,
-/obj/structure/sign/poster/official/bless_this_spess{
-	pixel_y = 32
-	},
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
 	},
+/obj/structure/sign/poster/official/bless_this_spess/directional/north,
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
 "qQj" = (
@@ -52773,12 +52759,10 @@
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/small/directional/east,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/lusty_xenomorph{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/contraband/lusty_xenomorph/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore)
 "rtT" = (
@@ -53114,9 +53098,6 @@
 "ryK" = (
 /obj/structure/table,
 /obj/structure/sign/departments/medbay/alt/directional/east,
-/obj/structure/sign/poster/official/help_others{
-	pixel_y = -32
-	},
 /obj/item/storage/box/bodybags{
 	pixel_y = 5
 	},
@@ -53124,6 +53105,7 @@
 	pixel_y = 4
 	},
 /obj/item/clothing/mask/surgical,
+/obj/structure/sign/poster/official/help_others/directional/south,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
 "ryW" = (
@@ -60709,9 +60691,7 @@
 /obj/machinery/recharger,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/the_griffin{
-	pixel_x = 32
-	},
+/obj/structure/sign/poster/contraband/the_griffin/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore)
 "tUO" = (
@@ -63705,11 +63685,9 @@
 	},
 /obj/item/storage/belt/janitor,
 /obj/item/storage/bag/trash,
-/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/fore)
 "uTM" = (
@@ -65833,6 +65811,7 @@
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 8
 	},
+/obj/structure/sign/poster/official/space_cops/directional/east,
 /turf/open/floor/iron,
 /area/station/security/office)
 "vBR" = (
@@ -72146,12 +72125,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
-"xAa" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/holosign/barrier/atmos,
-/obj/structure/sign/poster/contraband/rebels_unite/directional/north,
-/turf/open/floor/plating/airless,
-/area/station/maintenance/space_hut/plasmaman)
 "xAw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -82293,7 +82266,7 @@ aeu
 aeu
 aeu
 aeu
-aaa
+aeu
 aeu
 aeu
 aeu
@@ -123999,8 +123972,8 @@ aaa
 aeo
 acm
 dwz
-xAa
-dhX
+iep
+lWO
 dwz
 aeo
 aaa
@@ -125027,8 +125000,8 @@ aaa
 acm
 acm
 dwz
-xAa
-dhX
+iep
+lWO
 dwz
 aeo
 aaa
