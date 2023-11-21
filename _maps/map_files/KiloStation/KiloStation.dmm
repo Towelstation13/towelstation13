@@ -5025,13 +5025,11 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/blood/gibs/up,
-/obj/structure/sign/poster/official/wtf_is_co2{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/small/directional/north,
 /obj/effect/mapping_helpers/broken_floor,
+/obj/structure/sign/poster/official/wtf_is_co2/directional/north,
 /turf/open/floor/plating,
 /area/station/security/execution/education)
 "bLR" = (
@@ -9324,6 +9322,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/station/service/bar/atrium)
+"dhX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/holosign/barrier/atmos,
+/obj/structure/sign/poster/contraband/rebels_unite/directional/south,
+/turf/open/floor/plating/airless,
+/area/station/maintenance/space_hut/plasmaman)
 "dhY" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
@@ -42898,10 +42902,8 @@
 /area/station/hallway/primary/aft)
 "ofr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/random{
-	pixel_y = 32
-	},
 /obj/effect/mapping_helpers/broken_floor,
+/obj/structure/sign/poster/random/directional/north,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "ofs" = (
@@ -45163,10 +45165,6 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "oVY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/rebels_unite{
-	pixel_x = 32;
-	pixel_y = 32
-	},
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 8
 	},
@@ -49276,10 +49274,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/tank/internals/plasmaman/belt/full,
 /obj/structure/table,
-/obj/structure/sign/poster/contraband/rebels_unite{
-	pixel_x = 32;
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 1
 	},
@@ -50556,10 +50550,6 @@
 /area/station/maintenance/fore)
 "qKH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/rebels_unite{
-	pixel_x = -32;
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 4
 	},
@@ -58800,10 +58790,6 @@
 /area/station/maintenance/fore)
 "tmv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/contraband/rebels_unite{
-	pixel_x = -32;
-	pixel_y = 32
-	},
 /obj/effect/turf_decal/trimline/purple/filled/corner,
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 1
@@ -72160,6 +72146,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/medical/pharmacy)
+"xAa" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/holosign/barrier/atmos,
+/obj/structure/sign/poster/contraband/rebels_unite/directional/north,
+/turf/open/floor/plating/airless,
+/area/station/maintenance/space_hut/plasmaman)
 "xAw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -124007,8 +123999,8 @@ aaa
 aeo
 acm
 dwz
-iBc
-iBc
+xAa
+dhX
 dwz
 aeo
 aaa
@@ -125035,8 +125027,8 @@ aaa
 acm
 acm
 dwz
-iBc
-iBc
+xAa
+dhX
 dwz
 aeo
 aaa
