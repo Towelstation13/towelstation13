@@ -206,14 +206,6 @@ required_map = "KiloStation.dmm"
 coordinates = [151, 80, 1]
 trait_name = "Station"
 
-# Icecats Camp Upper Level
-[templates.icebox_icecats_upper]
-map_files = ["icemoon_underground_icewalker_upper.dmm"]
-directory = "_maps/RandomRuins/IceRuins/skyrat/"
-required_map = "IceBoxStation.dmm"
-coordinates = [202, 16, 2]
-trait_name = "Station"
-
 # TRAMSTATION MAP EDITS
 # Tramstation Arrivals
 [templates.tramstation_arrivals]
