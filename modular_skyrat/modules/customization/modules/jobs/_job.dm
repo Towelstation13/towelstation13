@@ -140,12 +140,6 @@
 /datum/job/prisoner
 	required_languages = null
 
-/datum/job/station_engineer
-	required_languages = null
-
-/datum/job/atmospheric_technician
-	required_languages = null
-
 /datum/job/orderly
 	banned_quirks = list(GUARD_RESTRICTED_QUIRKS)
 

@@ -267,7 +267,7 @@
 	else if(I == gloves)
 		//SKYRAT EDIT ADDITION - ERP UPDATE
 		if(gloves.breakouttime) //when unequipping a straightjacket
-			REMOVE_TRAIT(src, TRAIT_RESTRAINED, GLOVES_TRAIT)
+			REMOVE_TRAIT(src, TRAIT_RESTRAINED, TRAIT_GLOVES)
 			drop_all_held_items() //suit is restraining
 			update_mob_action_buttons() //certain action buttons may be usable again.
 		//SKYRAT EDIT ADDITION END
