@@ -30,10 +30,6 @@
 		to_chat(user, span_warning("You need to aggressively grab someone to hypnotize them."))
 		return FALSE
 
-	if(!target_human.client?.prefs?.read_preference(/datum/preference/toggle/erp/sex_toy))
-		to_chat(user, span_warning("[target_human] doesn't want to be hypnotized."))
-		return FALSE
-
 	to_chat(user, span_notice("You begin to place [target_human] into a hypnotic trance."))
 
 	if(!do_after(user, 12 SECONDS, target_human))
