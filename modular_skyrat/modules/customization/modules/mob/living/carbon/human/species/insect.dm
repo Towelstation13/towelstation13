@@ -30,7 +30,6 @@
 		"horns" = list("None", FALSE),
 		"ears" = list("None", FALSE),
 		"legs" = list("Normal Legs", FALSE),
-		"taur" = list("None", FALSE),
 		"fluff" = list("None", FALSE),
 		"wings" = list("Bee", FALSE),
 		"moth_antennae" = list("None", FALSE),

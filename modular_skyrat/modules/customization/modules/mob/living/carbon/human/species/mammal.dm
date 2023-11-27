@@ -28,7 +28,6 @@
 		"horns" = list("None", FALSE),
 		"ears" = list("Husky", TRUE),
 		"legs" = list("Normal Legs", TRUE),
-		"taur" = list("None", FALSE),
 		"fluff" = list("None", FALSE),
 		"wings" = list("None", FALSE),
 		"head_acc" = list("None", FALSE),

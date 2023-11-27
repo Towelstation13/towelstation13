@@ -10,7 +10,6 @@
 		"snout" = list("None", FALSE),
 		"ears" = list("None", FALSE),
 		"legs" = list("Normal Legs", FALSE),
-		"taur" = list("None", FALSE),
 		"wings" = list("None", FALSE),
 		"horns" = list("None", FALSE),
 		"spines" = list("None", FALSE),

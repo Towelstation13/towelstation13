@@ -20,7 +20,6 @@
 		"ears" = list("None", FALSE),
 		"legs" = list("Normal Legs", FALSE),
 		"wings" = list("None", FALSE),
-		"taur" = list("None", FALSE),
 		"horns" = list("None", FALSE),
 	)
 
