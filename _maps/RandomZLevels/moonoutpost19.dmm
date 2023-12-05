@@ -2140,6 +2140,15 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
 /area/awaymission/moonoutpost19/arrivals)
+"ob" = (
+/mob/living/basic/pet/cat/space{
+	desc = "With survival instincts like these, it's no wonder cats survived to the 26th century.";
+	name = "Jones"
+	},
+/turf/open/misc/asteroid/moon{
+	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
+	},
+/area/awaymission/moonoutpost19/main)
 "od" = (
 /obj/effect/decal/cleanable/xenoblood/xgibs/larva/body,
 /turf/open/misc/asteroid/moon{
@@ -3365,6 +3374,17 @@
 	},
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/plating,
+/area/awaymission/moonoutpost19/research)
+"vu" = (
+/obj/structure/table,
+/obj/item/storage/briefcase/secure,
+/obj/item/taperecorder{
+	pixel_x = -3
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/iron/dark,
 /area/awaymission/moonoutpost19/research)
 "vx" = (
 /obj/structure/table/reinforced,
@@ -5129,15 +5149,6 @@
 	dir = 8
 	},
 /area/awaymission/moonoutpost19/research)
-"HP" = (
-/mob/living/simple_animal/pet/cat/space{
-	desc = "With survival instincts like these, it's no wonder cats survived to the 26th century.";
-	name = "Jones"
-	},
-/turf/open/misc/asteroid/moon{
-	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
-	},
-/area/awaymission/moonoutpost19/main)
 "HS" = (
 /obj/structure/chair/stool/directional/east{
 	pixel_x = 9
@@ -6852,6 +6863,16 @@
 /turf/open/floor/iron/cafeteria{
 	dir = 5
 	},
+/area/awaymission/moonoutpost19/research)
+"Tx" = (
+/obj/structure/secure_safe/directional/east,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/pen,
+/obj/item/paper/crumpled/awaymissions/moonoutpost19/hastey_note,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
 /area/awaymission/moonoutpost19/research)
 "Tz" = (
 /obj/machinery/power/shuttle_engine/propulsion/burst/left{
@@ -29319,7 +29340,7 @@ ac
 ac
 My
 My
-HP
+ob
 My
 My
 My
