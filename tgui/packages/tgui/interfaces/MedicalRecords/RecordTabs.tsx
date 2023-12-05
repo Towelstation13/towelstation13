@@ -58,7 +58,6 @@ export const MedicalRecordTabs = (props) => {
             <Button.Confirm
               content="Purge"
               icon="trash"
-              disabled={!station_z}
               onClick={() => act('purge_records')}
               tooltip="Wipe all record data."
             />
