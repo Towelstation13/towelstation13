@@ -118,10 +118,6 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	requirements = list(40,30,30,20,20,15,15,15,10,10)
 	antag_cap = 1
 
-/datum/dynamic_ruleset/roundstart/traitorbro/forget_startup()
-	pre_brother_teams = list()
-	return ..()
-
 /datum/dynamic_ruleset/roundstart/traitorbro/pre_execute(population)
 	. = ..()
 
@@ -132,6 +128,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 
 		assigned += candidate.mind
 		candidate.mind.restricted_roles = restricted_roles
+		candidate.mind.special_role = ROLE_BROTHER
 		GLOB.pre_setup_antags += candidate.mind
 
 	return TRUE
