@@ -2963,7 +2963,54 @@
 	},
 /turf/open/misc/beach/sand,
 /area/awaymission/beach)
-"cI" = (
+"KV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/structure/crate,
+/turf/open/floor/plating,
+/area/awaymission/beach)
+"KW" = (
+/obj/structure/fluff/beach_umbrella/syndi,
+/turf/open/misc/beach/sand,
+/area/awaymission/beach)
+"La" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/random/structure/closet_empty/crate,
+/obj/effect/spawner/random/maintenance/two,
+/obj/item/storage/toolbox/fishing{
+	pixel_y = 2
+	},
+/turf/open/floor/plating,
+/area/awaymission/beach)
+"Ld" = (
+/obj/item/toy/seashell{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/turf/open/misc/beach/coast/corner{
+	dir = 1
+	},
+/area/awaymission/beach)
+"Le" = (
+/turf/open/misc/beach/coast{
+	dir = 8
+	},
+/area/awaymission/beach)
+"Lg" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/diagonal,
+/area/awaymission/beach)
+"Ll" = (
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 1
+	},
+/turf/open/misc/beach/sand,
+/area/awaymission/beach)
+"Lt" = (
+/obj/structure/rack,
 /obj/effect/turf_decal/sand,
 /obj/item/clothing/shoes/sandal{
 	pixel_y = 4;
