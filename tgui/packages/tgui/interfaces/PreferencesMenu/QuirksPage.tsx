@@ -241,12 +241,6 @@ export const QuirksPage = (props) => {
     data.character_preferences.non_contextual.random_body !==
       RandomSetting.Disabled || randomToggleEnabled;
 
-  // this is mainly just here to copy from MainPage.tsx
-  const [randomToggleEnabled] = useRandomToggleState(context);
-  const randomBodyEnabled =
-    data.character_preferences.non_contextual.random_body !==
-      RandomSetting.Disabled || randomToggleEnabled;
-
   const [selectedQuirks, setSelectedQuirks] = useLocalState(
     `selectedQuirks_${data.active_slot}`,
     data.selected_quirks

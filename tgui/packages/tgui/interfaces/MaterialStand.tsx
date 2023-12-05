@@ -19,10 +19,10 @@ type Data = {
   ore_images: Ore_images[];
 };
 
-export const MaterialStand = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const MaterialStand = (props) => {
+  const { act, data } = useBackend<Data>();
   const { ores = [] } = data;
-  const [searchItem, setSearchItem] = useLocalState(context, 'searchItem', '');
+  const [searchItem, setSearchItem] = useLocalState('searchItem', '');
   const search = createSearch(searchItem, (ore: Ores) => ore.name);
   const ores_filtered =
     searchItem.length > 0 ? ores.filter((ore) => search(ore)) : ores;
@@ -84,8 +84,8 @@ export const MaterialStand = (props, context) => {
   );
 };
 
-const RetrieveIcon = (props, context) => {
-  const { data } = useBackend<Data>(context);
+const RetrieveIcon = (props) => {
+  const { data } = useBackend<Data>();
   const { ore_images = [] } = data;
   const { ore } = props;
 
