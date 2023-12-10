@@ -7229,6 +7229,7 @@
 /obj/machinery/netpod,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/effect/landmark/start/bitrunner,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
 "cup" = (
@@ -8669,6 +8670,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "cXg" = (
@@ -11813,6 +11815,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "dXz" = (
@@ -13305,6 +13308,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "eyl" = (
+/mob/living/basic/bear,
 /turf/open/floor/wood,
 /area/station/maintenance/port/fore)
 "eyv" = (
@@ -22658,6 +22662,7 @@
 "hxG" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
 "hxL" = (
@@ -23226,7 +23231,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
-/obj/machinery/cryo_cell,
+/obj/machinery/cryo_cell{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/central)
 "hHj" = (
@@ -23990,7 +23997,6 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
-/mob/living/basic/mining/mook/worker/tribal_chief,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/fore)
 "hRj" = (
@@ -25597,6 +25603,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
 "ipI" = (
@@ -25663,6 +25670,7 @@
 /obj/machinery/door/airlock/mining{
 	name = "Bitrunning Den"
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
 "iqd" = (
@@ -28415,7 +28423,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
-/mob/living/basic/mining/mook/worker/tribal_chief,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/fore)
 "jhy" = (
@@ -29423,7 +29430,9 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
-/obj/machinery/cryo_cell,
+/obj/machinery/cryo_cell{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/central)
 "jBR" = (
@@ -35181,6 +35190,7 @@
 /obj/effect/turf_decal/tile/yellow,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "lxf" = (
@@ -38843,6 +38853,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow/opposingcorners,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/storage)
 "mIo" = (
@@ -58570,6 +58581,7 @@
 "tlb" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/basic/cat_butcherer,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "tlu" = (
@@ -72981,6 +72993,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/mob/living/basic/mining/mook,
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/fore)
 "xOh" = (
