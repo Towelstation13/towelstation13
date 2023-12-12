@@ -54,11 +54,7 @@
 			to_chat(the_real_ling, span_ghostalert("We detect our decoy brain has been placed within a Man-Machine Interface. \
 				We can use the \"MMI Talk\" action to command it to speak."))
 		else
-<<<<<<< HEAD
-			the_real_ling.notify_ghost_cloning("Your decoy brain has been placed in an MMI, re-enter your body to talk via it!", source = the_real_ling, flashwindow = TRUE)
-=======
 			the_real_ling.notify_revival("Your decoy brain has been placed in an MMI, re-enter your body to talk via it!", source = the_real_ling, flashwindow = TRUE)
->>>>>>> 339dc45593fad661740106e4f50c443b28c8e0a5
 		talk_action.Grant(the_real_ling)
 
 	else if(talk_action?.owner == the_real_ling)
