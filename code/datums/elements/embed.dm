@@ -86,6 +86,9 @@
 	if(victim.status_flags & GODMODE)
 		return FALSE
 
+	if(victim.status_flags & GODMODE)
+		return FALSE
+
 	var/flying_speed = throwingdatum?.speed || weapon.throw_speed
 
 	if(flying_speed < EMBED_THROWSPEED_THRESHOLD && !ignore_throwspeed_threshold)

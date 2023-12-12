@@ -7,7 +7,7 @@
 import { NtosWindow } from '../layouts';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Section, TextArea, MenuBar, Divider } from '../components';
-import { Component, createRef, RefObject } from 'inferno';
+import { Component, createRef, RefObject } from 'react';
 import { createLogger } from '../logging';
 import { Dialog, UnsavedChangesDialog } from '../components/Dialog';
 
@@ -28,7 +28,7 @@ const PartiallyUnderlined = (props: PartiallyUnderlinedProps) => {
   return (
     <>
       {start}
-      <span style={{ 'text-decoration': 'underline' }}>{underlined}</span>
+      <span style={{ textDecoration: 'underline' }}>{underlined}</span>
       {end}
     </>
   );
@@ -134,7 +134,8 @@ const NtosNotepadMenuBar = (props: MenuBarProps) => {
         entry="file"
         openWidth="22rem"
         display={<PartiallyUnderlined str="File" indexStart={0} />}
-        {...itemProps}>
+        {...itemProps}
+      >
         <MenuBar.Dropdown.MenuItem {...getMenuItemProps('new', 'New')} />
         <MenuBar.Dropdown.MenuItem {...getMenuItemProps('save', 'Save')} />
         <MenuBar.Dropdown.Separator key="firstSep" />
@@ -144,7 +145,8 @@ const NtosNotepadMenuBar = (props: MenuBarProps) => {
         entry="edit"
         openWidth="22rem"
         display={<PartiallyUnderlined str="Edit" indexStart={0} />}
-        {...itemProps}>
+        {...itemProps}
+      >
         <MenuBar.Dropdown.MenuItem {...getMenuItemProps('cut', 'Cut')} />
         <MenuBar.Dropdown.MenuItem {...getMenuItemProps('copy', 'Copy')} />
         <MenuBar.Dropdown.MenuItem {...getMenuItemProps('paste', 'Paste')} />
@@ -154,7 +156,8 @@ const NtosNotepadMenuBar = (props: MenuBarProps) => {
         entry="format"
         openWidth="15rem"
         display={<PartiallyUnderlined str="Format" indexStart={1} />}
-        {...itemProps}>
+        {...itemProps}
+      >
         <MenuBar.Dropdown.MenuItemToggle
           checked={wordWrap}
           {...getMenuItemProps('wordWrap', 'Word Wrap')}
@@ -164,7 +167,8 @@ const NtosNotepadMenuBar = (props: MenuBarProps) => {
         entry="view"
         openWidth="15rem"
         display={<PartiallyUnderlined str="View" indexStart={0} />}
-        {...itemProps}>
+        {...itemProps}
+      >
         <MenuBar.Dropdown.MenuItemToggle
           checked={showStatusBar}
           {...getMenuItemProps('statusBar', 'Status Bar')}
@@ -174,7 +178,8 @@ const NtosNotepadMenuBar = (props: MenuBarProps) => {
         entry="help"
         openWidth="17rem"
         display={<PartiallyUnderlined str="Help" indexStart={0} />}
-        {...itemProps}>
+        {...itemProps}
+      >
         <MenuBar.Dropdown.MenuItem
           {...getMenuItemProps('aboutNotepad', 'About Notepad')}
         />
@@ -320,7 +325,7 @@ type AboutDialogProps = {
 
 const AboutDialog = (props: AboutDialogProps) => {
   const { close, clientName } = props;
-  const paragraphStyle = { 'padding': '.5rem 1rem 0 2rem' };
+  const paragraphStyle = { padding: '.5rem 1rem 0 2rem' };
   return (
     <Dialog title="About Notepad" onClose={close} width={'500px'}>
       <div className="Dialog__body">
@@ -334,19 +339,20 @@ const AboutDialog = (props: AboutDialogProps) => {
           <span style={paragraphStyle}>
             &copy; NT Corporation. All rights reserved.
           </span>
-          <span style={{ 'padding': '3rem 1rem 3rem 2rem' }}>
+          <span style={{ padding: '3rem 1rem 3rem 2rem' }}>
             The NtOS operating system and its user interface are protected by
             trademark and other pending or existing intellectual property rights
             in the Sol system and other regions.
           </span>
           <span
             style={{
-              'padding': '3rem 1rem 0.5rem 2rem',
-              'max-width': '35rem',
-            }}>
+              padding: '3rem 1rem 0.5rem 2rem',
+              maxWidth: '35rem',
+            }}
+          >
             This product is licensed under the NT Corporation Terms to:
           </span>
-          <span style={{ 'padding': '0 1rem 0 4rem' }}>{clientName}</span>
+          <span style={{ padding: '0 1rem 0 4rem' }}>{clientName}</span>
         </Box>
       </div>
       <div className="Dialog__footer">
@@ -452,7 +458,8 @@ export const NtosNotepad = (props) => {
     <NtosWindow
       title={`${unsavedAsterisk}${documentName} - Notepad`}
       width={840}
-      height={900}>
+      height={900}
+    >
       <NtosWindow.Content>
         <Box className="NtosNotepad__layout">
           <NtosNotepadMenuBar

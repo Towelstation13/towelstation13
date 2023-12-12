@@ -19,7 +19,19 @@
 /obj/machinery/fishing_portal_generator/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
 	default_unfasten_wrench(user, tool)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
+
+/obj/machinery/fishing_portal_generator/examine(mob/user)
+	. = ..()
+	. += span_notice("You can unlock further portal settings by completing fish scanning experiments.")
+
+/obj/machinery/fishing_portal_generator/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(obj_flags & EMAGGED)
+		return FALSE
+	obj_flags |= EMAGGED
+	balloon_alert(user, "syndicate setting loaded")
+	playsound(src, SFX_SPARKS, 25, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	return TRUE
 
 /obj/machinery/fishing_portal_generator/examine(mob/user)
 	. = ..()

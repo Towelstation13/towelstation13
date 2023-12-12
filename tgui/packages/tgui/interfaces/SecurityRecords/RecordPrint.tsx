@@ -1,7 +1,11 @@
 import { useBackend, useLocalState } from 'tgui/backend';
 import { PRINTOUT, SecurityRecordsData } from './types';
 import { Box, Button, Input, Section, Stack } from 'tgui/components';
-import { getSecurityRecord, getDefaultPrintDescription, getDefaultPrintHeader } from './helpers';
+import {
+  getSecurityRecord,
+  getDefaultPrintDescription,
+  getDefaultPrintHeader,
+} from './helpers';
 
 /** Handles printing posters and rapsheets */
 export const RecordPrint = (props) => {
@@ -78,7 +82,8 @@ export const RecordPrint = (props) => {
             onClick={() => swapTabs(PRINTOUT.Missing)}
             selected={printType === PRINTOUT.Missing}
             tooltip="Prints a poster with mugshot and description."
-            tooltipPosition="bottom">
+            tooltipPosition="bottom"
+          >
             Missing
           </Button>
           <Button
@@ -86,10 +91,13 @@ export const RecordPrint = (props) => {
             icon="file-alt"
             onClick={() => swapTabs(PRINTOUT.Rapsheet)}
             selected={printType === PRINTOUT.Rapsheet}
-            tooltip={`Prints a standard paper with the record on it.${
-              innocent ? ' (Requires crimes)' : ''
-            }`}
-            tooltipPosition="bottom">
+            tooltip={`Prints a standard paper with the record on it.`} // SKYRAT EDIT CHANGE START - ORIGINAL:
+            // tooltip={`Prints a standard paper with the record on it.${
+            //  innocent ? ' (Requires crimes)' : ''
+            // }`}
+            // SKYRAT EDIT CHANGE END
+            tooltipPosition="bottom"
+          >
             Rapsheet
           </Button>
           <Button
@@ -100,7 +108,8 @@ export const RecordPrint = (props) => {
             tooltip={`Prints a poster with mugshot and crimes.${
               innocent ? ' (Requires crimes)' : ''
             }`}
-            tooltipPosition="bottom">
+            tooltipPosition="bottom"
+          >
             Wanted
           </Button>
           <Button color="bad" icon="times" onClick={reset} />
@@ -108,7 +117,8 @@ export const RecordPrint = (props) => {
       }
       fill
       scrollable
-      title="Print Record">
+      title="Print Record"
+    >
       <Stack color="label" fill vertical>
         <Stack.Item>
           <Box>Enter a Header:</Box>

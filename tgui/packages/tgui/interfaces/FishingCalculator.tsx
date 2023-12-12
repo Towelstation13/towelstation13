@@ -71,13 +71,14 @@ export const FishingCalculator = (props) => {
             <Button
               onClick={() =>
                 act('recalc', {
-                  'rod': rod,
-                  'bait': bait,
-                  'hook': hook,
-                  'line': line,
-                  'spot': spot,
+                  rod: rod,
+                  bait: bait,
+                  hook: hook,
+                  line: line,
+                  spot: spot,
                 })
-              }>
+              }
+            >
               Calculate
             </Button>
           </Stack.Item>

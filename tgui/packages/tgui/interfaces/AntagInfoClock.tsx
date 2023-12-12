@@ -1,15 +1,13 @@
+// THIS IS A SKYRAT UI FILE
 import { useBackend } from '../backend';
 import { Icon, Section, Stack } from '../components';
 import { Window } from '../layouts';
-// SKYRAT EDIT BEGIN
 import { Rules } from './AntagInfoRules';
-// SKYRAT EDIT END
 
 type Info = {
   antag_name: string;
 };
 
-// SKYRAT EDIT change height from 250 to 350
 export const AntagInfoClock = (props) => {
   const { data } = useBackend<Info>();
   const { antag_name } = data;
@@ -28,6 +26,9 @@ export const AntagInfoClock = (props) => {
               <Rules />
             </Stack.Item>
             {/* SKYRAT EDIT ADDITION END */}
+            <Stack.Item>
+              <Rules />
+            </Stack.Item>
             <Stack.Item>
               <ObjectivePrintout />
             </Stack.Item>

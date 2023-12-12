@@ -1,9 +1,24 @@
-import { FeatureChoiced, FeatureDropdownInput, Feature, FeatureColorInput, FeatureTextInput, FeatureShortTextInput, CheckboxInput, FeatureTriColorInput, FeatureTriBoolInput, FeatureToggle, FeatureNumberInput, FeatureValueProps, FeatureChoicedServerData } from '../../base';
+// THIS IS A SKYRAT UI FILE
+import {
+  FeatureChoiced,
+  FeatureDropdownInput,
+  Feature,
+  FeatureColorInput,
+  FeatureTextInput,
+  FeatureShortTextInput,
+  CheckboxInput,
+  FeatureTriColorInput,
+  FeatureTriBoolInput,
+  FeatureToggle,
+  FeatureNumberInput,
+  FeatureValueProps,
+  FeatureChoicedServerData,
+} from '../../base';
 
 export const feature_leg_type: FeatureChoiced = {
   name: 'Leg type',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -127,7 +142,7 @@ export const body_markings_toggle: FeatureToggle = {
 export const feature_body_markings: Feature<string> = {
   name: 'Body Markings Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -151,7 +166,7 @@ export const tail_toggle: FeatureToggle = {
 export const feature_tail: Feature<string> = {
   name: 'Tail Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -176,7 +191,7 @@ export const snout_toggle: FeatureToggle = {
 export const feature_snout: Feature<string> = {
   name: 'Snout Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -201,7 +216,7 @@ export const horns_toggle: FeatureToggle = {
 export const feature_horns: Feature<string> = {
   name: 'Horns Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -226,7 +241,7 @@ export const ears_toggle: FeatureToggle = {
 export const feature_ears: Feature<string> = {
   name: 'Ears Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -251,7 +266,7 @@ export const wings_toggle: FeatureToggle = {
 export const feature_wings: Feature<string> = {
   name: 'Wings Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -276,7 +291,7 @@ export const frills_toggle: FeatureToggle = {
 export const feature_frills: Feature<string> = {
   name: 'Frills Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -301,7 +316,7 @@ export const spines_toggle: FeatureToggle = {
 export const feature_spines: Feature<string> = {
   name: 'Spines Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -321,7 +336,7 @@ export const spines_emissive: Feature<boolean[]> = {
 export const digitigrade_legs: FeatureChoiced = {
   name: 'Legs',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -335,7 +350,7 @@ export const caps_toggle: FeatureToggle = {
 export const feature_caps: Feature<string> = {
   name: 'Cap Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -360,7 +375,7 @@ export const moth_antennae_toggle: FeatureToggle = {
 export const feature_moth_antennae: Feature<string> = {
   name: 'Moth Antenna Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -385,7 +400,7 @@ export const moth_markings_toggle: FeatureToggle = {
 export const feature_moth_markings: Feature<string> = {
   name: 'Moth Markings Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -410,7 +425,7 @@ export const fluff_toggle: FeatureToggle = {
 export const feature_fluff: Feature<string> = {
   name: 'Fluff Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -435,7 +450,7 @@ export const head_acc_toggle: FeatureToggle = {
 export const feature_head_acc: Feature<string> = {
   name: 'Head Accessories Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -456,7 +471,7 @@ export const feature_ipc_screen: Feature<string> = {
   name: 'IPC Screen Selection',
   description: 'Can be changed in-round.',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -481,7 +496,7 @@ export const ipc_antenna_toggle: FeatureToggle = {
 export const feature_ipc_antenna: Feature<string> = {
   name: 'Synth Antenna Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -502,7 +517,7 @@ export const feature_ipc_chassis: Feature<string> = {
   name: 'Synth Chassis Selection',
   description: 'Only works for synths.',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -519,7 +534,7 @@ export const feature_ipc_head: Feature<string> = {
   name: 'Synth Head Selection',
   description: 'Only works for Synths.',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -548,7 +563,7 @@ export const neck_acc_toggle: FeatureToggle = {
 export const feature_neck_acc: Feature<string> = {
   name: 'Neck Accessories Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -572,7 +587,7 @@ export const skrell_hair_toggle: FeatureToggle = {
 export const feature_skrell_hair: Feature<string> = {
   name: 'Skrell Hair Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -598,7 +613,7 @@ export const xenodorsal_toggle: FeatureToggle = {
 export const feature_xenodorsal: Feature<string> = {
   name: 'Xenodorsal Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -623,7 +638,7 @@ export const xenohead_toggle: FeatureToggle = {
 export const feature_xenohead: Feature<string> = {
   name: 'Xeno Head Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -658,7 +673,7 @@ export const heterochromia_toggle: FeatureToggle = {
 export const feature_heterochromia: Feature<string> = {
   name: 'Heterochromia Selection',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
@@ -678,7 +693,7 @@ export const heterochromia_emissive: Feature<boolean[]> = {
 export const vox_bodycolor: Feature<string> = {
   name: 'Vox Bodycolor',
   component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>
+    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
   ) => {
     return <FeatureDropdownInput buttons {...props} />;
   },
