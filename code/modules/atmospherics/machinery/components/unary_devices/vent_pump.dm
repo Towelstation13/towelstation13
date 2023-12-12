@@ -103,7 +103,31 @@
 
 	balloon_alert(user, "vent saved in buffer")
 	multi_tool.set_buffer(src)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
+
+/obj/machinery/atmospherics/components/unary/vent_pump/screwdriver_act(mob/living/user, obj/item/tool)
+	var/time_to_repair = (10 SECONDS) * (1 - get_integrity_percentage())
+	if(!time_to_repair)
+		return FALSE
+
+	balloon_alert(user, "repairing vent...")
+	if(do_after(user, time_to_repair, src))
+		balloon_alert(user, "vent repaired")
+		repair_damage(max_integrity)
+
+	else
+		balloon_alert(user, "interrupted!")
+	return ITEM_INTERACT_SUCCESS
+
+/obj/machinery/atmospherics/components/unary/vent_pump/atom_fix()
+	set_is_operational(TRUE)
+	update_appearance()
+	return ..()
+
+/obj/machinery/atmospherics/components/unary/vent_pump/atom_break(damage_flag)
+	set_is_operational(FALSE)
+	update_appearance()
+	return ..()
 
 /obj/machinery/atmospherics/components/unary/vent_pump/Destroy()
 	disconnect_from_area()
