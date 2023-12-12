@@ -18,10 +18,6 @@ import { flow } from 'common/fp';
 import { filter, sortBy } from 'common/collections';
 import { NtosWindow } from '../layouts';
 
-<<<<<<<< HEAD:tgui/packages/tgui/interfaces/NtosNetDownloader.jsx
-export const NtosNetDownloader = (props) => {
-  const { act, data } = useBackend();
-========
 type Data = {
   disk_size: number;
   disk_used: number;
@@ -50,7 +46,6 @@ type ProgramData = {
 
 export const NtosNetDownloader = (props) => {
   const { act, data } = useBackend<Data>();
->>>>>>>> 339dc45593fad661740106e4f50c443b28c8e0a5:tgui/packages/tgui/interfaces/NtosNetDownloader.tsx
   const {
     disk_size,
     disk_used,
@@ -180,11 +175,7 @@ export const NtosNetDownloader = (props) => {
 
 const Program = (props) => {
   const { program } = props;
-<<<<<<<< HEAD:tgui/packages/tgui/interfaces/NtosNetDownloader.jsx
-  const { act, data } = useBackend();
-========
   const { act, data } = useBackend<Data>();
->>>>>>>> 339dc45593fad661740106e4f50c443b28c8e0a5:tgui/packages/tgui/interfaces/NtosNetDownloader.tsx
   const {
     disk_size,
     disk_used,

@@ -23,10 +23,6 @@ const formatPressure = (value: number) => {
   return formatSiUnit(value * 1000, 1, 'Pa');
 };
 
-<<<<<<<< HEAD:tgui/packages/tgui/interfaces/Canister.jsx
-export const Canister = (props) => {
-  const { act, data } = useBackend();
-========
 type HoldingTank = {
   name: string;
   tankPressure: number;
@@ -52,7 +48,6 @@ type Data = {
 
 export const Canister = (props) => {
   const { act, data } = useBackend<Data>();
->>>>>>>> 339dc45593fad661740106e4f50c443b28c8e0a5:tgui/packages/tgui/interfaces/Canister.tsx
   const {
     shielding,
     holdingTank,

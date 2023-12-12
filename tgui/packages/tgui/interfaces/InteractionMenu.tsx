@@ -3,7 +3,6 @@ import { useBackend } from '../backend';
 import {
   Button,
   Collapsible,
-  Icon,
   NoticeBox,
   Section,
   Stack,

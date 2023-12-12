@@ -81,6 +81,7 @@ const FlavorSection = (props) => {
           mr={-0.8}
           mt={-0.5}
           icon="hammer"
+          /* SKYRAT EDIT: ORIGINAL TOOLTIP
           tooltip={multiline`
             This is a gameplay suggestion for bored ais.
             You don't have to follow it, unless you want some
