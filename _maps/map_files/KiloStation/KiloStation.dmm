@@ -14539,7 +14539,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/mob/living/simple_animal/bot/cleanbot/medbay,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
@@ -23410,10 +23409,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
-/mob/living/simple_animal/bot/cleanbot/medbay{
-	maints_access_required = list(22);
-	name = "Deacon Scrubsy"
-	},
 /turf/open/floor/iron/smooth_large,
 /area/station/maintenance/department/chapel/monastery)
 "hJD" = (
@@ -31826,6 +31821,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/opposingcorners,
+/mob/living/basic/bot/cleanbot/medbay,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/storage)
 "kua" = (
@@ -34814,6 +34810,11 @@
 "lrq" = (
 /turf/closed/wall/r_wall/rust,
 /area/station/security/prison)
+"lrC" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/mob/living/basic/bot/cleanbot/autopatrol,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central/fore)
 "lrI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -59252,7 +59253,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/mob/living/simple_animal/bot/cleanbot/autopatrol,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/iron,
@@ -104398,7 +104398,7 @@ tGZ
 wLu
 mlw
 eDT
-fzL
+lrC
 bji
 qTC
 iRt
