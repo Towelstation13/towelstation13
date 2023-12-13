@@ -110,7 +110,7 @@ export const Autolathe = (props) => {
               buildRecipeElement={(
                 design,
                 availableMaterials,
-                _onPrintDesign
+                _onPrintDesign,
               ) => (
                 <AutolatheRecipe
                   design={design}
