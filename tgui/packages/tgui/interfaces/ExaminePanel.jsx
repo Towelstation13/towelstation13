@@ -4,8 +4,36 @@ import { Stack, Section, ByondUi } from '../components';
 import { Window } from '../layouts';
 import { resolveAsset } from '../assets';
 
-export const ExaminePanel = (props, context) => {
-  const { act, data } = useBackend(context);
+const formatURLs = (text) => {
+  if (!text) return;
+  const parts = [];
+  let regex = /https?:\/\/[^\s/$.?#].[^\s]*/gi;
+  let lastIndex = 0;
+
+  text.replace(regex, (url, index) => {
+    parts.push(text.substring(lastIndex, index));
+    parts.push(
+      <a
+        style={{
+          color: '#0591e3',
+          'text-decoration': 'none',
+        }}
+        href={url}
+      >
+        {url}
+      </a>,
+    );
+    lastIndex = index + url.length;
+    return url;
+  });
+
+  parts.push(text.substring(lastIndex));
+
+  return <div>{parts}</div>;
+};
+
+export const ExaminePanel = (props) => {
+  const { act, data } = useBackend();
   const {
     character_name,
     obscured,
