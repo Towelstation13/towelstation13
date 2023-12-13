@@ -1,5 +1,13 @@
 import { useBackend } from '../backend';
-import { Button, Flex, Icon, NoticeBox, NumberInput, Section, Tabs } from '../components';
+import {
+  Button,
+  Flex,
+  Icon,
+  NoticeBox,
+  NumberInput,
+  Section,
+  Tabs,
+} from '../components';
 import { Window } from '../layouts';
 
 export const Colormate = (props, context) => {
@@ -45,7 +53,8 @@ export const Colormate = (props, context) => {
                     act('switch_modes', {
                       mode: '0',
                     })
-                  }>
+                  }
+                >
                   Regular coloring
                 </Tabs.Tab>
                 <Tabs.Tab
@@ -55,7 +64,8 @@ export const Colormate = (props, context) => {
                     act('switch_modes', {
                       mode: '1',
                     })
-                  }>
+                  }
+                >
                   Matrixed coloring
                 </Tabs.Tab>
               </Tabs>

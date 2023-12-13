@@ -183,11 +183,11 @@ export class ObjectiveMenu extends Component<
                           handleObjectiveAction,
                           handleObjectiveCompleted,
                           handleObjectiveAbort,
-                          true
+                          true,
                         )}
                       </Stack.Item>
                     );
-                  }
+                  },
                 )}
               </Stack>
             </Section>
@@ -219,7 +219,7 @@ export class ObjectiveMenu extends Component<
                           undefined,
                           undefined,
                           undefined,
-                          true
+                          true,
                         )) || (
                         <Box
                           style={{
@@ -288,7 +288,7 @@ const ObjectiveFunction = (
   handleObjectiveAction?: (objective: Objective, action: string) => void,
   handleCompletion?: (objective: Objective) => void,
   handleAbort?: (objective: Objective) => void,
-  grow: boolean = false
+  grow: boolean = false,
 ) => {
   const dangerLevel = getDangerLevel(objective.progression_minimum);
   return (

@@ -271,12 +271,12 @@ const CheckoutModal = (props) => {
   const [checkoutBook, setCheckoutBook] = useLocalState('CheckoutBook', false);
   const [bookName, setBookName] = useLocalState(
     'CheckoutBookName',
-    'Insert Book name...'
+    'Insert Book name...',
   );
   const [checkoutee, setCheckoutee] = useLocalState('Checkoutee', 'Recipient');
   const [checkoutPeriod, setCheckoutPeriod] = useLocalState(
     'CheckoutPeriod',
-    5
+    5,
   );
   return (
     <Modal width="500px">
@@ -697,7 +697,7 @@ export const Print = (props) => {
   const { deity, religion, bible_name, bible_sprite, posters } = data;
   const [selectedPoster, setSelectedPoster] = useLocalState(
     'selected_poster',
-    posters[0]
+    posters[0],
   );
 
   return (

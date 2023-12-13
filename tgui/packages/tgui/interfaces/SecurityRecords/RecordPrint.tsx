@@ -21,7 +21,7 @@ export const RecordPrint = (props) => {
 
   const [printType, setPrintType] = useLocalState<PRINTOUT>(
     'printType',
-    PRINTOUT.Missing
+    PRINTOUT.Missing,
   );
   const [header, setHeader] = useLocalState<string>('printHeader', '');
   const [description, setDescription] = useLocalState<string>('printDesc', '');
@@ -87,7 +87,9 @@ export const RecordPrint = (props) => {
             Missing
           </Button>
           <Button
-            disabled={innocent}
+            // SKYRAT EDIT REMOVE START - REMOVE INNOCENT CHECK, ALLOWS RAPSHEETS TO BE PRINTED WITHOUT ANY CRIMES HAVING BEEN LOGGED
+            // disabled={innocent}
+            // SKYRA EDIT REMOVE END
             icon="file-alt"
             onClick={() => swapTabs(PRINTOUT.Rapsheet)}
             selected={printType === PRINTOUT.Rapsheet}

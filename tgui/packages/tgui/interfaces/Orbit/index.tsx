@@ -58,12 +58,12 @@ const ObservableSearch = (props) => {
 
   const [autoObserve, setAutoObserve] = useLocalState<boolean>(
     'autoObserve',
-    false
+    false,
   );
   const [heatMap, setHeatMap] = useLocalState<boolean>('heatMap', false);
   const [searchQuery, setSearchQuery] = useLocalState<string>(
     'searchQuery',
-    ''
+    '',
   );
 
   /** Gets a list of Observables, then filters the most relevant to orbit */
@@ -205,12 +205,12 @@ const ObservableSection = (props: {
 
   const filteredSection: Observable[] = flow([
     filter<Observable>((observable) =>
-      isJobOrNameMatch(observable, searchQuery)
+      isJobOrNameMatch(observable, searchQuery),
     ),
     sortBy<Observable>((observable) =>
       getDisplayName(observable.full_name, observable.name)
         .replace(/^"/, '')
-        .toLowerCase()
+        .toLowerCase(),
     ),
   ])(section);
 

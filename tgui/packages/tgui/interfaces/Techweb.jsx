@@ -250,7 +250,7 @@ const TechwebOverview = (props) => {
         n.name.toLowerCase().includes(searchText) ||
         n.description.toLowerCase().includes(searchText) ||
         n.design_ids.some((e) =>
-          design_cache[e].name.toLowerCase().includes(searchText)
+          design_cache[e].name.toLowerCase().includes(searchText),
         )
       );
     });
@@ -258,7 +258,7 @@ const TechwebOverview = (props) => {
     displayedNodes = sortBy((x) => node_cache[x.id].name)(
       tabIndex < 2
         ? nodes.filter((x) => x.tier === tabIndex)
-        : nodes.filter((x) => x.tier >= tabIndex)
+        : nodes.filter((x) => x.tier >= tabIndex),
     );
   }
 
@@ -428,7 +428,7 @@ const TechNodeDetail = (props) => {
 
   const prereqNodes = nodes.filter((x) => prereq_ids.includes(x.id));
   const complPrereq = prereq_ids.filter(
-    (x) => nodes.find((y) => y.id === x)?.tier === 0
+    (x) => nodes.find((y) => y.id === x)?.tier === 0,
   ).length;
   const unlockedNodes = nodes.filter((x) => unlock_ids.includes(x.id));
 
@@ -503,7 +503,7 @@ const TechNode = (props) => {
   const [tabIndex, setTabIndex] = useLocalState('nodeDetailTabIndex', 0);
 
   const expcompl = required_experiments.filter(
-    (x) => experiments[x]?.completed
+    (x) => experiments[x]?.completed,
   ).length;
   const experimentProgress = (
     <ProgressBar
@@ -519,7 +519,7 @@ const TechNode = (props) => {
   );
 
   const techcompl = prereq_ids.filter(
-    (x) => nodes.find((y) => y.id === x)?.tier === 0
+    (x) => nodes.find((y) => y.id === x)?.tier === 0,
   ).length;
   const techProgress = (
     <ProgressBar

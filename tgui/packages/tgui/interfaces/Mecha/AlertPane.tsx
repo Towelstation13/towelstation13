@@ -46,13 +46,13 @@ export const AlertPane = (props) => {
                 (overclock_temp_percentage > 1
                   ? 'bad'
                   : overclock_temp_percentage > 0.5
-                  ? 'average'
-                  : 'good')
+                    ? 'average'
+                    : 'good')
               }
             >
               {overclock_mode
                 ? `Overclocking (${Math.round(
-                    overclock_temp_percentage * 100
+                    overclock_temp_percentage * 100,
                   )}%)`
                 : 'Overclock'}
             </Button>

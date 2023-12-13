@@ -24,7 +24,7 @@ export const FishingCalculator = (props) => {
 
   const [bait, setBait] = useLocalState<string>(
     'bait',
-    '/obj/item/food/bait/worm'
+    '/obj/item/food/bait/worm',
   );
   const [spot, setSpot] = useLocalState<string>('spot', data.spot_types[0]);
   const [rod, setRod] = useLocalState<string>('rod', data.rod_types[0]);
